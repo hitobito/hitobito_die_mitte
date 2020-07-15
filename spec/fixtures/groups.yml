@@ -4,16 +4,16 @@
 #  https://github.com/hitobito/hitobito_cvp.
 
 
-root:
+bund:
   parent:
   lft: 1
   rgt: 2
   name: Hauptgruppe
-  type: Group::Root
+  type: Group::Bund
   email: root@example.net
   address: Ophovener Str. 79a
   zip_code: 2843
   town: Neu Carlscheid
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:root) %>
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:bund) %>
 
 # TODO add more groups
