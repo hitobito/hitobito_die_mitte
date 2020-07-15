@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+type = YML
+
+[hitobito_cvp.models-cvp]
+file_filter = config/locales/models.cvp.<lang>.yml
+source_file = config/locales/models.cvp.de.yml
+source_lang = de
+
