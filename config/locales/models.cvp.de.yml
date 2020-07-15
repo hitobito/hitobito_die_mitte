@@ -4,16 +4,50 @@ de:
 
       ### GROUPS
 
-      group/root:
-        one: Hauptgruppe
-        other: Hauptgruppen
+      group/bund:
+        one: Bund
+        other: Bund
 
+      group/vereinigung:
+        one: Vereinigung
+        other: Vereinigungen
+
+      group/kanton:
+        one: Kanton
+        other: Kantone
+
+      group/bezirk:
+        one: Bezirk
+        other: Bezirke
+
+      group/ort:
+        one: Ort
+        other: Orte
 
       ### ROLES
 
-      group/root/leader:
+      group/bund/leitung:
         one: Leitung
         description: Leitungspersonen verwalten die Applikation.
-      group/root/member:
+      group/bund/mitglied:
         one: Mitglied
         description: Mitglieder sind alle anderen.
+
+      group/vereinigung/leitung:
+        one: Leitung
+        description: Leitungspersonen verwalten die Applikation.
+      group/vereinigung/mitglied:
+        one: Mitglied
+        description: Mitglieder sind alle anderen.
+
+      group/kanton/leitung:
+        one: Leitung
+        description: Leitungspersonen verwalten die Applikation.
+
+      group/bezirk/leitung:
+        one: Leitung
+        description: Leitungspersonen verwalten die Applikation.
+
+      group/ort/leitung:
+        one: Leitung
+        description: Leitungspersonen verwalten die Applikation.

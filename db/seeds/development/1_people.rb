@@ -20,7 +20,11 @@ puzzlers = ['Pascal Zumkehr',
             'Mathis Hofer',
             'Pascal Simon']
 
-devs = {'Customer Name' => 'customer@email.com'}
+devs = {
+  'Stefan Züger' => 'zueger@cvp.ch',
+  'Luca Strebel' => 'strebel@cvp.ch',
+  'Pascal Bürgy' => 'pascal.buergy@proact.ch'
+}
 puzzlers.each do |puz|
   devs[puz] = "#{puz.split.last.downcase}@puzzle.ch"
 end
@@ -29,7 +33,7 @@ seeder = CvpPersonSeeder.new
 
 seeder.seed_all_roles
 
-root = Group.root
+bund = Group.root
 devs.each do |name, email|
-  seeder.seed_developer(name, email, root, Group::Root::Leader)
+  seeder.seed_developer(name, email, bund, Group::Bund::Leitung)
 end
