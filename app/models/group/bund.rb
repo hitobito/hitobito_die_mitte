@@ -15,7 +15,7 @@ class Group::Bund < Group
   ### ROLES
 
   class Leitung < Role
-    self.permissions = [:layer_and_below_full, :admin, :impersonation]
+    self.permissions = [:layer_and_below_full, :admin, :impersonation, :finance]
   end
 
   class Mitglied < Role
