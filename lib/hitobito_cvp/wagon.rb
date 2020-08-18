@@ -24,6 +24,7 @@ module HitobitoCvp
       # extend application classes here
       Group.send        :include, Cvp::Group
       # rubocop:enable SingleSpaceBeforeFirstArg
+      Event.role_types -= [Event::Role::Cook]
     end
 
     initializer 'cvp.add_settings' do |_app|
