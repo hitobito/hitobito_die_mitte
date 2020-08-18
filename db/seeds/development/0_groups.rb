@@ -72,14 +72,14 @@ states.each do |s|
   seeder.seed_social_accounts(s)
 end
 
-
-
-
-bezirke = Group::Bezirk.seed(:name, :parent_id,
+bezirke = Group::Region.seed(:name, :parent_id,
   {name: 'Stadt Bern',
    parent_id: states[0].id }.merge(seeder.group_attributes),
 
   {name: 'Emmental',
+   parent_id: states[0].id }.merge(seeder.group_attributes),
+
+  {name: 'Seeland',
    parent_id: states[0].id }.merge(seeder.group_attributes),
 
   {name: 'Stadt Zürich',
@@ -100,6 +100,15 @@ Group::Ort.seed(:name, :parent_id,
 
   {name: 'Langnau',
    parent_id: bezirke[1].id }.merge(seeder.group_attributes),
+
+  {name: 'Thun',
+   parent_id: states[0].id }.merge(seeder.group_attributes),
+
+  {name: 'Kirchenfeld',
+   parent_id: bezirke[0].id }.merge(seeder.group_attributes),
+
+  {name: 'Breitenrain',
+   parent_id: bezirke[0].id }.merge(seeder.group_attributes),
 )
 
 Group.rebuild!

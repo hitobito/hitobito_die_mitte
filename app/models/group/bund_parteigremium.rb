@@ -5,5 +5,10 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
+class Group::BundParteigremium < Group::Simple
 
-Group::Bund.seed_once(:parent_id, name: 'CVP/PDC/PPD', short_name: 'CVP')
+  class Leitung < Group::Simple::Leitung; end
+  class Mitglied < Group::Simple::Mitglied; end
+
+  roles Leitung, Mitglied
+end

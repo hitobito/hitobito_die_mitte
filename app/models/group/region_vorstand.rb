@@ -5,5 +5,16 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
+class Group::RegionVorstand < Group
 
-Group::Bund.seed_once(:parent_id, name: 'CVP/PDC/PPD', short_name: 'CVP')
+  class Mitglied < Role
+    self.permissions = []
+  end
+
+  class Kassier < Role
+    self.permissions = [:finance]
+  end
+
+  roles Mitglied, Kassier
+
+end

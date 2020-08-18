@@ -5,5 +5,10 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
+class Group::OrtMitglieder < Group
 
-Group::Bund.seed_once(:parent_id, name: 'CVP/PDC/PPD', short_name: 'CVP')
+  class Mitglied < Role; end
+  class SympathisantNachKantonalemStatut < Role; end
+
+  roles Mitglied, SympathisantNachKantonalemStatut
+end

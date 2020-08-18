@@ -12,7 +12,7 @@ class CvpPersonSeeder < PersonSeeder
 
   def amount(role_type)
     case role_type.name.demodulize
-    when 'Member' then 5
+    when 'Member' then 3
     else 1
     end
   end
@@ -22,6 +22,7 @@ end
 puzzlers = ['Pascal Zumkehr',
             'Andreas Maierhofer',
             'Matthias Viehweger',
+            'Oli Brian',
             'Carlo Beltrame',
             'Mathis Hofer',
             'Pascal Simon']
@@ -39,7 +40,7 @@ seeder = CvpPersonSeeder.new
 
 seeder.seed_all_roles
 
-bund = Group.root
+bund = Group::BundSekretariat.first
 devs.each do |name, email|
-  seeder.seed_developer(name, email, bund, Group::Bund::Leitung)
+  seeder.seed_developer(name, email, bund, Group::BundSekretariat::Mitarbeiter)
 end

@@ -5,5 +5,21 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
+class Group::BundKontakte < Group
 
-Group::Bund.seed_once(:parent_id, name: 'CVP/PDC/PPD', short_name: 'CVP')
+  class Medien < Role
+    self.permissions = []
+  end
+
+  class Spender < Role
+    self.permissions = []
+  end
+
+  class Kontakt < Role
+    self.permissions = []
+  end
+
+  roles Medien, Spender, Kontakt
+
+  children Group::BundKontakte
+end

@@ -5,19 +5,25 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-
-
-# encoding: utf-8
-
 class Group::Ort < Group
 
   self.layer = true
 
-  class Leitung < Role
-    self.permissions = [:layer_and_below_full, :contact_data]
-  end
+  children Group::OrtGewaehlte,
+           Group::OrtVorstand,
+           Group::OrtPraesidium,
+           Group::OrtSekretariat,
+           Group::OrtKommission,
+           Group::OrtParteigremium,
+           Group::OrtKontakte,
+           Group::OrtMitglieder,
+           Group::OrtSympathisanten
 
-  roles Leitung
+  self.default_children = [
+    Group::OrtGewaehlte,
+    Group::OrtSekretariat,
+    Group::OrtMitglieder
+  ]
 
 end
 

@@ -10,18 +10,22 @@ class Group::Vereinigung < Group
 
   self.layer = true
 
-  children Group::Kanton
+
+  children Group::VereinigungGewaehlte,
+           Group::VereinigungVorstand,
+           Group::VereinigungPraesidium,
+           Group::VereinigungSekretariat,
+           Group::VereinigungKommission,
+           Group::VereinigungParteigremium,
+           Group::VereinigungKontakte,
+
+           Group::Kanton
 
   ### ROLES
-
-  class Leitung < Role
-    self.permissions = [:layer_and_below_full, :admin]
-  end
-
-  class Mitglied < Role
-    self.permissions = [:group_read]
-  end
-
-  roles Leitung, Mitglied
+  #
+  self.default_children = [
+    Group::VereinigungGewaehlte,
+    Group::VereinigungSekretariat
+  ]
 
 end

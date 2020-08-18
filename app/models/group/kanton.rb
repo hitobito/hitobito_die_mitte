@@ -10,12 +10,28 @@ class Group::Kanton < Group
 
   self.layer = true
 
-  children Group::Bezirk
+  children Group::KantonGewaehlte,
+           Group::KantonVorstand,
+           Group::KantonPraesidium,
+           Group::KantonSekretariat,
+           Group::KantonKommission,
+           Group::KantonParteigremium,
+           Group::KantonKontakte,
+           Group::KantonDelegierte,
+           Group::KantonMitglieder,
+           Group::KantonSympathisanten,
 
-  class Leitung < Role
-    self.permissions = [:layer_and_below_full, :contact_data]
-  end
+           Group::Region,
+           Group::Ort
 
-  roles Leitung
+
+  # Group::Bezirk
+  #
+  self.default_children = [
+    Group::KantonGewaehlte,
+    Group::KantonSekretariat,
+    Group::KantonMitglieder
+  ]
+
 end
 

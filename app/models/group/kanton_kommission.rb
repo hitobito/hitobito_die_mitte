@@ -5,5 +5,17 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
+class Group::KantonKommission < Group::Simple
 
-Group::Bund.seed_once(:parent_id, name: 'CVP/PDC/PPD', short_name: 'CVP')
+  class Praesident < Role
+    self.permissions = []
+  end
+
+  class Leitung < Simple::Leitung
+  end
+
+  class Mitglied < Simple::Mitglied
+  end
+
+  roles Praesident, Leitung, Mitglied
+end

@@ -5,21 +5,15 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-
-
-# encoding: utf-8
-
-class Group::Bezirk < Group
-
-  self.layer = true
-
-  children Group::Ort
+class Group::RegionSpender < Group
 
   class Leitung < Role
-    self.permissions = [:layer_and_below_full, :contact_data]
+    self.permissions = []
   end
 
-  roles Leitung
+  class Mitglied < Role
+    self.permissions = []
+  end
 
+  roles Leitung, Mitglied
 end
-

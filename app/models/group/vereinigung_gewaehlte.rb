@@ -6,4 +6,13 @@
 #  https://github.com/hitobito/hitobito_cvp.
 
 
-Group::Bund.seed_once(:parent_id, name: 'CVP/PDC/PPD', short_name: 'CVP')
+class Group::VereinigungGewaehlte < Group
+
+  class Fraktionschef < Role; end
+  class VereinigungExekutive < Role; end
+  class VereinigungLegislative < Role; end
+
+  roles Fraktionschef,
+        VereinigungExekutive,
+        VereinigungLegislative
+end
