@@ -8,11 +8,11 @@
 class Group::BundSekretariat < Group
 
   class Generalsekretaer < Role
-    self.permissions = [:layer_and_below_full, :contact_data]
+    self.permissions = [:layer_and_below_full, :contact_data, :admin]
   end
 
   class Mitarbeiter < Role
-    self.permissions = [:layer_and_below_full, :contact_data]
+    self.permissions = [:layer_and_below_full, :contact_data, :admin]
   end
 
   class ItSupport < Role
