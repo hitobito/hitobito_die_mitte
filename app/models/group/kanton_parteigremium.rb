@@ -12,4 +12,6 @@ class Group::KantonParteigremium < Group::Simple
   class Mitglied < Simple::Mitglied; end
 
   roles Leitung, Mitglied
+
+  children Group::KantonParteigremium
 end

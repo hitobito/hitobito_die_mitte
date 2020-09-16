@@ -16,4 +16,6 @@ class Group::RegionParteigremium < Group
   end
 
   roles Leitung, Mitglied
+
+  children Group::RegionParteigremium
 end

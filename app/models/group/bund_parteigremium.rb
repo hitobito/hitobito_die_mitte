@@ -11,4 +11,6 @@ class Group::BundParteigremium < Group::Simple
   class Mitglied < Group::Simple::Mitglied; end
 
   roles Leitung, Mitglied
+
+  children Group::BundParteigremium
 end

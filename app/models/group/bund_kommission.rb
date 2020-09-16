@@ -12,4 +12,6 @@ class Group::BundKommission < Group::Simple
   class Mitglied < Group::Simple::Mitglied; end
 
   roles Praesident, Leitung, Mitglied
+
+  children Group::BundKommission
 end

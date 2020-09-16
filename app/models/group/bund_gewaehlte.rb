@@ -40,4 +40,6 @@ class Group::BundGewaehlte < Group
         Bundesverwaltungsrichter,
         Bundespatentrichter,
         Bundesstrafrichter)
+
+  children Group::BundGewaehlte
 end

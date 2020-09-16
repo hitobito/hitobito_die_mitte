@@ -16,4 +16,6 @@ class Group::OrtParteigremium < Group
   end
 
   roles Leitung, Mitglied
+
+  children Group::OrtParteigremium
 end

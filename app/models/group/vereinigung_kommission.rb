@@ -16,4 +16,6 @@ class Group::VereinigungKommission < Group
   end
 
   roles Praesident, Mitglied
+
+  children Group::VereinigungKommission
 end

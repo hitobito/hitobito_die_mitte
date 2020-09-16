@@ -15,4 +15,6 @@ class Group::VereinigungGewaehlte < Group
   roles Fraktionschef,
         VereinigungExekutive,
         VereinigungLegislative
+
+  children Group::VereinigungGewaehlte
 end

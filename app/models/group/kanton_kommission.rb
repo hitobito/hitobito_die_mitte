@@ -18,4 +18,6 @@ class Group::KantonKommission < Group::Simple
   end
 
   roles Praesident, Leitung, Mitglied
+
+  children Group::KantonKommission
 end

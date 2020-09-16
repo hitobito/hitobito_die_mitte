@@ -16,4 +16,6 @@ class Group::VereinigungParteigremium < Group
   end
 
   roles Leitung, Mitglied
+
+  children Group::VereinigungParteigremium
 end

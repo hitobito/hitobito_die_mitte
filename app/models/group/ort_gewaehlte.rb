@@ -22,4 +22,6 @@ class Group::OrtGewaehlte < Group
         Schulpflegekommission,
         Rechnungspruefungskommission,
         MitgliedWeitereKommissionen
+
+  children Group::OrtGewaehlte
 end

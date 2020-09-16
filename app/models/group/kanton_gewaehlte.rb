@@ -29,4 +29,6 @@ class Group::KantonGewaehlte < Group
         Staatsanwaltschaft,
         ParlamentarischeGeschaeftsfuehrung,
         Fraktionschef
+
+  children Group::KantonGewaehlte
 end

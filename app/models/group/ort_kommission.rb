@@ -16,4 +16,6 @@ class Group::OrtKommission < Group
   end
 
   roles Praesident, Mitglied
+
+  children Group::OrtKommission
 end
