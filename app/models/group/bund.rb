@@ -18,6 +18,7 @@ class Group::Bund < Group
            Group::BundArbeitsgruppe,
            Group::BundExterneKontakte,
            Group::BundDelegierte,
+           Group::BundMitglieder,
 
            Group::Kanton,
            Group::Vereinigung

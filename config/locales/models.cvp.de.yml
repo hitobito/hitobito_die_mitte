@@ -37,6 +37,9 @@ de:
       group/bund_delegierte:
         one: Delegierte
         other: Delegierte
+      group/bund_mitglieder:
+        one: Mitglieder
+        other: Mitglieder
 
       group/kanton:
         one: Kanton
@@ -221,6 +224,10 @@ de:
         one: Spender
       group/bund_externe_kontakte/kontakt:
         one: Kontakt
+      group/bund_mitglieder/mitglied:
+        one: Mitglied
+      group/bund_mitglieder/sympathisant:
+        one: Sympathisant
 
       group/kanton_gewaehlte/fraktionschef:
         one: Fraktionschef
