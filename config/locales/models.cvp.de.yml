@@ -361,9 +361,9 @@ de:
       group/ort_gewaehlte/rechnungspruefungskommission:
         one: Rechnungsprüfungskommission
         other: Rechnungsprüfungskommissionen
-      group/ort_gewaehlte/mitglied_weitere_kommissionen:
-        one: Mitglied weitere Kommissionen
-        other: Mitglieder weitere Kommissionen
+      group/ort_gewaehlte/mitglied_weitere_gemeinde_kommissionen:
+        one: Mitglied weitere Gemeindekommissionen
+        other: Mitglieder weitere Gemeindekommissionen
       group/ort_vorstand/mitglied:
         one: Mitglied
       group/ort_vorstand/kassier:

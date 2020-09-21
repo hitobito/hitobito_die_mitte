@@ -14,14 +14,14 @@ class Group::OrtGewaehlte < Group
   class KommunaleLegislative < Role; end
   class Schulpflegekommission < Role; end
   class Rechnungspruefungskommission < Role; end
-  class MitgliedWeitereKommissionen < Role; end
+  class MitgliedWeitereGemeindeKommissionen < Role; end
 
   roles Fraktionschef,
         KommunaleExekutive,
         KommunaleLegislative,
         Schulpflegekommission,
         Rechnungspruefungskommission,
-        MitgliedWeitereKommissionen
+        MitgliedWeitereGemeindeKommissionen
 
   children Group::OrtGewaehlte
 end
