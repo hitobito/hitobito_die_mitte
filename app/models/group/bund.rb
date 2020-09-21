@@ -11,13 +11,14 @@ class Group::Bund < Group
   self.layer = true
 
   children Group::BundGewaehlte,
-           Group::BundVorstand,
+           Group::BundParteigremium,
            Group::BundPraesidium,
            Group::BundSekretariat,
            Group::BundKommission,
-           Group::BundParteigremium,
-           Group::BundKontakte,
+           Group::BundArbeitsgruppe,
+           Group::BundExterneKontakte,
            Group::BundDelegierte,
+           Group::BundMitglieder,
 
            Group::Kanton,
            Group::Vereinigung

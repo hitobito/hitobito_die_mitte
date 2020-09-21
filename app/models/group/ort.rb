@@ -10,12 +10,11 @@ class Group::Ort < Group
   self.layer = true
 
   children Group::OrtGewaehlte,
-           Group::OrtVorstand,
+           Group::OrtParteigremium,
            Group::OrtPraesidium,
            Group::OrtSekretariat,
-           Group::OrtKommission,
-           Group::OrtParteigremium,
-           Group::OrtKontakte,
+           Group::OrtArbeitsgruppe,
+           Group::OrtExterneKontakte,
            Group::OrtMitglieder,
            Group::OrtSympathisanten
 

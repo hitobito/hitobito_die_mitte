@@ -5,7 +5,7 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-class Group::VereinigungParteigremium < Group
+class Group::VereinigungArbeitsgruppe < Group
 
   class Praesident < Role; end
   class Leitung < Group::Simple::Leitung; end
@@ -14,4 +14,5 @@ class Group::VereinigungParteigremium < Group
 
   roles Praesident, Leitung, Mitglied, Gast
 
+  children Group::VereinigungArbeitsgruppe
 end

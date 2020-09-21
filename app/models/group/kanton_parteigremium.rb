@@ -5,13 +5,13 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-class Group::KantonParteigremium < Group::Simple
+class Group::KantonParteigremium < Group
 
-  class Leitung < Simple::Leitung; end
+  class Praesident < Role; end
+  class Leitung < Group::Simple::Leitung; end
+  class Mitglied < Group::Simple::Mitglied; end
+  class Gast < Role; end
 
-  class Mitglied < Simple::Mitglied; end
+  roles Praesident, Leitung, Mitglied, Gast
 
-  roles Leitung, Mitglied
-
-  children Group::KantonParteigremium
 end

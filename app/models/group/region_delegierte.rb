@@ -5,17 +5,15 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-class Group::OrtKommission < Group
+class Group::RegionDelegierte < Group
 
-  class Praesident < Role
+  class Delegierte < Role
     self.permissions = []
   end
 
-  class Mitglied < Role
+  class Ersatzdelegierte < Role
     self.permissions = []
   end
 
-  roles Praesident, Mitglied
-
-  children Group::OrtKommission
+  roles Delegierte, Ersatzdelegierte
 end

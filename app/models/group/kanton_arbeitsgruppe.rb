@@ -5,16 +5,15 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-class Group::VereinigungVorstand < Group
+class Group::KantonArbeitsgruppe < Group::Simple
 
-  class Mitglied < Role
-    self.permissions = []
-  end
 
-  class Kassier < Role
-    self.permissions = [:finance]
-  end
+  class Praesident < Role; end
+  class Leitung < Group::Simple::Leitung; end
+  class Mitglied < Group::Simple::Mitglied; end
+  class Gast < Role; end
 
-  roles Mitglied, Kassier
+  roles Praesident, Leitung, Mitglied, Gast
 
+  children Group::KantonArbeitsgruppe
 end

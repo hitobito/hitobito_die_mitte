@@ -13,7 +13,7 @@ class Group::KantonGewaehlte < Group
   end
   class MitgliedKantonalesGerichtErsteInstanz < Role
   end
-  class MitgliedKantonalesGerichtObereInstanz < Role
+  class MitgliedKantonalesGerichtZweiteInstanz < Role
   end
   class Staatsanwaltschaft < Role
   end
@@ -24,8 +24,8 @@ class Group::KantonGewaehlte < Group
 
   roles KantonaleExekutive,
         KantonaleLegislative,
-        MitgliedKantonalesGerichtObereInstanz,
         MitgliedKantonalesGerichtErsteInstanz,
+        MitgliedKantonalesGerichtZweiteInstanz,
         Staatsanwaltschaft,
         ParlamentarischeGeschaeftsfuehrung,
         Fraktionschef

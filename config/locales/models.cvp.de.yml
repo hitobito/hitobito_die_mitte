@@ -16,9 +16,9 @@ de:
       group/bund_gewaehlte:
         one: Gewählte
         other: Gewählte
-      group/bund_vorstand:
-        one: Vorstand
-        other: Vorstand
+      group/bund_parteigremium:
+        one: Parteigremium
+        other: Parteigremium
       group/bund_praesidium:
         one: Praesidium
         other: Praesidium
@@ -28,15 +28,18 @@ de:
       group/bund_kommission:
         one: Kommission
         other: Kommission
-      group/bund_parteigremium:
-        one: Parteigremium
-        other: Parteigremium
-      group/bund_kontakte:
-        one: Kontakte
-        other: Kontakte
+      group/bund_arbeitsgruppe:
+        one: Arbeitsgruppe
+        other: Arbeitsgruppen
+      group/bund_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
       group/bund_delegierte:
         one: Delegierte
         other: Delegierte
+      group/bund_mitglieder:
+        one: Mitglieder
+        other: Mitglieder
 
       group/kanton:
         one: Kanton
@@ -44,8 +47,8 @@ de:
       group/kanton_gewaehlte:
         one: Gewählte
         other: Gewählte
-      group/kanton_vorstand:
-        one: Vorstand
+      group/kanton_parteigremium:
+        one: Parteigremium
         other: Vorstände
       group/kanton_praesidium:
         one: Praesidium
@@ -56,12 +59,12 @@ de:
       group/kanton_kommission:
         one: Kommission
         other: Kommissionen
-      group/kanton_parteigremium:
-        one: Parteigremium
-        other: Parteigremien
-      group/kanton_kontakte:
-        one: Kontakte
-        other: Kontakte
+      group/kanton_arbeitsgruppe:
+        one: Arbeitsgruppe
+        other: Arbeitsgruppen
+      group/kanton_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
       group/kanton_delegierte:
         one: Delegierte
         other: Delegierte
@@ -78,9 +81,9 @@ de:
       group/vereinigung_gewaehlte:
         one: Gewählte
         other: Gewählte
-      group/vereinigung_vorstand:
-        one: Vorstand
-        other: Vorstand
+      group/vereinigung_parteigremium:
+        one: Parteigremium
+        other: Parteigremium
       group/vereinigung_praesidium:
         one: Praesidium
         other: Praesidium
@@ -90,28 +93,31 @@ de:
       group/vereinigung_kommission:
         one: Kommission
         other: Kommission
-      group/vereinigung_parteigremium:
-        one: Parteigremium
-        other: Parteigremium
-      group/vereinigung_kontakte:
-        one: Kontakte
-        other: Kontakte
+      group/vereinigung_arbeitsgruppe:
+        one: Arbeitsgruppe
+        other: Arbeitsgruppen
+      group/vereinigung_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
 
       group/region:
         one: Region
         other: Regionen
-      group/region_vorstand:
-        one: Vorstand
-        other: Vorstand
+      group/region_parteigremium:
+        one: Parteigremium
+        other: Parteigremium
       group/region_praesidium:
         one: Praesidium
         other: Praesidium
       group/region_sekretariat:
         one: Sekretariat
         other: Sekretariat
-      group/region_parteigremium:
-        one: Parteigremium
-        other: Parteigremium
+      group/region_arbeitsgruppe:
+        one: Arbeitsgruppe
+        other: Arbeitsgruppen
+      group/region_delegierte:
+        one: Delegierte
+        other: Delegierte
 
       group/ort:
         one: Ortspartei
@@ -119,8 +125,8 @@ de:
       group/ort_gewaehlte:
         one: Gewählte
         other: Gewählte
-      group/ort_vorstand:
-        one: Vorstand
+      group/ort_parteigremium:
+        one: Parteigremium
         other: Vorstände
       group/ort_praesidium:
         one: Praesidium
@@ -128,15 +134,12 @@ de:
       group/ort_sekretariat:
         one: Sekretariat
         other: Sekretariate
-      group/ort_kommission:
-        one: Kommission
-        other: Kommissionen
-      group/ort_parteigremium:
-        one: Parteigremium
-        other: Parteigremien
-      group/ort_kontakte:
-        one: Kontakte
-        other: Kontakte
+      group/ort_arbeitsgruppe:
+        one: Arbeitsgruppe
+        other: Arbeitsgruppen
+      group/ort_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
       group/ort_mitglieder:
         one: Mitglieder
         other: Mitglieder
@@ -171,8 +174,14 @@ de:
       group/bund_gewaehlte/bundesstrafrichter:
         one: Bundesstrafrichter
         other: Bundesstrafrichter
-      group/bund_vorstand/mitglied:
+      group/bund_parteigremium/praesident:
+        one: Präsident
+      group/bund_parteigremium/leitung:
+        one: Leitung
+      group/bund_parteigremium/mitglied:
         one: Mitglied
+      group/bund_parteigremium/gast:
+        one: Gast
       group/bund_praesidium/praesident:
         one: Präsident
       group/bund_praesidium/vizepraesident:
@@ -197,20 +206,28 @@ de:
         one: Leitung
       group/bund_kommission/mitglied:
         one: Mitglied
-      group/bund_parteigremium/leitung:
+      group/bund_arbeitsgruppe/praesident:
+        one: Präsident
+      group/bund_arbeitsgruppe/leitung:
         one: Leitung
-      group/bund_parteigremium/mitglied:
+      group/bund_arbeitsgruppe/mitglied:
         one: Mitglied
+      group/bund_arbeitsgruppe/gast:
+        one: Gast
       group/bund_delegierte/delegierte:
         one: Delegierte
       group/bund_delegierte/ersatzdelegierte:
         one: Ersatzdelegierte
-      group/bund_kontakte/medien:
+      group/bund_externe_kontakte/medien:
         one: Medien
-      group/bund_kontakte/spender:
+      group/bund_externe_kontakte/spender:
         one: Spender
-      group/bund_kontakte/kontakt:
+      group/bund_externe_kontakte/kontakt:
         one: Kontakt
+      group/bund_mitglieder/mitglied:
+        one: Mitglied
+      group/bund_mitglieder/sympathisant:
+        one: Sympathisant
 
       group/kanton_gewaehlte/fraktionschef:
         one: Fraktionschef
@@ -223,19 +240,23 @@ de:
       group/kanton_gewaehlte/mitglied_kantonales_gericht_erste_instanz:
         one: Mitglied kantonales Gericht erste Instanz
         other: Mitglieder kantonales Gericht erste Instanz
-      group/kanton_gewaehlte/mitglied_kantonales_gericht_obere_instanz:
-        one: Mitglied kantonales Gericht obere Instanz
-        other: Mitglieder kantonales Gericht obere Instanz
+      group/kanton_gewaehlte/mitglied_kantonales_gericht_zweite_instanz:
+        one: Mitglied kantonales Gericht zweite Instanz
+        other: Mitglieder kantonales Gericht zweite Instanz
       group/kanton_gewaehlte/staatsanwaltschaft:
         one: Staatsanwaltschaft
         other: Staatsanwaltschaften
       group/kanton_gewaehlte/parlamentarische_geschaeftsfuehrung:
         one: Parlamentarische Geschaeftsfuehrung
         other: Parlamentarische Geschaeftsfuehrungen
-      group/kanton_vorstand/mitglied:
+      group/kanton_parteigremium/praesident:
+        one: Präsident
+      group/kanton_parteigremium/leitung:
+        one: Leitung
+      group/kanton_parteigremium/mitglied:
         one: Mitglied
-      group/kanton_vorstand/kassier:
-        one: Kassier
+      group/kanton_parteigremium/gast:
+        one: Gast
       group/kanton_praesidium/praesident:
         one: Präsident
       group/kanton_praesidium/vizepraesident:
@@ -244,6 +265,8 @@ de:
         one: Kassier
       group/kanton_praesidium/mitglied:
         one: Mitglied
+      group/kanton_praesidium/gast:
+        one: Gast
       group/kanton_sekretariat/leitung:
         one: Leitung
       group/kanton_sekretariat/mitarbeiter:
@@ -254,15 +277,19 @@ de:
         one: Leitung
       group/kanton_kommission/mitglied:
         one: Mitglied
-      group/kanton_parteigremium/leitung:
+      group/kanton_arbeitsgruppe/praesident:
+        one: Präsident
+      group/kanton_arbeitsgruppe/leitung:
         one: Leitung
-      group/kanton_parteigremium/mitglied:
+      group/kanton_arbeitsgruppe/mitglied:
         one: Mitglied
-      group/kanton_kontakte/medien:
+      group/kanton_arbeitsgruppe/gast:
+        one: Gast
+      group/kanton_externe_kontakte/medien:
         one: Medien
-      group/kanton_kontakte/spender:
+      group/kanton_externe_kontakte/spender:
         one: Spender
-      group/kanton_kontakte/kontakt:
+      group/kanton_externe_kontakte/kontakt:
         one: Kontakt
       group/kanton_delegierte/delegierte:
         one: Delegierte
@@ -284,10 +311,14 @@ de:
       group/vereinigung_gewaehlte/vereinigung_legislative:
         one: Vereinigung Legislative
         other: Vereinigung Legislativen
-      group/vereinigung_vorstand/mitglied:
+      group/vereinigung_parteigremium/praesident:
+        one: Präsident
+      group/vereinigung_parteigremium/leitung:
+        one: Leitung
+      group/vereinigung_parteigremium/mitglied:
         one: Mitglied
-      group/vereinigung_vorstand/kassier:
-        one: Kassier
+      group/vereinigung_parteigremium/gast:
+        one: Gast
       group/vereinigung_praesidium/praesident:
         one: Präsident
       group/vereinigung_praesidium/vizepraesident:
@@ -304,22 +335,29 @@ de:
         one: Präsident
       group/vereinigung_kommission/mitglied:
         one: Mitglied
-      group/vereinigung_parteigremium/leitung:
+      group/vereinigung_arbeitsgruppe/praesident:
+        one: Präsident
+      group/vereinigung_arbeitsgruppe/leitung:
         one: Leitung
-      group/vereinigung_parteigremium/mitglied:
+      group/vereinigung_arbeitsgruppe/mitglied:
         one: Mitglied
-      group/vereinigung_kontakte/medien:
+      group/vereinigung_arbeitsgruppe/gast:
+        one: Gast
+      group/vereinigung_externe_kontakte/medien:
         one: Medien
-      group/vereinigung_kontakte/spender:
+      group/vereinigung_externe_kontakte/spender:
         one: Spender
-      group/vereinigung_kontakte/kontakt:
+      group/vereinigung_externe_kontakte/kontakt:
         one: Kontakt
 
-
-      group/region_vorstand/mitglied:
+      group/region_parteigremium/praesident:
+        one: Präsident
+      group/region_parteigremium/leitung:
+        one: Leitung
+      group/region_parteigremium/mitglied:
         one: Mitglied
-      group/region_vorstand/kassier:
-        one: Kassier
+      group/region_parteigremium/gast:
+        one: Gast
       group/region_praesidium/praesident:
         one: Präsident
       group/region_praesidium/vizepraesident:
@@ -336,10 +374,18 @@ de:
         one: Präsident
       group/region_kommission/mitglied:
         one: Mitglied
-      group/region_parteigremium/leitung:
+      group/region_arbeitsgruppe/praesident:
+        one: Präsident
+      group/region_arbeitsgruppe/leitung:
         one: Leitung
-      group/region_parteigremium/mitglied:
+      group/region_arbeitsgruppe/mitglied:
         one: Mitglied
+      group/region_arbeitsgruppe/gast:
+        one: Gast
+      group/region_delegierte/delegierte:
+        one: Delegierte
+      group/region_delegierte/ersatzdelegierte:
+        one: Ersatzdelegierte
 
       group/ort_gewaehlte/fraktionschef:
         one: Fraktionschef
@@ -357,13 +403,17 @@ de:
       group/ort_gewaehlte/rechnungspruefungskommission:
         one: Rechnungsprüfungskommission
         other: Rechnungsprüfungskommissionen
-      group/ort_gewaehlte/mitglied_weitere_kommissionen:
-        one: Mitglied weitere Kommissionen
-        other: Mitglieder weitere Kommissionen
-      group/ort_vorstand/mitglied:
+      group/ort_gewaehlte/mitglied_weitere_gemeinde_kommissionen:
+        one: Mitglied weitere Gemeindekommissionen
+        other: Mitglieder weitere Gemeindekommissionen
+      group/ort_parteigremium/praesident:
+        one: Präsident
+      group/ort_parteigremium/leitung:
+        one: Leitung
+      group/ort_parteigremium/mitglied:
         one: Mitglied
-      group/ort_vorstand/kassier:
-        one: Kassier
+      group/ort_parteigremium/gast:
+        one: Gast
       group/ort_praesidium/praesident:
         one: Präsident
       group/ort_praesidium/vizepraesident:
@@ -378,19 +428,19 @@ de:
         one: Leitung
       group/ort_sekretariat/mitarbeiter:
         one: Mitarbeiter
-      group/ort_kommission/praesident:
+      group/ort_arbeitsgruppe/praesident:
         one: Präsident
-      group/ort_kommission/mitglied:
-        one: Mitglied
-      group/ort_parteigremium/leitung:
+      group/ort_arbeitsgruppe/leitung:
         one: Leitung
-      group/ort_parteigremium/mitglied:
+      group/ort_arbeitsgruppe/mitglied:
         one: Mitglied
-      group/ort_kontakte/medien:
+      group/ort_arbeitsgruppe/gast:
+        one: Gast
+      group/ort_externe_kontakte/medien:
         one: Medien
-      group/ort_kontakte/spender:
+      group/ort_externe_kontakte/spender:
         one: Spender
-      group/ort_kontakte/kontakt:
+      group/ort_externe_kontakte/kontakt:
         one: Kontakt
       group/ort_mitglieder/mitglied:
         one: Mitglied

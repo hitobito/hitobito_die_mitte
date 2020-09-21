@@ -11,12 +11,12 @@ class Group::Kanton < Group
   self.layer = true
 
   children Group::KantonGewaehlte,
-           Group::KantonVorstand,
+           Group::KantonParteigremium,
            Group::KantonPraesidium,
            Group::KantonSekretariat,
            Group::KantonKommission,
-           Group::KantonParteigremium,
-           Group::KantonKontakte,
+           Group::KantonArbeitsgruppe,
+           Group::KantonExterneKontakte,
            Group::KantonDelegierte,
            Group::KantonMitglieder,
            Group::KantonSympathisanten,

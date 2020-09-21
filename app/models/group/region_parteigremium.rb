@@ -7,15 +7,10 @@
 
 class Group::RegionParteigremium < Group
 
-  class Leitung < Role
-    self.permissions = []
-  end
+  class Praesident < Role; end
+  class Leitung < Group::Simple::Leitung; end
+  class Mitglied < Group::Simple::Mitglied; end
+  class Gast < Role; end
 
-  class Mitglied < Role
-    self.permissions = []
-  end
-
-  roles Leitung, Mitglied
-
-  children Group::RegionParteigremium
+  roles Praesident, Leitung, Mitglied, Gast
 end
