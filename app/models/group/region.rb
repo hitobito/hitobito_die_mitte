@@ -13,7 +13,7 @@ class Group::Region < Group
 
   self.layer = true
 
-  children Group::RegionVorstand,
+  children Group::RegionParteigremium,
            Group::RegionPraesidium,
            Group::RegionSekretariat,
            Group::RegionArbeitsgruppe,

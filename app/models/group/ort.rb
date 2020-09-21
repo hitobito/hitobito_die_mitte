@@ -10,7 +10,7 @@ class Group::Ort < Group
   self.layer = true
 
   children Group::OrtGewaehlte,
-           Group::OrtVorstand,
+           Group::OrtParteigremium,
            Group::OrtPraesidium,
            Group::OrtSekretariat,
            Group::OrtArbeitsgruppe,

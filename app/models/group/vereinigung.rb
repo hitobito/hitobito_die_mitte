@@ -12,7 +12,7 @@ class Group::Vereinigung < Group
 
 
   children Group::VereinigungGewaehlte,
-           Group::VereinigungVorstand,
+           Group::VereinigungParteigremium,
            Group::VereinigungPraesidium,
            Group::VereinigungSekretariat,
            Group::VereinigungKommission,

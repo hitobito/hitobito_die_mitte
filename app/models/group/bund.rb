@@ -11,7 +11,7 @@ class Group::Bund < Group
   self.layer = true
 
   children Group::BundGewaehlte,
-           Group::BundVorstand,
+           Group::BundParteigremium,
            Group::BundPraesidium,
            Group::BundSekretariat,
            Group::BundKommission,
