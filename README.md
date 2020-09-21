@@ -9,7 +9,7 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
 
 ## Organization Hierarchy
 
-    * Bund
+    * Schweiz
       * Gewählte
         * Bundesrat: []
         * Ständerat: []
@@ -19,48 +19,59 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
         * Bundesverwaltungsrichter: []
         * Bundespatentrichter: []
         * Bundesstrafrichter: []
-      * Vorstand
-        * Mitglied: []
+      * Parteigremium
+        * Präsident: []
+        * Leitung: [:group_full]
+        * Mitglied: [:group_read]
+        * Gast: []
       * Praesidium
         * Präsident: []
         * Vizepräsident: []
         * Mitglied: []
         * Gast: []
       * Sekretariat
-        * Generalsekretär: [:layer_and_below_full, :contact_data]
-        * Mitarbeiter: [:layer_and_below_full, :contact_data]
+        * Generalsekretär: [:layer_and_below_full, :contact_data, :admin]
+        * Mitarbeiter: [:layer_and_below_full, :contact_data, :admin]
         * It-Support: [:impersonation]
         * Kassier: [:finance]
       * Kommission
         * Präsident: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
-      * Parteigremium
+      * Arbeitsgruppe
+        * Präsident: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
-      * Kontakte
+        * Gast: []
+      * Externe Kontakte
         * Medien: []
         * Spender: []
         * Kontakt: []
       * Delegierte
         * Delegierte: []
         * Ersatzdelegierte: []
+      * Mitglieder
+        * Mitglied: []
+        * Sympathisant: []
     * Kanton
       * Gewählte
         * Kantonale Exekutive: []
         * Kantonale Legislative: []
-        * Mitglied kantonales Gericht obere Instanz: []
         * Mitglied kantonales Gericht erste Instanz: []
+        * Mitglied kantonales Gericht zweite Instanz: []
         * Staatsanwaltschaft: []
         * Parlamentarische Geschaeftsfuehrung: []
         * Fraktionschef: []
-      * Vorstand
-        * Mitglied: []
-        * Kassier: [:finance]
+      * Parteigremium
+        * Präsident: []
+        * Leitung: [:group_full]
+        * Mitglied: [:group_read]
+        * Gast: []
       * Praesidium
         * Präsident: [:contact_data]
         * Vizepräsident: []
         * Mitglied: []
+        * Gast: []
       * Sekretariat
         * Leitung: [:layer_and_below_full, :finance, :contact_data]
         * Mitarbeiter: [:layer_and_below_full]
@@ -68,10 +79,12 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
         * Präsident: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
-      * Parteigremium
+      * Arbeitsgruppe
+        * Präsident: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
-      * Kontakte
+        * Gast: []
+      * Externe Kontakte
         * Medien: []
         * Spender: []
         * Kontakt: []
@@ -84,9 +97,11 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
       * Sympathisanten
         * Sympathisant: []
     * Region
-      * Vorstand
-        * Mitglied: []
-        * Kassier: [:finance]
+      * Parteigremium
+        * Präsident: []
+        * Leitung: [:group_full]
+        * Mitglied: [:group_read]
+        * Gast: []
       * Praesidium
         * Präsident: []
         * Vizepräsident: []
@@ -95,9 +110,14 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
       * Sekretariat
         * Leitung: [:layer_and_below_full]
         * Mitarbeiter: [:layer_and_below_full]
-      * Parteigremium
-        * Leitung: []
-        * Mitglied: []
+      * Arbeitsgruppe
+        * Präsident: []
+        * Leitung: [:group_full]
+        * Mitglied: [:group_read]
+        * Gast: []
+      * Delegierte
+        * Delegierte: []
+        * Ersatzdelegierte: []
     * Ortspartei
       * Gewählte
         * Fraktionschef: []
@@ -105,10 +125,12 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
         * Kommunale Legislative: []
         * Schulpflege/- kommission: []
         * Rechnungsprüfungskommission: []
-        * Mitglied weitere Kommissionen: []
-      * Vorstand
-        * Mitglied: []
-        * Kassier: [:finance]
+        * Mitglied weitere Gemeindekommissionen: []
+      * Parteigremium
+        * Präsident: []
+        * Leitung: [:group_full]
+        * Mitglied: [:group_read]
+        * Gast: []
       * Praesidium
         * Präsident: [:contact_data]
         * Vizepräsident: []
@@ -118,13 +140,12 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
       * Sekretariat
         * Leitung: [:layer_full]
         * Mitarbeiter: [:layer_full]
-      * Kommission
+      * Arbeitsgruppe
         * Präsident: []
-        * Mitglied: []
-      * Parteigremium
-        * Leitung: []
-        * Mitglied: []
-      * Kontakte
+        * Leitung: [:group_full]
+        * Mitglied: [:group_read]
+        * Gast: []
+      * Externe Kontakte
         * Medien: []
         * Spender: []
         * Kontakt: []
@@ -137,10 +158,12 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
       * Gewählte
         * Fraktionschef: []
         * Vereinigung Exekutive: []
-        * Rolle: []
-      * Vorstand
-        * Mitglied: []
-        * Kassier: [:finance]
+        * Vereinigung Legislative: []
+      * Parteigremium
+        * Präsident: []
+        * Leitung: [:group_full]
+        * Mitglied: [:group_read]
+        * Gast: []
       * Praesidium
         * Präsident: [:contact_data]
         * Vizepräsident: []
@@ -152,10 +175,12 @@ Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/
       * Kommission
         * Präsident: []
         * Mitglied: []
-      * Parteigremium
-        * Leitung: []
-        * Mitglied: []
-      * Kontakte
+      * Arbeitsgruppe
+        * Präsident: []
+        * Leitung: [:group_full]
+        * Mitglied: [:group_read]
+        * Gast: []
+      * Externe Kontakte
         * Medien: []
         * Spender: []
         * Kontakt: []
