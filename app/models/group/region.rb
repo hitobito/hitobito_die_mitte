@@ -17,6 +17,7 @@ class Group::Region < Group
            Group::RegionPraesidium,
            Group::RegionSekretariat,
            Group::RegionParteigremium,
+           Group::RegionDelegierte,
            Group::Ort
 
   self.default_children = [

@@ -112,6 +112,9 @@ de:
       group/region_parteigremium:
         one: Parteigremium
         other: Parteigremium
+      group/region_delegierte:
+        one: Delegierte
+        other: Delegierte
 
       group/ort:
         one: Ortspartei
@@ -340,6 +343,10 @@ de:
         one: Leitung
       group/region_parteigremium/mitglied:
         one: Mitglied
+      group/region_delegierte/delegierte:
+        one: Delegierte
+      group/region_delegierte/ersatzdelegierte:
+        one: Ersatzdelegierte
 
       group/ort_gewaehlte/fraktionschef:
         one: Fraktionschef
