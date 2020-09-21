@@ -223,9 +223,9 @@ de:
       group/kanton_gewaehlte/mitglied_kantonales_gericht_erste_instanz:
         one: Mitglied kantonales Gericht erste Instanz
         other: Mitglieder kantonales Gericht erste Instanz
-      group/kanton_gewaehlte/mitglied_kantonales_gericht_obere_instanz:
-        one: Mitglied kantonales Gericht obere Instanz
-        other: Mitglieder kantonales Gericht obere Instanz
+      group/kanton_gewaehlte/mitglied_kantonales_gericht_zweite_instanz:
+        one: Mitglied kantonales Gericht zweite Instanz
+        other: Mitglieder kantonales Gericht zweite Instanz
       group/kanton_gewaehlte/staatsanwaltschaft:
         one: Staatsanwaltschaft
         other: Staatsanwaltschaften
