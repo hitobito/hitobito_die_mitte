@@ -16,7 +16,7 @@ class Group::Vereinigung < Group
            Group::VereinigungPraesidium,
            Group::VereinigungSekretariat,
            Group::VereinigungKommission,
-           Group::VereinigungParteigremium,
+           Group::VereinigungArbeitsgruppe,
            Group::VereinigungExterneKontakte,
 
            Group::Kanton

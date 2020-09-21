@@ -16,7 +16,7 @@ class Group::Region < Group
   children Group::RegionVorstand,
            Group::RegionPraesidium,
            Group::RegionSekretariat,
-           Group::RegionParteigremium,
+           Group::RegionArbeitsgruppe,
            Group::RegionDelegierte,
            Group::Ort
 

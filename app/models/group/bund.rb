@@ -15,7 +15,7 @@ class Group::Bund < Group
            Group::BundPraesidium,
            Group::BundSekretariat,
            Group::BundKommission,
-           Group::BundParteigremium,
+           Group::BundArbeitsgruppe,
            Group::BundExterneKontakte,
            Group::BundDelegierte,
 
