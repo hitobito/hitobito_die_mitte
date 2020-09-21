@@ -16,7 +16,7 @@ class Group::Bund < Group
            Group::BundSekretariat,
            Group::BundKommission,
            Group::BundParteigremium,
-           Group::BundKontakte,
+           Group::BundExterneKontakte,
            Group::BundDelegierte,
 
            Group::Kanton,

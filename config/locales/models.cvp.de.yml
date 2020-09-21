@@ -31,9 +31,9 @@ de:
       group/bund_parteigremium:
         one: Parteigremium
         other: Parteigremium
-      group/bund_kontakte:
-        one: Kontakte
-        other: Kontakte
+      group/bund_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
       group/bund_delegierte:
         one: Delegierte
         other: Delegierte
@@ -59,9 +59,9 @@ de:
       group/kanton_parteigremium:
         one: Parteigremium
         other: Parteigremien
-      group/kanton_kontakte:
-        one: Kontakte
-        other: Kontakte
+      group/kanton_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
       group/kanton_delegierte:
         one: Delegierte
         other: Delegierte
@@ -93,9 +93,9 @@ de:
       group/vereinigung_parteigremium:
         one: Parteigremium
         other: Parteigremium
-      group/vereinigung_kontakte:
-        one: Kontakte
-        other: Kontakte
+      group/vereinigung_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
 
       group/region:
         one: Region
@@ -134,9 +134,9 @@ de:
       group/ort_parteigremium:
         one: Parteigremium
         other: Parteigremien
-      group/ort_kontakte:
-        one: Kontakte
-        other: Kontakte
+      group/ort_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
       group/ort_mitglieder:
         one: Mitglieder
         other: Mitglieder
@@ -205,11 +205,11 @@ de:
         one: Delegierte
       group/bund_delegierte/ersatzdelegierte:
         one: Ersatzdelegierte
-      group/bund_kontakte/medien:
+      group/bund_externe_kontakte/medien:
         one: Medien
-      group/bund_kontakte/spender:
+      group/bund_externe_kontakte/spender:
         one: Spender
-      group/bund_kontakte/kontakt:
+      group/bund_externe_kontakte/kontakt:
         one: Kontakt
 
       group/kanton_gewaehlte/fraktionschef:
@@ -258,11 +258,11 @@ de:
         one: Leitung
       group/kanton_parteigremium/mitglied:
         one: Mitglied
-      group/kanton_kontakte/medien:
+      group/kanton_externe_kontakte/medien:
         one: Medien
-      group/kanton_kontakte/spender:
+      group/kanton_externe_kontakte/spender:
         one: Spender
-      group/kanton_kontakte/kontakt:
+      group/kanton_externe_kontakte/kontakt:
         one: Kontakt
       group/kanton_delegierte/delegierte:
         one: Delegierte
@@ -308,11 +308,11 @@ de:
         one: Leitung
       group/vereinigung_parteigremium/mitglied:
         one: Mitglied
-      group/vereinigung_kontakte/medien:
+      group/vereinigung_externe_kontakte/medien:
         one: Medien
-      group/vereinigung_kontakte/spender:
+      group/vereinigung_externe_kontakte/spender:
         one: Spender
-      group/vereinigung_kontakte/kontakt:
+      group/vereinigung_externe_kontakte/kontakt:
         one: Kontakt
 
 
@@ -386,11 +386,11 @@ de:
         one: Leitung
       group/ort_parteigremium/mitglied:
         one: Mitglied
-      group/ort_kontakte/medien:
+      group/ort_externe_kontakte/medien:
         one: Medien
-      group/ort_kontakte/spender:
+      group/ort_externe_kontakte/spender:
         one: Spender
-      group/ort_kontakte/kontakt:
+      group/ort_externe_kontakte/kontakt:
         one: Kontakt
       group/ort_mitglieder/mitglied:
         one: Mitglied

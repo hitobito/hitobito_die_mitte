@@ -5,12 +5,21 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-class Group::OrtKontakte < Group
+class Group::BundExterneKontakte < Group
 
-  class Medien < Role; end
-  class Spender < Role; end
-  class Kontakt < Role; end
+  class Medien < Role
+    self.permissions = []
+  end
 
-  roles  Medien, Spender, Kontakt
-  children Group::OrtKontakte
+  class Spender < Role
+    self.permissions = []
+  end
+
+  class Kontakt < Role
+    self.permissions = []
+  end
+
+  roles Medien, Spender, Kontakt
+
+  children Group::BundExterneKontakte
 end

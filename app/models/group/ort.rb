@@ -15,7 +15,7 @@ class Group::Ort < Group
            Group::OrtSekretariat,
            Group::OrtKommission,
            Group::OrtParteigremium,
-           Group::OrtKontakte,
+           Group::OrtExterneKontakte,
            Group::OrtMitglieder,
            Group::OrtSympathisanten
 

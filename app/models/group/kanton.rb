@@ -16,7 +16,7 @@ class Group::Kanton < Group
            Group::KantonSekretariat,
            Group::KantonKommission,
            Group::KantonParteigremium,
-           Group::KantonKontakte,
+           Group::KantonExterneKontakte,
            Group::KantonDelegierte,
            Group::KantonMitglieder,
            Group::KantonSympathisanten,
