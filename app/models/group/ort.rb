@@ -13,7 +13,6 @@ class Group::Ort < Group
            Group::OrtVorstand,
            Group::OrtPraesidium,
            Group::OrtSekretariat,
-           Group::OrtKommission,
            Group::OrtParteigremium,
            Group::OrtExterneKontakte,
            Group::OrtMitglieder,

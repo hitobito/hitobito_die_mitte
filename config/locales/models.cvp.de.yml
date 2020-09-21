@@ -131,9 +131,6 @@ de:
       group/ort_sekretariat:
         one: Sekretariat
         other: Sekretariate
-      group/ort_kommission:
-        one: Kommission
-        other: Kommissionen
       group/ort_parteigremium:
         one: Parteigremium
         other: Parteigremien
@@ -385,10 +382,6 @@ de:
         one: Leitung
       group/ort_sekretariat/mitarbeiter:
         one: Mitarbeiter
-      group/ort_kommission/praesident:
-        one: Präsident
-      group/ort_kommission/mitglied:
-        one: Mitglied
       group/ort_parteigremium/leitung:
         one: Leitung
       group/ort_parteigremium/mitglied:
