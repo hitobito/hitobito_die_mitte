@@ -4,18 +4,17 @@
 #  https://github.com/hitobito/hitobito_cvp.
 
 
-admin:
-  person: admin
-  group: bund
-  type: Group::Bund::Leitung
+sekretaer:
+  person: sekretaer
+  group: sekretariat
+  type: Group::BundSekretariat::Generalsekretaer
 
-leader:
-  person: leader
-  group: bund
-  type: Group::Bund::Leitung
+thuner:
+  person: thuner
+  group: be_thun_mitglieder
+  type: Group::OrtMitglieder::Mitglied
 
-# TODO use group and type of the main base member
-member:
-  person: member
-  group: bund
-  type: Group::Bund::Member
+zuercher:
+  person: zuercher
+  group: zh
+  type: Group::KantonMitglieder::Mitglied

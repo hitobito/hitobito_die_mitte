@@ -3,17 +3,124 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-
-bund:
-  parent:
-  lft: 1
-  rgt: 2
-  name: Hauptgruppe
+---
+cvp:
+  name: CVP/PDC/PPD
+  short_name: CVP
   type: Group::Bund
-  email: root@example.net
-  address: Ophovener Str. 79a
-  zip_code: 2843
-  town: Neu Carlscheid
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:bund) %>
-
-# TODO add more groups
+  lft: 1
+  rgt: 24
+  email: alta.haley@example.org
+  address: Schellingstr. 8
+  zip_code: 5692
+  town: Damianburg
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:cvp) %>
+be:
+  parent: cvp
+  name: Bern
+  short_name: BE
+  type: Group::Kanton
+  lft: 2
+  rgt: 11
+  email: bern@be.ch
+  address: Klostergasse 3
+  zip_code: 3333
+  town: Bern
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be) %>
+be_bern:
+  parent: be
+  name: Stadt Bern
+  short_name:
+  type: Group::Region
+  lft: 3
+  rgt: 6
+  email: verner@example.com
+  address: Glücksburger Str. 50a
+  zip_code: 6809
+  town: Wakanscheid
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_bern) %>
+be_bern_breitsch:
+  parent: be_bern
+  name: Breitsch
+  short_name:
+  type: Group::Ort
+  lft: 4
+  rgt: 5
+  email: nat@example.com
+  address: Eichenkamp 78c
+  zip_code: 8414
+  town: Nord Giulia
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_bern_breitsch) %>
+be_thun:
+  parent: be
+  name: Thun
+  short_name:
+  type: Group::Ort
+  lft: 7
+  rgt: 10
+  email: theresia_bosco@example.org
+  address: Brucknerstr. 417
+  zip_code: 2559
+  town: Neu Elaine
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_thun) %>
+be_thun_mitglieder:
+  parent: be_thun
+  name: Mitglieder
+  short_name:
+  type: Group::OrtMitglieder
+  lft: 8
+  rgt: 9
+  email: mohammed_jones@example.net
+  address: Im Rottland 872
+  zip_code: 8220
+  town: Bad Mira
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_thun) %>
+sekretariat:
+  parent: cvp
+  name: Sekretariat
+  type: Group::BundSekretariat
+  lft: 12
+  rgt: 13
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:cvp) %>
+junge:
+  parent: cvp
+  name: Junge CVP
+  short_name: Junge
+  type: Group::Vereinigung
+  lft: 14
+  rgt: 17
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:junge) %>
+junge_be:
+  parent: junge
+  name: Bern
+  short_name: BE
+  type: Group::Kanton
+  lft: 15
+  rgt: 16
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:junge_be) %>
+zh:
+  parent: cvp
+  name: Zürich
+  short_name: ZH
+  type: Group::Kanton
+  lft: 18
+  rgt: 23
+  email: zuerich@zh.ch
+  address: Tellgasse 3
+  zip_code: 8888
+  town: Zürich
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh) %>
+zh_zuerich:
+  parent: zh
+  name: Stadt Zürich
+  type: Group::Region
+  lft: 19
+  rgt: 20
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh_zuerich) %>
+zh_zurich_mitglieder:
+  parent: zh
+  name: Mitglieder
+  type: Group::KantonMitglieder
+  lft: 20
+  rgt: 21
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh) %>

@@ -12,15 +12,21 @@ admin:
   contact_data_visible: true
   primary_group: root
 
-leader:
+sekretaer:
   first_name: A
   last_name: Leader
   email: a.leader@hitobito.example.com
   contact_data_visible: true
-  primary_group: root
+  primary_group: cvp
 
-member:
-  first_name: My
-  last_name: Member
-  email: member0@hitobito.example.com
-  primary_group: root
+thuner:
+  first_name: A
+  last_name: Berner
+  email: memberbe@hitobito.example.com
+  primary_group: be_thun_mitglieder
+
+zuercher:
+  first_name: A
+  last_name: Zuercher
+  email: memberzh@hitobito.example.com
+  primary_group: zh_miglieder
