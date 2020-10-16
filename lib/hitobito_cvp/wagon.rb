@@ -23,6 +23,7 @@ module HitobitoCvp
       # rubocop:disable SingleSpaceBeforeFirstArg
       # extend application classes here
       Group.send        :include, Cvp::Group
+      Role.send         :include, Cvp::Role
       # rubocop:enable SingleSpaceBeforeFirstArg
       Event.role_types -= [Event::Role::Cook]
     end

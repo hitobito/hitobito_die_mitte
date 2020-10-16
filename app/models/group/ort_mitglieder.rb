@@ -7,8 +7,8 @@
 
 class Group::OrtMitglieder < Group
 
-  class Mitglied < Role; end
-  class SympathisantNachKantonalemStatut < Role; end
+  class Mitglied < Role::Mitglied; end
+  class SympathisantNachKantonalemStatut < Role::Mitglied; end
 
   roles Mitglied, SympathisantNachKantonalemStatut
 end

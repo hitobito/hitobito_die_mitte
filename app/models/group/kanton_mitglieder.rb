@@ -7,13 +7,8 @@
 
 class Group::KantonMitglieder < Group
 
-  class Mitglied < Role
-    self.permissions = []
-  end
-
-  class SympathisantNachKantonalemStatut < Role
-    self.permissions = []
-  end
+  class Mitglied < Role::Mitglied; end
+  class SympathisantNachKantonalemStatut < Role::Mitglied; end
 
   roles Mitglied, SympathisantNachKantonalemStatut
 end
