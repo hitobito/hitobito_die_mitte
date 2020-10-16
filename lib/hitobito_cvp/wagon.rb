@@ -26,6 +26,9 @@ module HitobitoCvp
       Role.send         :include, Cvp::Role
       # rubocop:enable SingleSpaceBeforeFirstArg
       Event.role_types -= [Event::Role::Cook]
+
+      PeopleController.send :prepend, Cvp::PeopleController
+      FilterNavigation::People.send :prepend, Cvp::FilterNavigation::People
     end
 
     initializer 'cvp.add_settings' do |_app|
