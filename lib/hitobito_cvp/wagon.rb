@@ -24,6 +24,8 @@ module HitobitoCvp
       # extend application classes here
       Group.send        :include, Cvp::Group
       Role.send         :include, Cvp::Role
+
+      RoleDecorator.send :prepend, Cvp::RoleDecorator
       # rubocop:enable SingleSpaceBeforeFirstArg
       Event.role_types -= [Event::Role::Cook]
 
