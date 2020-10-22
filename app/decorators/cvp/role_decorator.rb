@@ -14,7 +14,7 @@ module Cvp::RoleDecorator
       hierarchy = (model.group.layer_hierarchy - [model.group.layer_group])
       tags += hierarchy.collect do |group|
         link = h.link_to(h.sanitize(group.to_s), group)
-        label = "#{model} - #{group.model_name.human} #{link}"
+        label = "#{model.model_name.human} - #{group.model_name.human} #{link}"
         content_tag(:strong, label.html_safe)
       end.reverse
     end

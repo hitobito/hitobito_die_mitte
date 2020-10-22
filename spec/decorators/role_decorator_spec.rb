@@ -20,12 +20,18 @@ describe RoleDecorator, :draper_with_helpers  do
     expect(aside).to eq '<strong>Generalsekretär</strong>'
   end
 
+  it "renders normal role within a <strong> tag for ordinary role and label" do
+    roles(:sekretaer).update(label: 'General')
+    aside = RoleDecorator.new(roles(:sekretaer)).for_aside
+    expect(aside).to eq '<strong>Generalsekretär (General)</strong>'
+  end
+
   it "renders hiearchy with links for Mitglieder Role" do
+    roles(:thuner).update(label: 'Einzelmitglied')
     aside = RoleDecorator.new(roles(:thuner)).for_aside
 
-    expect(aside).to include '<strong>Mitglied</strong>'
     html = [
-      "<strong>Mitglied</strong>",
+      "<strong>Mitglied (Einzelmitglied)</strong>",
       "<strong>Mitglied - Kanton <a href=#{group_path(:be)}>Bern</a></strong>",
       "<strong>Mitglied - Schweiz <a href=#{group_path(:cvp)}>CVP/PDC/PPD</a></strong>"
     ]
