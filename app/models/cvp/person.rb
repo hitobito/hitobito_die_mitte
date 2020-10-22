@@ -54,13 +54,13 @@ module Cvp::Person
   included do
     include I18nEnums
 
-    Person::PUBLIC_ATTRS << :title << :website << :correspondance_language << :zivil_status
+    Person::PUBLIC_ATTRS << :title << :website << :correspondance_language << :civil_status
 
     CORRESPONDANCE_LANGUAGES = %w(de fr en it).freeze
     CIVIL_STATUSES = %w(single registered_partnership married divorced widowed).freeze
 
     i18n_enum :correspondance_language, CORRESPONDANCE_LANGUAGES
 
-    i18n_enum :civil_status, CIVIL_STATES
+    i18n_enum :civil_status, CIVIL_STATUSES
   end
 end
