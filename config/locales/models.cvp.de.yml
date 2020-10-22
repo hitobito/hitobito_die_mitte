@@ -7,6 +7,18 @@
 de:
   activerecord:
     models:
+      person:
+        correspondance_languages:
+          de: Deutsch
+          en: Englisch
+          fr: Französisch
+          it: Italienisch
+        civil_statuses:
+          single: Ledig
+          registered_partnership: Eingetragene Partnerschaft
+          married: Verheiratet
+          divorced: Geschieden
+          widowed: Verwitwet
 
       ### GROUPS
 
