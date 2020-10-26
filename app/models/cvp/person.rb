@@ -40,22 +40,30 @@
 #  household_key             :string(255)
 #  title                     :string(255)      not null
 #  website                   :string(255)      not null
-#  correspondance_language   :string(255)      default('de'), not null
+#  correspondence_language   :string(255)      default('de'), not null
 #  civil_status              :string(255)      default('single'), not null
 
 module Cvp::Person
   extend ActiveSupport::Concern
 
+  CIVIL_STATUSES = %w(single registered_partnership married divorced widowed).freeze
+
   included do
     include I18nEnums
 
-    Person::PUBLIC_ATTRS << :title << :website << :correspondance_language << :civil_status
+    Person::PUBLIC_ATTRS << :title << :website << :correspondence_language << :civil_status << :salutation
 
-    CORRESPONDANCE_LANGUAGES = %w(de fr en it).freeze
-    CIVIL_STATUSES = %w(single registered_partnership married divorced widowed).freeze
 
-    i18n_enum :correspondance_language, CORRESPONDANCE_LANGUAGES
+    i18n_enum :correspondence_language, Settings.application.languages
 
     i18n_enum :civil_status, CIVIL_STATUSES
+  end
+
+  def salutation_label
+    Salutation.new(self).label
+  end
+
+  def salutation_value
+    Salutation.new(self).value
   end
 end

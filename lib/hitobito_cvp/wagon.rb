@@ -30,6 +30,8 @@ module HitobitoCvp
       Event.role_types -= [Event::Role::Cook]
 
       PeopleController.send :prepend, Cvp::PeopleController
+      PeopleController.permitted_attrs += [:salutation, :title, :website,
+                                           :correspondence_language, :civil_status]
       FilterNavigation::People.send :prepend, Cvp::FilterNavigation::People
     end
 
