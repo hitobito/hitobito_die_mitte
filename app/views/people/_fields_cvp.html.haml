@@ -1,0 +1,14 @@
+= field_set_tag do
+  = f.labeled_input_field :title
+  = f.labeled_input_field :website
+  = f.labeled_collection_select :salutation, Salutation.available, :first, :last, { include_blank: true }, class: 'span6'
+  = f.labeled_collection_select(:correspondence_language,
+                                Settings.application.languages.to_hash,
+                                :first,
+                                :last,
+                                { prompt: true })
+  = f.labeled_collection_select(:civil_status,
+                                entry.civil_status_labels,
+                                :first,
+                                :last,
+                                { prompt: true })
