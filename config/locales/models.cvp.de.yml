@@ -424,6 +424,8 @@ de:
         one: Mitglied
       group/ort_praesidium/gast:
         one: Gast
+      group/ort_praesidium/adressverwalter:
+        one: Adressverwalter
       group/ort_sekretariat/leitung:
         one: Leitung
       group/ort_sekretariat/mitarbeiter:

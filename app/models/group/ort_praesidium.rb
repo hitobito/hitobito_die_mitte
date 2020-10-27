@@ -23,9 +23,13 @@ class Group::OrtPraesidium < Group
     self.permissions = []
   end
 
+  class Adressverwalter < Role
+    self.permissions = [:layer_and_below_full]
+  end
+
   class Gast < Role
     self.permissions = []
   end
 
-  roles Praesident, Vizepraesident, Kassier, Mitglied, Gast
+  roles Praesident, Vizepraesident, Kassier, Mitglied, Adressverwalter, Gast
 end
