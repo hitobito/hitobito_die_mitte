@@ -10,6 +10,17 @@ require Rails.root.join('db', 'seeds', 'support', 'person_seeder')
 
 class CvpPersonSeeder < PersonSeeder
 
+  def person_attributes(role_type)
+    attrs = super(role_type)
+
+    attrs[:title] = %w(Herr Frau).sample
+    attrs[:website] = "example.com"
+    attrs[:correspondence_language] = Settings.application.correspondence_languages.keys.sample.to_s
+    attrs[:civil_status] = Cvp::Person::CIVIL_STATUSES.sample
+    attrs[:salutation] = Salutation.available.keys.sample
+    attrs
+  end
+
   def amount(role_type)
     case role_type.name.demodulize
     when 'Member' then 3
