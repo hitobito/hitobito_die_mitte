@@ -56,7 +56,8 @@ module Cvp::Person
   included do
     include I18nEnums
 
-    Person::PUBLIC_ATTRS << :title << :website << :correspondence_language << :civil_status << :salutation
+    Person::PUBLIC_ATTRS << :title << :website << :correspondence_language <<
+                         :civil_status << :salutation
 
 
     i18n_enum :correspondence_language, Settings.application.languages

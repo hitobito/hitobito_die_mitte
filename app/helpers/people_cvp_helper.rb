@@ -18,6 +18,8 @@ module PeopleCvpHelper
   end
 
   def format_person_salutation(person)
-    t("activerecord.models.salutation.available.#{person.salutation}.label") if person.salutation.present?
+    if person.salutation.present?
+      t("activerecord.models.salutation.available.#{person.salutation}.label")
+    end
   end
 end
