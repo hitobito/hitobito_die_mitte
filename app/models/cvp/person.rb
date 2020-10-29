@@ -58,12 +58,4 @@ module Cvp::Person
 
     i18n_enum :civil_status, CIVIL_STATUSES
   end
-
-  def salutation_label
-    Salutation.new(self).label
-  end
-
-  def salutation_value
-    Salutation.new(self).value
-  end
 end

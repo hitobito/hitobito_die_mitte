@@ -10,6 +10,10 @@
 application:
   languages:
     de: Deutsch
+  correspondence_languages:
+    de: Deutsch
+    fr: Französisch
+    it: Italienisch
   logo:
     image: cvp.svg
 

@@ -3,12 +3,12 @@
   = f.labeled_input_field :website
   = f.labeled_collection_select :salutation, Salutation.available, :first, :last, { include_blank: true }, class: 'span6'
   = f.labeled_collection_select(:correspondence_language,
-                                Settings.application.languages.to_hash,
+                                Settings.application.correspondence_languages.to_hash,
                                 :first,
                                 :last,
                                 { prompt: true })
   = f.labeled_collection_select(:civil_status,
-                                entry.civil_status_labels,
+                                possible_person_civil_statuses,
                                 :first,
                                 :last,
                                 { prompt: true })
