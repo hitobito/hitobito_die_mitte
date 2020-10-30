@@ -22,6 +22,14 @@ describe PeopleController do
 
   before { sign_in(sekretaer) }
 
+  it 'should permit the cvp attributes' do
+    expect(PeopleController.permitted_attrs).to include(:title)
+    expect(PeopleController.permitted_attrs).to include(:salutation)
+    expect(PeopleController.permitted_attrs).to include(:website)
+    expect(PeopleController.permitted_attrs).to include(:correspondence_language)
+    expect(PeopleController.permitted_attrs).to include(:website)
+  end
+
   it 'GET#index lists both members on top layer' do
     get :index, params: { group_id: groups(:cvp).id }
     expect(members_filter.text).to eq 'Mitglieder (2)'
@@ -59,4 +67,32 @@ describe PeopleController do
     expect(people_table).to have(1).item
   end
 
+  describe 'PUT update' do
+    it 'updates cvp atts using patch' do
+      params = {
+        id: sekretaer.id,
+        group_id: groups(:cvp).id,
+        person: {
+          first_name: 'updated_name',
+          title: 'Frau',
+          website: 'example.com',
+          correspondence_language: 'de',
+          civil_status: 'single',
+          salutation: 'lieber_vorname'
+        }
+      }
+
+      patch :update, params: params
+
+      sekretaer.reload
+
+      expect(response).to have_http_status(302)
+      expect(sekretaer.first_name).to eq('updated_name')
+      expect(sekretaer.title).to eq('Frau')
+      expect(sekretaer.website).to eq('example.com')
+      expect(sekretaer.correspondence_language).to eq('de')
+      expect(sekretaer.civil_status).to eq('single')
+      expect(sekretaer.salutation).to eq('lieber_vorname')
+    end
+  end
 end
