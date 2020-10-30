@@ -7,7 +7,6 @@
 de:
   activerecord:
     models:
-
       ### GROUPS
 
       group/bund:
@@ -451,3 +450,53 @@ de:
       group/ort_sympathisanten/sympathisant:
         one: Sympathisant
         other: Sympathisanten
+
+      salutation:
+        one: Anrede
+        other: Anreden
+        default:
+          label: Hallo [Name]
+          value:
+            m: Hallo %{greeting_name}
+            w: Hallo %{greeting_name}
+            other: Hallo %{greeting_name}
+        available:
+          lieber_vorname:
+            label: Liebe*r [Vorname]
+            value:
+              m: Lieber %{first_name}
+              w: Liebe %{first_name}
+              other: Liebe(r) %{first_name}
+          lieber_titel_nachname:
+            label: Liebe*r Frau*Herr [Titel] [Nachname]
+            value:
+              m: Lieber Herr %{title_last_name}
+              w: Liebe Frau %{title_last_name}
+              other: Liebe*r %{title_last_name}
+          sehr_geehrter_titel_nachname:
+            label: Sehr geehrte*r Frau*Herr [Titel] [Nachname]
+            value:
+              m: Sehr geehrter Herr %{title_last_name}
+              w: Sehr geehrte Frau %{title_last_name}
+              other: Sehr geehrte*r %{title_last_name}
+
+    attributes:
+      person:
+        salutation: Anrede
+        salutation_value: Anrede
+        title: Titel
+        website: Webseite
+        correspondence_language: Korrespondenzsprache
+        civil_status: Zivilstatus
+        correspondence_languages:
+          de: Deutsch
+          en: Englisch
+          fr: Französisch
+          it: Italienisch
+        civil_statuses:
+          single: Ledig
+          registered_partnership: Eingetragene Partnerschaft
+          married: Verheiratet
+          divorced: Geschieden
+          widowed: Verwittwet
+

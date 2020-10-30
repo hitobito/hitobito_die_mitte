@@ -6,6 +6,12 @@
 #  https://github.com/hitobito/hitobito_cvp.
 
 module Cvp::PeopleController
+  extend ActiveSupport::Concern
+
+  def self.prepended(base)
+    base.permitted_attrs += [:title, :salutation, :website,
+                             :correspondence_language, :civil_status]
+  end
 
   def list_filter_args
     return super unless group.layer? && no_filter_active?
@@ -16,5 +22,4 @@ module Cvp::PeopleController
   def no_filter_active?
     %w(filters filter_id).none? { |k| params[k].present? }
   end
-
 end
