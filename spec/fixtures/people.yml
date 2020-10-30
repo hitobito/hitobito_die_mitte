@@ -11,6 +11,11 @@ admin:
   gender: m
   contact_data_visible: true
   primary_group: root
+  title: 'Frau'
+  website: 'hitobito.example.com'
+  correspondence_language: 'de'
+  civil_status: 'widowed'
+  salutation: 'lieber_titel_nachname'
 
 sekretaer:
   first_name: A
@@ -18,15 +23,30 @@ sekretaer:
   email: a.leader@hitobito.example.com
   contact_data_visible: true
   primary_group: cvp
+  title: 'Herr'
+  website: 'hitobito.example.com'
+  correspondence_language: 'en'
+  civil_status: 'divorced'
+  salutation: 'lieber_titel_nachname'
 
 thuner:
   first_name: A
   last_name: Berner
   email: memberbe@hitobito.example.com
   primary_group: be_thun_mitglieder
+  title: 'Herr'
+  website: 'hitobito.example.com'
+  correspondence_language: 'de'
+  civil_status: 'married'
+  salutation: 'lieber_vorname'
 
 zuercher:
   first_name: A
   last_name: Zuercher
   email: memberzh@hitobito.example.com
   primary_group: zh_miglieder
+  title: 'Herr'
+  website: 'hitobito.example.com'
+  correspondence_language: 'de'
+  civil_status: 'single'
+  salutation: 'lieber_titel_nachname'
