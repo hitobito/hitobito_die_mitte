@@ -7,6 +7,7 @@
 
 
 require Rails.root.join('db', 'seeds', 'support', 'person_seeder')
+require Rails.root.join('db', 'seeds', 'support', 'person_duplicate_seeder')
 
 class CvpPersonSeeder < PersonSeeder
 
@@ -54,4 +55,8 @@ seeder.seed_all_roles
 bund = Group::BundSekretariat.first
 devs.each do |name, email|
   seeder.seed_developer(name, email, bund, Group::BundSekretariat::Mitarbeiter)
+end
+
+5.times do
+  PersonDuplicateSeeder.new.seed_duplicates
 end
