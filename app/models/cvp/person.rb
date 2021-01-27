@@ -60,7 +60,7 @@ module Cvp::Person
                          :civil_status << :salutation
 
 
-    i18n_enum :correspondence_language, Settings.application.languages
+    i18n_enum :correspondence_language, Settings.application.correspondence_languages.to_hash.keys.collect(&:to_s)
 
     i18n_enum :civil_status, CIVIL_STATUSES
   end
