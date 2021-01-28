@@ -10,7 +10,7 @@ module Cvp::Export::Pdf
     module Content
 
       def salutation(recipient)
-        Salutation.new(recipient).value
+        recipient.salutation_value
       end
 
     end
