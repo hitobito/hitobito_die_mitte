@@ -32,6 +32,7 @@ class Salutation
     I18n.translate("#{I18N_KEY_PREFIX}.#{salutation}.value.#{gender}",
                    first_name: person.first_name,
                    last_name: person.last_name,
+                   greeting_name: person.greeting_name,
                    company_name: person.company_name,
                    title: person.title,
                    title_last_name: "#{person.title} #{person.last_name}".strip)
