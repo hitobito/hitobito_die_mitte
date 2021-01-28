@@ -34,7 +34,8 @@ module HitobitoCvp
       FilterNavigation::People.send :prepend, Cvp::FilterNavigation::People
 
       Export::Pdf::Messages::Letter::Content.placeholders << :salutation
-      Export::Pdf::Messages::Letter::Content.send :prepend, Cvp::Export::Pdf::Messages::Letter::Content
+      Export::Pdf::Messages::Letter::Content.send :prepend,
+                                                  Cvp::Export::Pdf::Messages::Letter::Content
     end
 
     initializer 'cvp.add_settings' do |_app|
