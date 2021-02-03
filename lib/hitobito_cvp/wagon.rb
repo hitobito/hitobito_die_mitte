@@ -24,6 +24,7 @@ module HitobitoCvp
       # extend application classes here
       Group.send        :include, Cvp::Group
       Role.send         :include, Cvp::Role
+      Person.send       :include, Cvp::Person
 
       RoleDecorator.send :prepend, Cvp::RoleDecorator
       # rubocop:enable SingleSpaceBeforeFirstArg
@@ -31,6 +32,10 @@ module HitobitoCvp
 
       PeopleController.send :prepend, Cvp::PeopleController
       FilterNavigation::People.send :prepend, Cvp::FilterNavigation::People
+
+      Export::Pdf::Messages::Letter::Content.placeholders << :salutation
+      Export::Pdf::Messages::Letter::Content.send :prepend,
+                                                  Cvp::Export::Pdf::Messages::Letter::Content
     end
 
     initializer 'cvp.add_settings' do |_app|

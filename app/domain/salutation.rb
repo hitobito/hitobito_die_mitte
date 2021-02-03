@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+#  Copyright (c) 2021, CVP Schweiz. This file is part of
+#  hitobito_cvp and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_cvp.
+
 class Salutation
 
   I18N_KEY_PREFIX = 'activerecord.models.salutation'.freeze
@@ -27,6 +32,7 @@ class Salutation
     I18n.translate("#{I18N_KEY_PREFIX}.#{salutation}.value.#{gender}",
                    first_name: person.first_name,
                    last_name: person.last_name,
+                   greeting_name: person.greeting_name,
                    company_name: person.company_name,
                    title: person.title,
                    title_last_name: "#{person.title} #{person.last_name}".strip)

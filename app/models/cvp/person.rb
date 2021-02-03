@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2012-2020, CVP Schweiz. This file is part of
+#  Copyright (c) 2012-2021, CVP Schweiz. This file is part of
 #  hitobito_cvp and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
@@ -60,8 +60,17 @@ module Cvp::Person
                          :civil_status << :salutation
 
 
-    i18n_enum :correspondence_language, Settings.application.languages
+    i18n_enum :correspondence_language, Settings.application
+                                                .correspondence_languages
+                                                .to_hash
+                                                .keys
+                                                .collect(&:to_s)
 
     i18n_enum :civil_status, CIVIL_STATUSES
+
+    def salutation_value
+      Salutation.new(self).value
+    end
+
   end
 end

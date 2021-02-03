@@ -14,7 +14,7 @@ class CvpPersonSeeder < PersonSeeder
   def person_attributes(role_type)
     attrs = super(role_type)
 
-    attrs[:title] = %w(Herr Frau).sample
+    attrs[:title] = ['', '', '', '', '', '', '', '', 'Dr.', 'Prof.'].sample
     attrs[:website] = "example.com"
     attrs[:correspondence_language] = Settings.application.correspondence_languages.keys.sample.to_s
     attrs[:civil_status] = Cvp::Person::CIVIL_STATUSES.sample
