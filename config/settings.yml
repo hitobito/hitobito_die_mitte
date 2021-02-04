@@ -10,6 +10,8 @@
 application:
   languages:
     de: Deutsch
+    fr: Français
+    it: Italiano
   correspondence_languages:
     de: Deutsch
     fr: Französisch
