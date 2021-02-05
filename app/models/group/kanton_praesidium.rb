@@ -23,5 +23,9 @@ class Group::KantonPraesidium < Group
     self.permissions = []
   end
 
-  roles Praesident, Vizepraesident, Mitglied, Gast
+  class Kassier < Role
+    self.permissions = [:finance]
+  end
+
+  roles Praesident, Vizepraesident, Mitglied, Gast, Kassier
 end

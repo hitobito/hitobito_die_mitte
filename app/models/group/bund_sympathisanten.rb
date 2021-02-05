@@ -5,17 +5,9 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_cvp.
 
-class Group::OrtSekretariat < Group
+class Group::BundSympathisanten < Group
 
-  class Leitung < Role
-    self.permissions = [:layer_full]
-  end
+  class Sympathisant < Role::Mitglied; end
 
-  class Mitarbeiter < Role
-    self.permissions = [:layer_full]
-  end
-
-  class Webadministrator < Role; end
-
-  roles Leitung, Mitarbeiter, Webadministrator
+  roles Sympathisant
 end

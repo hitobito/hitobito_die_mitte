@@ -17,13 +17,13 @@ describe RoleDecorator, :draper_with_helpers  do
 
   it "renders normal role within a <strong> tag for ordinary role" do
     aside = RoleDecorator.new(roles(:sekretaer)).for_aside
-    expect(aside).to eq '<strong>Generalsekretär</strong>'
+    expect(aside).to eq '<strong>Leitung</strong>'
   end
 
   it "renders normal role within a <strong> tag for ordinary role and label" do
     roles(:sekretaer).update(label: 'General')
     aside = RoleDecorator.new(roles(:sekretaer)).for_aside
-    expect(aside).to eq '<strong>Generalsekretär (General)</strong>'
+    expect(aside).to eq '<strong>Leitung (General)</strong>'
   end
 
   it "renders hiearchy with links for Mitglieder Role" do

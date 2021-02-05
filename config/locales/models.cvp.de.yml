@@ -39,6 +39,9 @@ de:
       group/bund_mitglieder:
         one: Mitglieder
         other: Mitglieder
+      group/bund_sympathisanten:
+        one: Sympathisanten
+        other: Sympathisanten
 
       group/kanton:
         one: Kanton
@@ -98,10 +101,22 @@ de:
       group/vereinigung_externe_kontakte:
         one: Externe Kontakte
         other: Externe Kontakte
+      group/vereinigung_mitglieder:
+        one: Mitglieder
+        other: Mitglieder
+      group/vereinigung_sympathisanten:
+        one: Sympathisanten
+        other: Sympathisanten
+      group/vereinigung_delegierte:
+        one: Delegierte
+        other: Delegierte
 
       group/region:
         one: Region
         other: Regionen
+      group/region_gewaehlte:
+        one: Gewählte
+        other: Gewählte
       group/region_parteigremium:
         one: Parteigremium
         other: Parteigremium
@@ -117,6 +132,15 @@ de:
       group/region_delegierte:
         one: Delegierte
         other: Delegierte
+      group/region_mitglieder:
+        one: Mitglieder
+        other: Mitglieder
+      group/region_sympathisanten:
+        one: Sympathisanten
+        other: Sympathisanten
+      group/region_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
 
       group/ort:
         one: Ortspartei
@@ -146,33 +170,26 @@ de:
         one: Sympathisanten
         other: Sympathisanten
 
-
       ### ROLES
 
       group/bund_gewaehlte/bundesrat:
         one: Bundesrat
-        other: Bundesräte
+      group/bund_gewaehlte/bundeskanzler:
+        one: Bundeskanzler
       group/bund_gewaehlte/staenderat:
         one: Ständerat
-        other: Ständeräte
       group/bund_gewaehlte/nationalrat:
         one: Nationalrat
-        other: Nationalräte
       group/bund_gewaehlte/vollamt_bundesrichter:
         one: Bundesrichter (Vollamt)
-        other: Bundesrichter (Vollamt)
       group/bund_gewaehlte/nebenamt_bundes_richter:
         one: Bundesrichter (Nebenamt)
-        other: Bundesrichter (Nebenamt)
       group/bund_gewaehlte/bundesverwaltungsrichter:
         one: Bundesverwaltungsrichter
-        other: Bundesverwaltungsrichter
       group/bund_gewaehlte/bundespatentrichter:
         one: Bundespatentrichter
-        other: Bundespatentrichter
       group/bund_gewaehlte/bundesstrafrichter:
         one: Bundesstrafrichter
-        other: Bundesstrafrichter
       group/bund_parteigremium/praesident:
         one: Präsident
       group/bund_parteigremium/leitung:
@@ -191,14 +208,16 @@ de:
         one: Mitglied
       group/bund_praesidium/gast:
         one: Gast
-      group/bund_sekretariat/generalsekretaer:
-        one: Generalsekretär
+      group/bund_sekretariat/leitung:
+        one: Leitung
       group/bund_sekretariat/mitarbeiter:
         one: Mitarbeiter
       group/bund_sekretariat/it_support:
         one: It-Support
       group/bund_sekretariat/kassier:
         one: Kassier
+      group/bund_sekretariat/webadministrator:
+        one: Webadministrator
       group/bund_kommission/praesident:
         one: Präsident
       group/bund_kommission/leitung:
@@ -217,6 +236,8 @@ de:
         one: Delegierte
       group/bund_delegierte/ersatzdelegierte:
         one: Ersatzdelegierte
+      group/bund_delegierte/delegierte_von_amtes_wegen:
+        one: Delegierte von Amtes wegen
       group/bund_externe_kontakte/medien:
         one: Medien
       group/bund_externe_kontakte/spender:
@@ -225,29 +246,25 @@ de:
         one: Kontakt
       group/bund_mitglieder/mitglied:
         one: Mitglied
-      group/bund_mitglieder/sympathisant:
+      group/bund_sympathisanten/sympathisant:
         one: Sympathisant
 
       group/kanton_gewaehlte/fraktionschef:
         one: Fraktionschef
       group/kanton_gewaehlte/kantonale_exekutive:
         one: Kantonale Exekutive
-        other: Kantonale Exekutiven
       group/kanton_gewaehlte/kantonale_legislative:
         one: Kantonale Legislative
-        other: Kantonale Legislativen
       group/kanton_gewaehlte/mitglied_kantonales_gericht_erste_instanz:
         one: Mitglied kantonales Gericht erste Instanz
-        other: Mitglieder kantonales Gericht erste Instanz
       group/kanton_gewaehlte/mitglied_kantonales_gericht_zweite_instanz:
         one: Mitglied kantonales Gericht zweite Instanz
-        other: Mitglieder kantonales Gericht zweite Instanz
       group/kanton_gewaehlte/staatsanwaltschaft:
         one: Staatsanwaltschaft
-        other: Staatsanwaltschaften
       group/kanton_gewaehlte/parlamentarische_geschaeftsfuehrung:
         one: Parlamentarische Geschaeftsfuehrung
-        other: Parlamentarische Geschaeftsfuehrungen
+      group/kanton_gewaehlte/weitere_mandate:
+        one: Weitere Mandate
       group/kanton_parteigremium/praesident:
         one: Präsident
       group/kanton_parteigremium/leitung:
@@ -276,6 +293,8 @@ de:
         one: Leitung
       group/kanton_kommission/mitglied:
         one: Mitglied
+      group/kanton_sekretariat/webadministrator:
+        one: Webadministrator
       group/kanton_arbeitsgruppe/praesident:
         one: Präsident
       group/kanton_arbeitsgruppe/leitung:
@@ -292,6 +311,8 @@ de:
         one: Kontakt
       group/kanton_delegierte/delegierte:
         one: Delegierte
+      group/kanton_delegierte/delegierte_von_amtes_wegen:
+        one: Delegierte von Amtes wegen
       group/kanton_delegierte/ersatzdelegierte:
         one: Ersatzdelegierte
       group/kanton_mitglieder/mitglied:
@@ -300,16 +321,13 @@ de:
         one: Sympathisant nach kant. Statut
       group/kanton_sympathisanten/sympathisant:
         one: Sympathisant
-        other: Sympathisanten
 
       group/vereinigung_gewaehlte/fraktionschef:
         one: Fraktionschef
       group/vereinigung_gewaehlte/vereinigung_exekutive:
         one: Vereinigung Exekutive
-        other: Vereinigung Exekutiven
       group/vereinigung_gewaehlte/vereinigung_legislative:
         one: Vereinigung Legislative
-        other: Vereinigung Legislativen
       group/vereinigung_parteigremium/praesident:
         one: Präsident
       group/vereinigung_parteigremium/leitung:
@@ -330,6 +348,8 @@ de:
         one: Leitung
       group/vereinigung_sekretariat/mitarbeiter:
         one: Mitarbeiter
+      group/vereinigung_sekretariat/webadministrator:
+        one: Webadministrator
       group/vereinigung_kommission/praesident:
         one: Präsident
       group/vereinigung_kommission/mitglied:
@@ -348,7 +368,25 @@ de:
         one: Spender
       group/vereinigung_externe_kontakte/kontakt:
         one: Kontakt
+      group/vereinigung_mitglieder/mitglied:
+        one: Mitglieder
+      group/vereinigung_sympathisanten/sympathisant:
+        one: Sympathisant
+      group/vereinigung_delegierte/delegierte:
+        one: Delegierte
+      group/vereinigung_delegierte/ersatzdelegierte:
+        one: Ersatzdelegierte
+      group/vereinigung_delegierte/delegierte_von_amtes_wegen:
+        one: Delegierte von Amtes wegen
 
+      group/region_gewaehlte/fraktionschef:
+        one: Fraktionschef
+      group/region_gewaehlte/region_exekutive:
+        one: Region Exekutive
+      group/region_gewaehlte/region_legislative:
+        one: Region Legislative
+      group/region_gewaehlte/region_judikative:
+        one: Region Judikative
       group/region_parteigremium/praesident:
         one: Präsident
       group/region_parteigremium/leitung:
@@ -369,6 +407,8 @@ de:
         one: Leitung
       group/region_sekretariat/mitarbeiter:
         one: Mitarbeiter
+      group/region_sekretariat/webadministrator:
+        one: Webadministrator
       group/region_kommission/praesident:
         one: Präsident
       group/region_kommission/mitglied:
@@ -385,6 +425,16 @@ de:
         one: Delegierte
       group/region_delegierte/ersatzdelegierte:
         one: Ersatzdelegierte
+      group/region_mitglieder/mitglied:
+        one: Mitglieder
+      group/region_sympathisanten/sympathisant:
+        one: Sympathisant
+      group/region_externe_kontakte/medien:
+        one: Medien
+      group/region_externe_kontakte/spender:
+        one: Spender
+      group/region_externe_kontakte/kontakt:
+        one: Kontakt
 
       group/ort_gewaehlte/fraktionschef:
         one: Fraktionschef
@@ -392,19 +442,14 @@ de:
         one: Mitglied
       group/ort_gewaehlte/kommunale_exekutive:
         one: Kommunale Exekutive
-        other: Kommunale Exekutiven
       group/ort_gewaehlte/kommunale_legislative:
         one: Kommunale Legislative
-        other: Kommunale Legislativen
       group/ort_gewaehlte/schulpflegekommission:
         one: Schulpflege/- kommission
-        other: Schulpflege/- kommissionen
       group/ort_gewaehlte/rechnungspruefungskommission:
         one: Rechnungsprüfungskommission
-        other: Rechnungsprüfungskommissionen
       group/ort_gewaehlte/mitglied_weitere_gemeinde_kommissionen:
         one: Mitglied weitere Gemeindekommissionen
-        other: Mitglieder weitere Gemeindekommissionen
       group/ort_parteigremium/praesident:
         one: Präsident
       group/ort_parteigremium/leitung:
@@ -433,6 +478,8 @@ de:
         one: Präsident
       group/ort_arbeitsgruppe/leitung:
         one: Leitung
+      group/ort_sekretariat/webadministrator:
+        one: Webadministrator
       group/ort_arbeitsgruppe/mitglied:
         one: Mitglied
       group/ort_arbeitsgruppe/gast:
@@ -449,7 +496,6 @@ de:
         one: Sympathisant nach kant. Statut
       group/ort_sympathisanten/sympathisant:
         one: Sympathisant
-        other: Sympathisanten
 
       salutation:
         one: Anrede

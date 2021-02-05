@@ -7,7 +7,7 @@
 
 class Group::BundSekretariat < Group
 
-  class Generalsekretaer < Role
+  class Leitung < Role
     self.permissions = [:layer_and_below_full, :contact_data, :admin]
   end
 
@@ -23,5 +23,7 @@ class Group::BundSekretariat < Group
     self.permissions = [:finance]
   end
 
-  roles Generalsekretaer, Mitarbeiter, ItSupport, Kassier
+  class Webadministrator < Role; end
+
+  roles Leitung, Mitarbeiter, ItSupport, Kassier, Webadministrator
 end

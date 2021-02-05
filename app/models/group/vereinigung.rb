@@ -18,6 +18,9 @@ class Group::Vereinigung < Group
            Group::VereinigungKommission,
            Group::VereinigungArbeitsgruppe,
            Group::VereinigungExterneKontakte,
+           Group::VereinigungMitglieder,
+           Group::VereinigungSympathisanten,
+           Group::VereinigungDelegierte,
 
            Group::Kanton
 

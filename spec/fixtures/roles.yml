@@ -7,7 +7,7 @@
 sekretaer:
   person: sekretaer
   group: sekretariat
-  type: Group::BundSekretariat::Generalsekretaer
+  type: Group::BundSekretariat::Leitung
 
 thuner:
   person: thuner
