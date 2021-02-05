@@ -1,4 +1,5 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 #  Copyright (c) 2012-2020, CVP Schweiz. This file is part of
 #  hitobito_cvp and licensed under the Affero General Public License version 3
@@ -14,19 +15,18 @@ module HitobitoCvp
     app_requirement '>= 0'
 
     # Add a load path for this specific wagon
-    config.autoload_paths += %W( #{config.root}/app/abilities
+    config.autoload_paths += %W[ #{config.root}/app/abilities
                                  #{config.root}/app/domain
-                                 #{config.root}/app/jobs
-                               )
+                                 #{config.root}/app/jobs ]
 
     config.to_prepare do
-      # rubocop:disable SingleSpaceBeforeFirstArg
       # extend application classes here
       Group.send        :include, Cvp::Group
       Role.send         :include, Cvp::Role
       Person.send       :include, Cvp::Person
 
       RoleDecorator.send :prepend, Cvp::RoleDecorator
+      GroupDecorator.send :prepend, Cvp::GroupDecorator
       # rubocop:enable SingleSpaceBeforeFirstArg
       Event.role_types -= [Event::Role::Cook]
 
@@ -36,6 +36,15 @@ module HitobitoCvp
       Export::Pdf::Messages::Letter::Content.placeholders << :salutation
       Export::Pdf::Messages::Letter::Content.send :prepend,
                                                   Cvp::Export::Pdf::Messages::Letter::Content
+      ## Customizations for migration
+      Group.all_types.each do |type|
+        # next if type.layer?
+        unless type.const_defined?("#{type}::Merkmal")
+          merkmal = Class.new(Role)
+          type.const_set('Merkmal', merkmal)
+          type.role_types += [merkmal]
+        end
+      end
     end
 
     initializer 'cvp.add_settings' do |_app|
