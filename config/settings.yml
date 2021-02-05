@@ -15,9 +15,9 @@ application:
     fr: Französisch
     it: Italienisch
   logo:
-    image: cvp.svg
+    image: die_mitte.svg
     width: 80
-    height: 50
+    height: 68
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
