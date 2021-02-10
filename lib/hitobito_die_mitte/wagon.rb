@@ -1,13 +1,11 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
-#  Copyright (c) 2012-2020, CVP Schweiz. This file is part of
-#  hitobito_cvp and licensed under the Affero General Public License version 3
+#  Copyright (c) 2021, Die Mitte. This file is part of
+#  hitobito_die_mitte and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_cvp.
+#  https://github.com/hitobito/hitobito_die_mitte.
 
-
-module HitobitoCvp
+module HitobitoDieMitte
   class Wagon < Rails::Engine
     include Wagons::Wagon
 
@@ -21,21 +19,21 @@ module HitobitoCvp
 
     config.to_prepare do
       # extend application classes here
-      Group.send        :include, Cvp::Group
-      Role.send         :include, Cvp::Role
-      Person.send       :include, Cvp::Person
+      Group.send        :include, DieMitte::Group
+      Role.send         :include, DieMitte::Role
+      Person.send       :include, DieMitte::Person
 
-      RoleDecorator.send :prepend, Cvp::RoleDecorator
-      GroupDecorator.send :prepend, Cvp::GroupDecorator
+      RoleDecorator.send :prepend, DieMitte::RoleDecorator
+      GroupDecorator.send :prepend, DieMitte::GroupDecorator
       # rubocop:enable SingleSpaceBeforeFirstArg
       Event.role_types -= [Event::Role::Cook]
 
-      PeopleController.send :prepend, Cvp::PeopleController
-      FilterNavigation::People.send :prepend, Cvp::FilterNavigation::People
+      PeopleController.send :prepend, DieMitte::PeopleController
+      FilterNavigation::People.send :prepend, DieMitte::FilterNavigation::People
 
       Export::Pdf::Messages::Letter::Content.placeholders << :salutation
       Export::Pdf::Messages::Letter::Content.send :prepend,
-                                                  Cvp::Export::Pdf::Messages::Letter::Content
+                                                  DieMitte::Export::Pdf::Messages::Letter::Content
       ## Customizations for migration
       Group.all_types.each do |type|
         # next if type.layer?
@@ -47,12 +45,12 @@ module HitobitoCvp
       end
     end
 
-    initializer 'cvp.add_settings' do |_app|
+    initializer 'die_mitte.add_settings' do |_app|
       Settings.add_source!(File.join(paths['config'].existent, 'settings.yml'))
       Settings.reload!
     end
 
-    initializer 'cvp.add_inflections' do |_app|
+    initializer 'die_mitte.add_inflections' do |_app|
       ActiveSupport::Inflector.inflections do |inflect|
         # inflect.irregular 'census', 'censuses'
       end

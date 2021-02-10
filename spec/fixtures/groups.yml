@@ -1,12 +1,12 @@
-#  Copyright (c) 2012-2020, CVP Schweiz. This file is part of
-#  hitobito_cvp and licensed under the Affero General Public License version 3
+#  Copyright (c) 2021, Die Mitte. This file is part of
+#  hitobito_die_mitte and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_cvp.
+#  https://github.com/hitobito/hitobito_die_mitte.
 
 ---
-cvp:
-  name: CVP/PDC/PPD
-  short_name: CVP
+die_mitte:
+  name: Die Mitte
+  short_name: die-mitte
   type: Group::Bund
   lft: 1
   rgt: 24
@@ -14,9 +14,9 @@ cvp:
   address: Schellingstr. 8
   zip_code: 5692
   town: Damianburg
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:cvp) %>
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:die_mitte) %>
 be:
-  parent: cvp
+  parent: die_mitte
   name: Bern
   short_name: BE
   type: Group::Kanton
@@ -76,14 +76,14 @@ be_thun_mitglieder:
   town: Bad Mira
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_thun) %>
 sekretariat:
-  parent: cvp
+  parent: die_mitte
   name: Sekretariat
   type: Group::BundSekretariat
   lft: 12
   rgt: 13
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:cvp) %>
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:die_mitte) %>
 junge:
-  parent: cvp
+  parent: die_mitte
   name: Junge CVP
   short_name: Junge
   type: Group::Vereinigung
@@ -99,7 +99,7 @@ junge_be:
   rgt: 16
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:junge_be) %>
 zh:
-  parent: cvp
+  parent: die_mitte
   name: Zürich
   short_name: ZH
   type: Group::Kanton
