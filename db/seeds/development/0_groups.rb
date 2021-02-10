@@ -21,7 +21,7 @@ if bund.address.blank?
 end
 
 vereinigungen = Group::Vereinigung.seed(:name, :parent_id,
-  {name: 'Junge CVP',
+  {name: 'Die junge Mitte',
    short_name: 'Junge',
    parent_id: bund.id},
 
