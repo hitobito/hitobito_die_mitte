@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2012-2021, CVP Schweiz. This file is part of
-#  hitobito_cvp and licensed under the Affero General Public License version 3
+#  Copyright (c) 2021, Die Mitte. This file is part of
+#  hitobito_die_mitte and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_cvp.
+#  https://github.com/hitobito/hitobito_die_mitte.
 
 # Table name: people
 #
@@ -48,7 +48,7 @@
 #  correspondence_language   :string(255)      default('de'), not null
 #  civil_status              :string(255)      default('single'), not null
 
-module Cvp::Person
+module DieMitte::Person
   extend ActiveSupport::Concern
 
   CIVIL_STATUSES = %w(single registered_partnership married divorced widowed).freeze

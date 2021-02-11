@@ -1,15 +1,14 @@
-//  Copyright (c) 2012-2018, Schweizer Blasmusikverband. This file is part of
-//  hitobito_sbv and licensed under the Affero General Public License version 3
+//  Copyright (c) 2021, Die Mitte. This file is part of
+//  hitobito_die_mitte and licensed under the Affero General Public License version 3
 //  or later. See the COPYING file at the top-level directory or at
-//  https://github.com/hitobito/hitobito_sbv.
+//  https://github.com/hitobito/hitobito_die_mitte.
 
-
-$cvp_color_a:           #EF7D00;
-$cvp_color_b:           lighten($cvp_color_a, 10%);
-$cvp_color_c:           lighten($cvp_color_a, 10%);
-$cvp_color_d:           lighten($cvp_color_a, 10%);
-$cvp_color_e:           lighten($cvp_color_a, 10%);
-$cvp_color_f:           #333333;
+$die_mitte_color_a:           #EF7D00;
+$die_mitte_color_b:           lighten($die_mitte_color_a, 10%);
+$die_mitte_color_c:           lighten($die_mitte_color_a, 10%);
+$die_mitte_color_d:           lighten($die_mitte_color_a, 10%);
+$die_mitte_color_e:           lighten($die_mitte_color_a, 10%);
+$die_mitte_color_f:           #333333;
 
 /* Bootstrap variable definition here */
 
@@ -28,19 +27,19 @@ $white:                 #fff !default;
 
 // Colors
 // ----------------------------
-$blue:                  $cvp_color_a!default;
+$blue:                  $die_mitte_color_a!default;
 $blueDark:              darken($blue, 10%) !default;
 $green:                 #8DB850 !default;
 $greenDark:             darken($green, 10%) !default;
 
-$orange:                lighten($cvp_color_b, 10%) !default;
-$orangeDark:            $cvp_color_b;
-$purple:                $cvp_color_c;
-$purpleDark:            darken($cvp_color_c, 10%) !default;
+$orange:                lighten($die_mitte_color_b, 10%) !default;
+$orangeDark:            $die_mitte_color_b;
+$purple:                $die_mitte_color_c;
+$purpleDark:            darken($die_mitte_color_c, 10%) !default;
 
 $red:                   $orange !default;
 
-$textColor:             $cvp_color_f !default;
+$textColor:             $die_mitte_color_f !default;
 $borderColor:           $grayLight !default;
 
 $pageBackground:        #B6B6B6;
@@ -48,10 +47,10 @@ $contentBackground:     $grayLight;
 $footerBackground:      darken(#B6B6B6, 30%);
 $bodyBackground:        $footerBackground !default;
 
-$focusColor:            $cvp_color_c;
+$focusColor:            $die_mitte_color_c;
 $shadowColor:           darken($pageBackground, 10%);
-$linkColor:             $cvp_color_a !default;
-$linkColorHover:        $cvp_color_d !default;
+$linkColor:             $die_mitte_color_a !default;
+$linkColorHover:        $die_mitte_color_d !default;
 
 $footerColor:           $white;
 $footerColorHover:      $white;

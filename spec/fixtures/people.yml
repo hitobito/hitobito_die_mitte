@@ -1,8 +1,7 @@
-#  Copyright (c) 2012-2020, CVP Schweiz. This file is part of
-#  hitobito_cvp and licensed under the Affero General Public License version 3
+#  Copyright (c) 2021, Die Mitte. This file is part of
+#  hitobito_die_mitte and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_cvp.
-
+#  https://github.com/hitobito/hitobito_die_mitte.
 
 admin:
   first_name: Chief
@@ -22,7 +21,7 @@ sekretaer:
   last_name: Leader
   email: a.leader@hitobito.example.com
   contact_data_visible: true
-  primary_group: cvp
+  primary_group: die_mitte
   title: 'Herr'
   website: 'hitobito.example.com'
   correspondence_language: 'en'

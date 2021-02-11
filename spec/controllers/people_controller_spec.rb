@@ -1,10 +1,9 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
-#  Copyright (c) 2012-2020, CVP Schweiz. This file is part of
-#  hitobito_cvp and licensed under the Affero General Public License version 3
+#  Copyright (c) 2021, Die Mitte. This file is part of
+#  hitobito_die_mitte and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_cvp.
-
+#  https://github.com/hitobito/hitobito_die_mitte.
 
 require 'spec_helper'
 
@@ -22,7 +21,7 @@ describe PeopleController do
 
   before { sign_in(sekretaer) }
 
-  it 'should permit the cvp attributes' do
+  it 'should permit the die_mitte attributes' do
     expect(PeopleController.permitted_attrs).to include(:title)
     expect(PeopleController.permitted_attrs).to include(:salutation)
     expect(PeopleController.permitted_attrs).to include(:website)
@@ -31,7 +30,7 @@ describe PeopleController do
   end
 
   it 'GET#index lists both members on top layer' do
-    get :index, params: { group_id: groups(:cvp).id }
+    get :index, params: { group_id: groups(:die_mitte).id }
     expect(members_filter.text).to eq 'Mitglieder (2)'
     expect(members_filter[:class]).to eq 'active'
     expect(custom_filter[:class]).not_to eq 'active'
@@ -42,7 +41,7 @@ describe PeopleController do
 
   it 'GET#index accepts filter params and lists only single member' do
     roles = { role_type_ids: Group::KantonMitglieder::Mitglied.id }
-    get :index, params: { group_id: groups(:cvp).id, filters: { role: roles }, range: 'deep' }
+    get :index, params: { group_id: groups(:die_mitte).id, filters: { role: roles }, range: 'deep' }
 
     expect(custom_filter[:class]).to eq 'dropdown active'
     expect(members_filter.text).to eq 'Mitglieder (2)'
@@ -68,10 +67,10 @@ describe PeopleController do
   end
 
   describe 'PUT update' do
-    it 'updates cvp atts using patch' do
+    it 'updates die_mitte atts using patch' do
       params = {
         id: sekretaer.id,
-        group_id: groups(:cvp).id,
+        group_id: groups(:die_mitte).id,
         person: {
           first_name: 'updated_name',
           title: 'Frau',
