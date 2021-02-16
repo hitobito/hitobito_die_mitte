@@ -3,6 +3,8 @@
 application:
   languages:
     de: Deutsch
+    fr: Französisch
+    it: Italienisch
   correspondence_languages:
     de: Deutsch
     fr: Französisch
