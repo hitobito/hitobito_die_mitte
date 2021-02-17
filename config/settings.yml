@@ -1,23 +1,18 @@
-#  Copyright (c) 2012-2020, CVP Schweiz. This file is part of
-#  hitobito_cvp and licensed under the Affero General Public License version 3
-#  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_cvp.
-
-
-
-# Settings relevant for the hitobito_cvp wagon
+# die mitte wagon
 # Overrides settings from the main application
 application:
   languages:
     de: Deutsch
+    fr: Französisch
+    it: Italienisch
   correspondence_languages:
     de: Deutsch
     fr: Französisch
     it: Italienisch
   logo:
-    image: cvp.svg
+    image: die_mitte.svg
     width: 80
-    height: 50
+    height: 68
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
@@ -28,3 +23,6 @@ root_email: hitobito-cvp@puzzle.ch
 
 messages:
   enable_writing: true
+
+assignments:
+  enabled: true
