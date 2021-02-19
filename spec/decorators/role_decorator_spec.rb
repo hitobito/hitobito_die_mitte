@@ -11,7 +11,7 @@ describe RoleDecorator, :draper_with_helpers  do
   include Rails.application.routes.url_helpers
 
   def group_path(name)
-    path = Rails.application.routes.url_helpers.group_path(groups(name))
+    path = Rails.application.routes.url_helpers.group_path(groups(name), locale: :de)
     "\"#{path}\""
   end
 
