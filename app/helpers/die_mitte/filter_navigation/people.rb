@@ -12,8 +12,12 @@ module DieMitte::FilterNavigation::People
 
     if group.layer?
       member_list = MemberList.new(group.layer_group, template.current_user)
-      item(member_list.name, template.group_people_path, member_list.count)
+      item(member_list.name, template.group_people_path(group), member_list.count)
     end
+  end
+
+  def visible_role_types?(types)
+    group.layer? ? false : super(types)
   end
 
 end
