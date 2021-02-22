@@ -34,15 +34,6 @@ module HitobitoDieMitte
       Export::Pdf::Messages::Letter::Content.placeholders << :salutation
       Export::Pdf::Messages::Letter::Content.send :prepend,
                                                   DieMitte::Export::Pdf::Messages::Letter::Content
-      ## Customizations for migration
-      Group.all_types.each do |type|
-        # next if type.layer?
-        unless type.const_defined?("#{type}::Merkmal")
-          merkmal = Class.new(Role)
-          type.const_set('Merkmal', merkmal)
-          type.role_types += [merkmal]
-        end
-      end
     end
 
     initializer 'die_mitte.add_settings' do |_app|
