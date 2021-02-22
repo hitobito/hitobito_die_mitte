@@ -3,7 +3,7 @@
 This hitobito wagon defines the organization hierarchy with groups and roles of Die Mitte.
 
 [![Build
-Status](https://travis-ci.org/hitobito/hitobito_cvp.svg)](https://travis-ci.org/hitobito/hitobito_cvp)
+Status](https://travis-ci.org/hitobito/hitobito_die_mitte.svg)](https://travis-ci.org/hitobito/hitobito_die_mitte)
 
 
 ## Organization Hierarchy

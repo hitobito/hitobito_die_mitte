@@ -40,11 +40,11 @@ class TarantulaTest < ActionDispatch::IntegrationTest
   
   private
   
-  def configure_urls_with_hitobito_cvp(t, person)
+  def configure_urls_with_hitobito_die_mitte(t, person)
     configure_urls_without_hitobito_cvp(t, person)
 
     # Wagon specific urls configuration here
   end
-  alias_method_chain :configure_urls, :hitobito_cvp
+  alias_method_chain :configure_urls, :hitobito_die_mitte
 
 end
