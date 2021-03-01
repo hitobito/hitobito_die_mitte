@@ -10,4 +10,6 @@ class Group::KantonMitglieder < Group
   class Mitglied < Role::Mitglied; end
 
   roles Mitglied
+
+  children Group::KantonMitglieder
 end

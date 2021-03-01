@@ -10,4 +10,6 @@ class Group::BundMitglieder < Group
   class Mitglied < Role::Mitglied; end
 
   roles Mitglied
+
+  children Group::BundMitglieder
 end

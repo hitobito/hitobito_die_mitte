@@ -9,4 +9,6 @@ class Group::VereinigungMitglieder < Group
 
   class Mitglied < Role::Mitglied; end
   roles Mitglied
+
+  children Group::VereinigungMitglieder
 end

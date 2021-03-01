@@ -10,4 +10,6 @@ class Group::RegionMitglieder < Group
   class Mitglied < Role::Mitglied; end
 
   roles Mitglied
+
+  children Group::RegionMitglieder
 end
