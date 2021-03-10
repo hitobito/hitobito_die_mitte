@@ -190,7 +190,7 @@ de:
       group/bund_gewaehlte/bundesstrafrichter:
         one: Bundesstrafrichter
       group/bund_parteigremium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/bund_parteigremium/leitung:
         one: Leitung
       group/bund_parteigremium/mitglied:
@@ -198,9 +198,9 @@ de:
       group/bund_parteigremium/gast:
         one: Gast
       group/bund_praesidium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/bund_praesidium/vizepraesident:
-        one: Vizepräsident
+        one: VizepräsidentIn
       group/bund_praesidium/kassier:
         one: Kassier
       group/bund_praesidium/mitglied:
@@ -210,21 +210,21 @@ de:
       group/bund_sekretariat/leitung:
         one: Leitung
       group/bund_sekretariat/mitarbeiter:
-        one: Mitarbeiter
+        one: MitarbeiterIn
       group/bund_sekretariat/it_support:
         one: It-Support
       group/bund_sekretariat/kassier:
         one: Kassier
       group/bund_sekretariat/webadministrator:
-        one: Webadministrator
+        one: WebadministratorIn
       group/bund_kommission/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/bund_kommission/leitung:
         one: Leitung
       group/bund_kommission/mitglied:
         one: Mitglied
       group/bund_arbeitsgruppe/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/bund_arbeitsgruppe/leitung:
         one: Leitung
       group/bund_arbeitsgruppe/mitglied:
@@ -246,10 +246,10 @@ de:
       group/bund_mitglieder/mitglied:
         one: Mitglied
       group/bund_sympathisanten/sympathisant:
-        one: Sympathisant
+        one: SympathisantIn
 
       group/kanton_gewaehlte/fraktionschef:
-        one: Fraktionschef
+        one: FraktionschefIn
       group/kanton_gewaehlte/kantonale_exekutive:
         one: Kantonale Exekutive
       group/kanton_gewaehlte/kantonale_legislative:
@@ -265,7 +265,7 @@ de:
       group/kanton_gewaehlte/weitere_mandate:
         one: Weitere Mandate
       group/kanton_parteigremium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/kanton_parteigremium/leitung:
         one: Leitung
       group/kanton_parteigremium/mitglied:
@@ -273,9 +273,9 @@ de:
       group/kanton_parteigremium/gast:
         one: Gast
       group/kanton_praesidium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/kanton_praesidium/vizepraesident:
-        one: Vizepräsident
+        one: VizepräsidentIn
       group/kanton_praesidium/kassier:
         one: Kassier
       group/kanton_praesidium/mitglied:
@@ -285,17 +285,17 @@ de:
       group/kanton_sekretariat/leitung:
         one: Leitung
       group/kanton_sekretariat/mitarbeiter:
-        one: Mitarbeiter
+        one: MitarbeiterIn
       group/kanton_kommission/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/kanton_kommission/leitung:
         one: Leitung
       group/kanton_kommission/mitglied:
         one: Mitglied
       group/kanton_sekretariat/webadministrator:
-        one: Webadministrator
+        one: WebadministratorIn
       group/kanton_arbeitsgruppe/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/kanton_arbeitsgruppe/leitung:
         one: Leitung
       group/kanton_arbeitsgruppe/mitglied:
@@ -319,16 +319,16 @@ de:
       group/kanton_mitglieder/sympathisant_nach_kantonalem_statut:
         one: Sympathisant nach kant. Statut
       group/kanton_sympathisanten/sympathisant:
-        one: Sympathisant
+        one: SympathisantIn
 
       group/vereinigung_gewaehlte/fraktionschef:
-        one: Fraktionschef
+        one: FraktionschefIn
       group/vereinigung_gewaehlte/vereinigung_exekutive:
         one: Vereinigung Exekutive
       group/vereinigung_gewaehlte/vereinigung_legislative:
         one: Vereinigung Legislative
       group/vereinigung_parteigremium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/vereinigung_parteigremium/leitung:
         one: Leitung
       group/vereinigung_parteigremium/mitglied:
@@ -336,9 +336,9 @@ de:
       group/vereinigung_parteigremium/gast:
         one: Gast
       group/vereinigung_praesidium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/vereinigung_praesidium/vizepraesident:
-        one: Vizepräsident
+        one: VizepräsidentIn
       group/vereinigung_praesidium/kassier:
         one: Kassier
       group/vereinigung_praesidium/mitglied:
@@ -348,13 +348,13 @@ de:
       group/vereinigung_sekretariat/mitarbeiter:
         one: Mitarbeiter
       group/vereinigung_sekretariat/webadministrator:
-        one: Webadministrator
+        one: WebadministratorIn
       group/vereinigung_kommission/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/vereinigung_kommission/mitglied:
         one: Mitglied
       group/vereinigung_arbeitsgruppe/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/vereinigung_arbeitsgruppe/leitung:
         one: Leitung
       group/vereinigung_arbeitsgruppe/mitglied:
@@ -370,7 +370,7 @@ de:
       group/vereinigung_mitglieder/mitglied:
         one: Mitglieder
       group/vereinigung_sympathisanten/sympathisant:
-        one: Sympathisant
+        one: SympathisantIn
       group/vereinigung_delegierte/delegierte:
         one: Delegierte
       group/vereinigung_delegierte/ersatzdelegierte:
@@ -379,7 +379,7 @@ de:
         one: Delegierte von Amtes wegen
 
       group/region_gewaehlte/fraktionschef:
-        one: Fraktionschef
+        one: FraktionschefIn
       group/region_gewaehlte/region_exekutive:
         one: Region Exekutive
       group/region_gewaehlte/region_legislative:
@@ -387,7 +387,7 @@ de:
       group/region_gewaehlte/region_judikative:
         one: Region Judikative
       group/region_parteigremium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/region_parteigremium/leitung:
         one: Leitung
       group/region_parteigremium/mitglied:
@@ -395,9 +395,9 @@ de:
       group/region_parteigremium/gast:
         one: Gast
       group/region_praesidium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/region_praesidium/vizepraesident:
-        one: Vizepräsident
+        one: VizepräsidentIn
       group/region_praesidium/kassier:
         one: Kassier
       group/region_praesidium/mitglied:
@@ -405,15 +405,15 @@ de:
       group/region_sekretariat/leitung:
         one: Leitung
       group/region_sekretariat/mitarbeiter:
-        one: Mitarbeiter
+        one: MitarbeiterIn
       group/region_sekretariat/webadministrator:
-        one: Webadministrator
+        one: WebadministratorIn
       group/region_kommission/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/region_kommission/mitglied:
         one: Mitglied
       group/region_arbeitsgruppe/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/region_arbeitsgruppe/leitung:
         one: Leitung
       group/region_arbeitsgruppe/mitglied:
@@ -427,7 +427,7 @@ de:
       group/region_mitglieder/mitglied:
         one: Mitglieder
       group/region_sympathisanten/sympathisant:
-        one: Sympathisant
+        one: SympathisantIn
       group/region_externe_kontakte/medien:
         one: Medien
       group/region_externe_kontakte/spender:
@@ -436,7 +436,7 @@ de:
         one: Kontakt
 
       group/ort_gewaehlte/fraktionschef:
-        one: Fraktionschef
+        one: FraktionschefIn
       group/ort_gewaehlte/mitglied:
         one: Mitglied
       group/ort_gewaehlte/kommunale_exekutive:
@@ -450,7 +450,7 @@ de:
       group/ort_gewaehlte/mitglied_weitere_gemeinde_kommissionen:
         one: Mitglied weitere Gemeindekommissionen
       group/ort_parteigremium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/ort_parteigremium/leitung:
         one: Leitung
       group/ort_parteigremium/mitglied:
@@ -458,9 +458,9 @@ de:
       group/ort_parteigremium/gast:
         one: Gast
       group/ort_praesidium/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/ort_praesidium/vizepraesident:
-        one: Vizepräsident
+        one: VizepräsidentIn
       group/ort_praesidium/kassier:
         one: Kassier
       group/ort_praesidium/mitglied:
@@ -468,17 +468,17 @@ de:
       group/ort_praesidium/gast:
         one: Gast
       group/ort_praesidium/adressverwalter:
-        one: Adressverwalter
+        one: AdressverwalterIn
       group/ort_sekretariat/leitung:
         one: Leitung
       group/ort_sekretariat/mitarbeiter:
-        one: Mitarbeiter
+        one: MitarbeiterIn
       group/ort_arbeitsgruppe/praesident:
-        one: Präsident
+        one: PräsidentIn
       group/ort_arbeitsgruppe/leitung:
         one: Leitung
       group/ort_sekretariat/webadministrator:
-        one: Webadministrator
+        one: WebadministratorIn
       group/ort_arbeitsgruppe/mitglied:
         one: Mitglied
       group/ort_arbeitsgruppe/gast:
@@ -494,7 +494,7 @@ de:
       group/ort_mitglieder/sympathisant_nach_kantonalem_statut:
         one: Sympathisant nach kant. Statut
       group/ort_sympathisanten/sympathisant:
-        one: Sympathisant
+        one: SympathisantIn
 
       salutation:
         one: Anrede
@@ -544,4 +544,3 @@ de:
           married: Verheiratet
           divorced: Geschieden
           widowed: Verwittwet
-
