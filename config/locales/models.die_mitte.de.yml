@@ -202,7 +202,7 @@ de:
       group/bund_praesidium/vizepraesident:
         one: VizepräsidentIn
       group/bund_praesidium/kassier:
-        one: Kassier
+        one: KassierIn
       group/bund_praesidium/mitglied:
         one: Mitglied
       group/bund_praesidium/gast:
@@ -214,7 +214,7 @@ de:
       group/bund_sekretariat/it_support:
         one: It-Support
       group/bund_sekretariat/kassier:
-        one: Kassier
+        one: KassierIn
       group/bund_sekretariat/webadministrator:
         one: WebadministratorIn
       group/bund_kommission/praesident:
@@ -277,7 +277,7 @@ de:
       group/kanton_praesidium/vizepraesident:
         one: VizepräsidentIn
       group/kanton_praesidium/kassier:
-        one: Kassier
+        one: KassierIn
       group/kanton_praesidium/mitglied:
         one: Mitglied
       group/kanton_praesidium/gast:
@@ -340,13 +340,13 @@ de:
       group/vereinigung_praesidium/vizepraesident:
         one: VizepräsidentIn
       group/vereinigung_praesidium/kassier:
-        one: Kassier
+        one: KassierIn
       group/vereinigung_praesidium/mitglied:
         one: Mitglied
       group/vereinigung_sekretariat/leitung:
         one: Leitung
       group/vereinigung_sekretariat/mitarbeiter:
-        one: Mitarbeiter
+        one: MitarbeiterIn
       group/vereinigung_sekretariat/webadministrator:
         one: WebadministratorIn
       group/vereinigung_kommission/praesident:
@@ -399,7 +399,7 @@ de:
       group/region_praesidium/vizepraesident:
         one: VizepräsidentIn
       group/region_praesidium/kassier:
-        one: Kassier
+        one: KassierIn
       group/region_praesidium/mitglied:
         one: Mitglied
       group/region_sekretariat/leitung:
@@ -435,7 +435,7 @@ de:
       group/region_externe_kontakte/kontakt:
         one: Kontakt
 
-      group/ort_gewaehlte/fraktionschef:
+      group/ort_gewaehlte/fraktionschefIn:
         one: FraktionschefIn
       group/ort_gewaehlte/mitglied:
         one: Mitglied
@@ -462,7 +462,7 @@ de:
       group/ort_praesidium/vizepraesident:
         one: VizepräsidentIn
       group/ort_praesidium/kassier:
-        one: Kassier
+        one: KassierIn
       group/ort_praesidium/mitglied:
         one: Mitglied
       group/ort_praesidium/gast:
@@ -532,7 +532,7 @@ de:
         title: Titel
         website: Webseite
         correspondence_language: Korrespondenzsprache
-        civil_status: Zivilstatus
+        civil_status: Zivilstand
         correspondence_languages:
           de: Deutsch
           en: Englisch
