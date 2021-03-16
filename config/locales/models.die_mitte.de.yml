@@ -435,7 +435,7 @@ de:
       group/region_externe_kontakte/kontakt:
         one: Kontakt
 
-      group/ort_gewaehlte/fraktionschefIn:
+      group/ort_gewaehlte/fraktionschef:
         one: FraktionschefIn
       group/ort_gewaehlte/mitglied:
         one: Mitglied
