@@ -232,15 +232,15 @@ de:
       group/bund_arbeitsgruppe/gast:
         one: Gast
       group/bund_delegierte/delegierte:
-        one: Delegierte
+        one: DelegierteR
       group/bund_delegierte/ersatzdelegierte:
-        one: Ersatzdelegierte
+        one: ErsatzdelegierteR
       group/bund_delegierte/delegierte_von_amtes_wegen:
-        one: Delegierte von Amtes wegen
+        one: DelegierteR von Amtes wegen
       group/bund_externe_kontakte/medien:
         one: Medien
       group/bund_externe_kontakte/spender:
-        one: Spender
+        one: SpenderIn
       group/bund_externe_kontakte/kontakt:
         one: Kontakt
       group/bund_mitglieder/mitglied:
@@ -305,19 +305,19 @@ de:
       group/kanton_externe_kontakte/medien:
         one: Medien
       group/kanton_externe_kontakte/spender:
-        one: Spender
+        one: SpenderIn
       group/kanton_externe_kontakte/kontakt:
         one: Kontakt
       group/kanton_delegierte/delegierte:
-        one: Delegierte
+        one: DelegierteR
       group/kanton_delegierte/delegierte_von_amtes_wegen:
-        one: Delegierte von Amtes wegen
+        one: DelegierteR von Amtes wegen
       group/kanton_delegierte/ersatzdelegierte:
-        one: Ersatzdelegierte
+        one: ErsatzdelegierteR
       group/kanton_mitglieder/mitglied:
         one: Mitglied
       group/kanton_mitglieder/sympathisant_nach_kantonalem_statut:
-        one: Sympathisant nach kant. Statut
+        one: SympathisantIn nach kant. Statut
       group/kanton_sympathisanten/sympathisant:
         one: SympathisantIn
 
@@ -364,7 +364,7 @@ de:
       group/vereinigung_externe_kontakte/medien:
         one: Medien
       group/vereinigung_externe_kontakte/spender:
-        one: Spender
+        one: SpenderIn
       group/vereinigung_externe_kontakte/kontakt:
         one: Kontakt
       group/vereinigung_mitglieder/mitglied:
@@ -372,11 +372,11 @@ de:
       group/vereinigung_sympathisanten/sympathisant:
         one: SympathisantIn
       group/vereinigung_delegierte/delegierte:
-        one: Delegierte
+        one: DelegierteR
       group/vereinigung_delegierte/ersatzdelegierte:
-        one: Ersatzdelegierte
+        one: ErsatzdelegierteR
       group/vereinigung_delegierte/delegierte_von_amtes_wegen:
-        one: Delegierte von Amtes wegen
+        one: DelegierteR von Amtes wegen
 
       group/region_gewaehlte/fraktionschef:
         one: FraktionschefIn
@@ -421,9 +421,9 @@ de:
       group/region_arbeitsgruppe/gast:
         one: Gast
       group/region_delegierte/delegierte:
-        one: Delegierte
+        one: DelegierteR
       group/region_delegierte/ersatzdelegierte:
-        one: Ersatzdelegierte
+        one: ErsatzdelegierteR
       group/region_mitglieder/mitglied:
         one: Mitglieder
       group/region_sympathisanten/sympathisant:
@@ -431,7 +431,7 @@ de:
       group/region_externe_kontakte/medien:
         one: Medien
       group/region_externe_kontakte/spender:
-        one: Spender
+        one: SpenderIn
       group/region_externe_kontakte/kontakt:
         one: Kontakt
 
@@ -486,13 +486,13 @@ de:
       group/ort_externe_kontakte/medien:
         one: Medien
       group/ort_externe_kontakte/spender:
-        one: Spender
+        one: SpenderIn
       group/ort_externe_kontakte/kontakt:
         one: Kontakt
       group/ort_mitglieder/mitglied:
         one: Mitglied
       group/ort_mitglieder/sympathisant_nach_kantonalem_statut:
-        one: Sympathisant nach kant. Statut
+        one: SympathisantIn nach kant. Statut
       group/ort_sympathisanten/sympathisant:
         one: SympathisantIn
 
