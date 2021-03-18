@@ -56,6 +56,8 @@ devs.each do |name, email|
   seeder.seed_developer(name, email, bund, Group::BundSekretariat::Mitarbeiter)
 end
 
+seeder.assign_role_to_root(bund, Group::BundSekretariat::Mitarbeiter)
+
 5.times do
   PersonDuplicateSeeder.new.seed_duplicates
 end
