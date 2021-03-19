@@ -1,0 +1,546 @@
+#  Copyright (c) 2021, Die Mitte. This file is part of
+#  hitobito_die_mitte and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_die_mitte.
+
+it:
+  activerecord:
+    models:
+      ### GROUPS
+
+      group/bund:
+        one: Svizzera
+        other: Svizzera
+      group/bund_gewaehlte:
+        one: eletto
+        other: eletti
+      group/bund_parteigremium:
+        one: Comitato del Partito
+        other: Comitato del Partito
+      group/bund_praesidium:
+        one: Presidenza
+        other: Presidenza
+      group/bund_sekretariat:
+        one: Segretariato
+        other: Segretariato
+      group/bund_kommission:
+        one: Commissione
+        other: Commissione
+      group/bund_arbeitsgruppe:
+        one: 'gruppo '
+        other: Gruppo di lavoro
+      group/bund_externe_kontakte:
+        one: Contatto esterno
+        other: Contatto esterno
+      group/bund_delegierte:
+        one: delegato
+        other: delegato
+      group/bund_mitglieder:
+        one: membro
+        other: membro
+      group/bund_sympathisanten:
+        one: simpatizzanti
+        other: simpatizzante
+
+      group/kanton:
+        one: Cantone
+        other: Cantoni
+      group/kanton_gewaehlte:
+        one: eletto
+        other: eletti
+      group/kanton_parteigremium:
+        one: Comitato del Partito
+        other: Comitati
+      group/kanton_praesidium:
+        one: Presidenza
+        other: Presidenze
+      group/kanton_sekretariat:
+        one: Segretariato
+        other: Segretariati
+      group/kanton_kommission:
+        one: Commissione
+        other: Commissioni
+      group/kanton_arbeitsgruppe:
+        one: Gruppo di lavoro
+        other: Gruppi di lavoro
+      group/kanton_externe_kontakte:
+        one: Contatti esterni
+        other: Contatti esterni
+      group/kanton_delegierte:
+        one: Delegato
+        other: Delegato
+      group/kanton_sympathisanten:
+        one: Simpatizzanti
+        other: Simpatizzanti
+      group/kanton_mitglieder:
+        one: Membro
+        other: Membro
+
+      group/vereinigung:
+        one: Associazione
+        other: Associazioni
+      group/vereinigung_gewaehlte:
+        one: Eletto
+        other: Eletti
+      group/vereinigung_parteigremium:
+        one: Comitato del Partito
+        other: Comitato del Partito
+      group/vereinigung_praesidium:
+        one: Presidenza
+        other: Presidenza
+      group/vereinigung_sekretariat:
+        one: Segretariato
+        other: Segretariato
+      group/vereinigung_kommission:
+        one: Commissione
+        other: Commissione
+      group/vereinigung_arbeitsgruppe:
+        one: Gruppo di lavoro
+        other: Gruppi di lavoro
+      group/vereinigung_externe_kontakte:
+        one: Contatto esterno
+        other: Contatto esterno
+      group/vereinigung_mitglieder:
+        one: Membro
+        other: Membro
+      group/vereinigung_sympathisanten:
+        one: Simpatizzanti
+        other: Simpatizzanti
+      group/vereinigung_delegierte:
+        one: Delegato
+        other: Delegato
+
+      group/region:
+        one: Regione
+        other: Regioni
+      group/region_gewaehlte:
+        one: Eletto
+        other: Eletti
+      group/region_parteigremium:
+        one: Comitato del Partito
+        other: Comitato del Partito
+      group/region_praesidium:
+        one: Presidenza
+        other: Presidenza
+      group/region_sekretariat:
+        one: Segretariato
+        other: Segretariato
+      group/region_arbeitsgruppe:
+        one: Gruppo di lavoro
+        other: Gruppi di lavoro
+      group/region_delegierte:
+        one: Delegato
+        other: Delegato
+      group/region_mitglieder:
+        one: Membro
+        other: Membro
+      group/region_sympathisanten:
+        one: Simpatizzanti
+        other: Simpatizzanti
+      group/region_externe_kontakte:
+        one: Contatti esterni
+        other: Contatti esterni
+
+      group/ort:
+        one: Partito locale
+        other: Partiti locali
+      group/ort_gewaehlte:
+        one: Eletto
+        other: Eletti
+      group/ort_parteigremium:
+        one: Comitato del Partito
+        other: Comitati
+      group/ort_praesidium:
+        one: Presidenza
+        other: Presidenze
+      group/ort_sekretariat:
+        one: Segretariato
+        other: Segretariati
+      group/ort_arbeitsgruppe:
+        one: Gruppo di lavoro
+        other: Gruppi di lavoro
+      group/ort_externe_kontakte:
+        one: Contatti esterni
+        other: Contatti esterni
+      group/ort_mitglieder:
+        one: Membro
+        other: Membri
+      group/ort_sympathisanten:
+        one: ''
+        other: ''
+
+      ### ROLES
+
+      group/bund_gewaehlte/bundesrat:
+        one: Consiglio federale
+      group/bund_gewaehlte/bundeskanzler:
+        one: Cancelliere della Confederazione
+      group/bund_gewaehlte/staenderat:
+        one: Consiglio degli Stati
+      group/bund_gewaehlte/nationalrat:
+        one: Consiglio nazionale
+      group/bund_gewaehlte/vollamt_bundesrichter:
+        one: Giudice federale
+      group/bund_gewaehlte/nebenamt_bundes_richter:
+        one: Giudice federale supplente
+      group/bund_gewaehlte/bundesverwaltungsrichter:
+        one: ""
+      group/bund_gewaehlte/bundespatentrichter:
+        one: ""
+      group/bund_gewaehlte/bundesstrafrichter:
+        one: ""
+      group/bund_parteigremium/praesident:
+        one: ""
+      group/bund_parteigremium/leitung:
+        one: ""
+      group/bund_parteigremium/mitglied:
+        one: Membro
+      group/bund_parteigremium/gast:
+        one: Ospite
+      group/bund_praesidium/praesident:
+        one: ""
+      group/bund_praesidium/vizepraesident:
+        one: ""
+      group/bund_praesidium/kassier:
+        one: ""
+      group/bund_praesidium/mitglied:
+        one: Membro
+      group/bund_praesidium/gast:
+        one: Ospite
+      group/bund_sekretariat/leitung:
+        one: ""
+      group/bund_sekretariat/mitarbeiter:
+        one: ""
+      group/bund_sekretariat/it_support:
+        one: ""
+      group/bund_sekretariat/kassier:
+        one: ""
+      group/bund_sekretariat/webadministrator:
+        one: ""
+      group/bund_kommission/praesident:
+        one: ""
+      group/bund_kommission/leitung:
+        one: ""
+      group/bund_kommission/mitglied:
+        one: ""
+      group/bund_arbeitsgruppe/praesident:
+        one: ""
+      group/bund_arbeitsgruppe/leitung:
+        one: ""
+      group/bund_arbeitsgruppe/mitglied:
+        one: Membro
+      group/bund_arbeitsgruppe/gast:
+        one: Ospite
+      group/bund_delegierte/delegierte:
+        one: ""
+      group/bund_delegierte/ersatzdelegierte:
+        one: ""
+      group/bund_delegierte/delegierte_von_amtes_wegen:
+        one: ""
+      group/bund_externe_kontakte/medien:
+        one: ""
+      group/bund_externe_kontakte/spender:
+        one: ""
+      group/bund_externe_kontakte/kontakt:
+        one: ""
+      group/bund_mitglieder/mitglied:
+        one: ""
+      group/bund_sympathisanten/sympathisant:
+        one: ""
+
+      group/kanton_gewaehlte/fraktionschef:
+        one: ""
+      group/kanton_gewaehlte/kantonale_exekutive:
+        one: Esecutivo cantonale
+      group/kanton_gewaehlte/kantonale_legislative:
+        one: Legislativo cantonale
+      group/kanton_gewaehlte/mitglied_kantonales_gericht_erste_instanz:
+        one: ""
+      group/kanton_gewaehlte/mitglied_kantonales_gericht_zweite_instanz:
+        one: ""
+      group/kanton_gewaehlte/staatsanwaltschaft:
+        one: ""
+      group/kanton_gewaehlte/parlamentarische_geschaeftsfuehrung:
+        one: ""
+      group/kanton_gewaehlte/weitere_mandate:
+        one: Altri mandati
+      group/kanton_parteigremium/praesident:
+        one: ""
+      group/kanton_parteigremium/leitung:
+        one: ""
+      group/kanton_parteigremium/mitglied:
+        one: ""
+      group/kanton_parteigremium/gast:
+        one: ""
+      group/kanton_praesidium/praesident:
+        one: ""
+      group/kanton_praesidium/vizepraesident:
+        one: ""
+      group/kanton_praesidium/kassier:
+        one: ""
+      group/kanton_praesidium/mitglied:
+        one: ""
+      group/kanton_praesidium/gast:
+        one: ""
+      group/kanton_sekretariat/leitung:
+        one: ""
+      group/kanton_sekretariat/mitarbeiter:
+        one: ""
+      group/kanton_kommission/praesident:
+        one: ""
+      group/kanton_kommission/leitung:
+        one: ""
+      group/kanton_kommission/mitglied:
+        one: ""
+      group/kanton_sekretariat/webadministrator:
+        one: ""
+      group/kanton_arbeitsgruppe/praesident:
+        one: ""
+      group/kanton_arbeitsgruppe/leitung:
+        one: ""
+      group/kanton_arbeitsgruppe/mitglied:
+        one: ""
+      group/kanton_arbeitsgruppe/gast:
+        one: ""
+      group/kanton_externe_kontakte/medien:
+        one: ""
+      group/kanton_externe_kontakte/spender:
+        one: ""
+      group/kanton_externe_kontakte/kontakt:
+        one: ""
+      group/kanton_delegierte/delegierte:
+        one: ""
+      group/kanton_delegierte/delegierte_von_amtes_wegen:
+        one: ""
+      group/kanton_delegierte/ersatzdelegierte:
+        one: ""
+      group/kanton_mitglieder/mitglied:
+        one: ""
+      group/kanton_mitglieder/sympathisant_nach_kantonalem_statut:
+        one: ""
+      group/kanton_sympathisanten/sympathisant:
+        one: ""
+
+      group/vereinigung_gewaehlte/fraktionschef:
+        one: ""
+      group/vereinigung_gewaehlte/vereinigung_exekutive:
+        one: ""
+      group/vereinigung_gewaehlte/vereinigung_legislative:
+        one: ""
+      group/vereinigung_parteigremium/praesident:
+        one: ""
+      group/vereinigung_parteigremium/leitung:
+        one: ""
+      group/vereinigung_parteigremium/mitglied:
+        one: ""
+      group/vereinigung_parteigremium/gast:
+        one: ""
+      group/vereinigung_praesidium/praesident:
+        one: ""
+      group/vereinigung_praesidium/vizepraesident:
+        one: ""
+      group/vereinigung_praesidium/kassier:
+        one: ""
+      group/vereinigung_praesidium/mitglied:
+        one: ""
+      group/vereinigung_sekretariat/leitung:
+        one: ""
+      group/vereinigung_sekretariat/mitarbeiter:
+        one: ""
+      group/vereinigung_sekretariat/webadministrator:
+        one: ""
+      group/vereinigung_kommission/praesident:
+        one: ""
+      group/vereinigung_kommission/mitglied:
+        one: ""
+      group/vereinigung_arbeitsgruppe/praesident:
+        one: ""
+      group/vereinigung_arbeitsgruppe/leitung:
+        one: ""
+      group/vereinigung_arbeitsgruppe/mitglied:
+        one: ""
+      group/vereinigung_arbeitsgruppe/gast:
+        one: ""
+      group/vereinigung_externe_kontakte/medien:
+        one: ""
+      group/vereinigung_externe_kontakte/spender:
+        one: ""
+      group/vereinigung_externe_kontakte/kontakt:
+        one: ""
+      group/vereinigung_mitglieder/mitglied:
+        one: ""
+      group/vereinigung_sympathisanten/sympathisant:
+        one: ""
+      group/vereinigung_delegierte/delegierte:
+        one: ""
+      group/vereinigung_delegierte/ersatzdelegierte:
+        one: ""
+      group/vereinigung_delegierte/delegierte_von_amtes_wegen:
+        one: ""
+
+      group/region_gewaehlte/fraktionschef:
+        one: ""
+      group/region_gewaehlte/region_exekutive:
+        one: ""
+      group/region_gewaehlte/region_legislative:
+        one: ""
+      group/region_gewaehlte/region_judikative:
+        one: ""
+      group/region_parteigremium/praesident:
+        one: ""
+      group/region_parteigremium/leitung:
+        one: ""
+      group/region_parteigremium/mitglied:
+        one: ""
+      group/region_parteigremium/gast:
+        one: ""
+      group/region_praesidium/praesident:
+        one: ""
+      group/region_praesidium/vizepraesident:
+        one: ""
+      group/region_praesidium/kassier:
+        one: ""
+      group/region_praesidium/mitglied:
+        one: ""
+      group/region_sekretariat/leitung:
+        one: ""
+      group/region_sekretariat/mitarbeiter:
+        one: ""
+      group/region_sekretariat/webadministrator:
+        one: ""
+      group/region_kommission/praesident:
+        one: ""
+      group/region_kommission/mitglied:
+        one: ""
+      group/region_arbeitsgruppe/praesident:
+        one: ""
+      group/region_arbeitsgruppe/leitung:
+        one: ""
+      group/region_arbeitsgruppe/mitglied:
+        one: ""
+      group/region_arbeitsgruppe/gast:
+        one: Ospite
+      group/region_delegierte/delegierte:
+        one: ""
+      group/region_delegierte/ersatzdelegierte:
+        one: ""
+      group/region_mitglieder/mitglied:
+        one: ""
+      group/region_sympathisanten/sympathisant:
+        one: ""
+      group/region_externe_kontakte/medien:
+        one: ""
+      group/region_externe_kontakte/spender:
+        one: ""
+      group/region_externe_kontakte/kontakt:
+        one: Contatto
+
+      group/ort_gewaehlte/fraktionschef:
+        one: ""
+      group/ort_gewaehlte/mitglied:
+        one: Membro
+      group/ort_gewaehlte/kommunale_exekutive:
+        one: Esecutivo comunale
+      group/ort_gewaehlte/kommunale_legislative:
+        one: Legislativo comunale
+      group/ort_gewaehlte/schulpflegekommission:
+        one: Commissione scolastica
+      group/ort_gewaehlte/rechnungspruefungskommission:
+        one: Commissione della Gestione
+      group/ort_gewaehlte/mitglied_weitere_gemeinde_kommissionen:
+        one: membro altre commissioni comunali
+      group/ort_parteigremium/praesident:
+        one: ""
+      group/ort_parteigremium/leitung:
+        one: ""
+      group/ort_parteigremium/mitglied:
+        one: Membro
+      group/ort_parteigremium/gast:
+        one: Ospite
+      group/ort_praesidium/praesident:
+        one: ""
+      group/ort_praesidium/vizepraesident:
+        one: ""
+      group/ort_praesidium/kassier:
+        one: ""
+      group/ort_praesidium/mitglied:
+        one: Membro
+      group/ort_praesidium/gast:
+        one: Ospite
+      group/ort_praesidium/adressverwalter:
+        one: ""
+      group/ort_sekretariat/leitung:
+        one: ""
+      group/ort_sekretariat/mitarbeiter:
+        one: ""
+      group/ort_arbeitsgruppe/praesident:
+        one: ""
+      group/ort_arbeitsgruppe/leitung:
+        one: Gestione
+      group/ort_sekretariat/webadministrator:
+        one: ""
+      group/ort_arbeitsgruppe/mitglied:
+        one: Membro
+      group/ort_arbeitsgruppe/gast:
+        one: Ospite
+      group/ort_externe_kontakte/medien:
+        one: Media
+      group/ort_externe_kontakte/spender:
+        one: ""
+      group/ort_externe_kontakte/kontakt:
+        one: ""
+      group/ort_mitglieder/mitglied:
+        one: ""
+      group/ort_mitglieder/sympathisant_nach_kantonalem_statut:
+        one: ""
+      group/ort_sympathisanten/sympathisant:
+        one: ""
+
+      salutation:
+        one: ""
+        other: ""
+        default:
+          label: ""
+          value:
+            m: Ciao
+            w: Ciao
+            other: Ciao
+        available:
+          lieber_vorname:
+            label: ""
+            value:
+              m: Caro
+              w: Cara
+              other: ""
+          lieber_titel_nachname:
+            label: ""
+            value:
+              m: Egregio signor
+              w: Gentile signora
+              other: ""
+          sehr_geehrter_titel_nachname:
+            label: ""
+            value:
+              m: Egregio Signor
+              w: Gentile Signora
+              other: ""
+
+    attributes:
+      person:
+        salutation: Saluto
+        salutation_value: Saluto
+        title: Titolo
+        website: Sito web
+        correspondence_language: lingua di corrispondenza
+        civil_status: ""
+        correspondence_languages:
+          de: tedesco
+          en: inglese
+          fr: francese
+          it: italiano
+        civil_statuses:
+          single: Singolo
+          registered_partnership: Unione registrata
+          married: sposato
+          divorced: divorziato
+          widowed: vedova

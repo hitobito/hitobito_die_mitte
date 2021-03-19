@@ -1,0 +1,546 @@
+#  Copyright (c) 2021, Die Mitte. This file is part of
+#  hitobito_die_mitte and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_die_mitte.
+
+fr:
+  activerecord:
+    models:
+      ### GROUPS
+
+      group/bund:
+        one: Suisse
+        other: Suisse
+      group/bund_gewaehlte:
+        one: 'Élu-e-s '
+        other: 'Élu-e-s '
+      group/bund_parteigremium:
+        one: Organes du parti
+        other: Organes du parti
+      group/bund_praesidium:
+        one: Présidence
+        other: Présidence
+      group/bund_sekretariat:
+        one: Secrétariat
+        other: Secrétariat
+      group/bund_kommission:
+        one: Commission
+        other: Commission
+      group/bund_arbeitsgruppe:
+        one: Groupes de travail
+        other: Groupes de travail
+      group/bund_externe_kontakte:
+        one: Contacts externes
+        other: Contacts externes
+      group/bund_delegierte:
+        one: Délé
+        other: Délégué-e-s
+      group/bund_mitglieder:
+        one: Membres
+        other: Membres
+      group/bund_sympathisanten:
+        one: Sympathisant-e-s
+        other: Sympathisant-e-s
+
+      group/kanton:
+        one: Canton
+        other: Canton
+      group/kanton_gewaehlte:
+        one: 'Élu-e-s '
+        other: Élu-e-s
+      group/kanton_parteigremium:
+        one: Comités
+        other: Comités
+      group/kanton_praesidium:
+        one: Présidences
+        other: Présidences
+      group/kanton_sekretariat:
+        one: Sécretariat
+        other: Secrétariats
+      group/kanton_kommission:
+        one: Commissions
+        other: Commissions
+      group/kanton_arbeitsgruppe:
+        one: Groupes de travail
+        other: Groupes de travail
+      group/kanton_externe_kontakte:
+        one: Contacts externes
+        other: Contacts
+      group/kanton_delegierte:
+        one: Délégué-e-s
+        other: Délégué-e-s
+      group/kanton_sympathisanten:
+        one: Sympathisant-e-s
+        other: Sympathisant-e-s
+      group/kanton_mitglieder:
+        one: Membres
+        other: Membres
+
+      group/vereinigung:
+        one: Groupements
+        other: Groupements
+      group/vereinigung_gewaehlte:
+        one: 'Élu-e-s '
+        other: Élu-e-s
+      group/vereinigung_parteigremium:
+        one: Organes du parti
+        other: Organes du parti
+      group/vereinigung_praesidium:
+        one: Présidence
+        other: Présidence
+      group/vereinigung_sekretariat:
+        one: Secrétariat
+        other: Secrétariat
+      group/vereinigung_kommission:
+        one: Commission
+        other: Commission
+      group/vereinigung_arbeitsgruppe:
+        one: Groupes de travail
+        other: Groupes de travail
+      group/vereinigung_externe_kontakte:
+        one: Contacts externes
+        other: Contacts externes
+      group/vereinigung_mitglieder:
+        one: Membres
+        other: Membres
+      group/vereinigung_sympathisanten:
+        one: Sympathisant-e-s
+        other: Sympathisant-e-s
+      group/vereinigung_delegierte:
+        one: Délégué-e-s
+        other: Délégué-e-s
+
+      group/region:
+        one: Régions
+        other: Régions
+      group/region_gewaehlte:
+        one: Élu-e-s
+        other: Élu-e-s
+      group/region_parteigremium:
+        one: Organes du parti
+        other: Organes du parti
+      group/region_praesidium:
+        one: Présidence
+        other: Présidence
+      group/region_sekretariat:
+        one: Secrétariat
+        other: Secrétariat
+      group/region_arbeitsgruppe:
+        one: Groupes de travail
+        other: Groupes de travail
+      group/region_delegierte:
+        one: Délégué-e-s
+        other: Délégué-e-s
+      group/region_mitglieder:
+        one: Membres
+        other: Membres
+      group/region_sympathisanten:
+        one: Sympathisant-e-s
+        other: Sympathisant-e-s
+      group/region_externe_kontakte:
+        one: Contacts externes
+        other: Contacts externes
+
+      group/ort:
+        one: Partis locaux
+        other: Partis locaux
+      group/ort_gewaehlte:
+        one: 'Élu-e-s '
+        other: 'Élu-e-s '
+      group/ort_parteigremium:
+        one: Comités
+        other: Comités
+      group/ort_praesidium:
+        one: Présidences
+        other: Présidences
+      group/ort_sekretariat:
+        one: Secrétariats
+        other: Secrétariats
+      group/ort_arbeitsgruppe:
+        one: Groupes de travail
+        other: Groupes de travail
+      group/ort_externe_kontakte:
+        one: Contacts externes
+        other: Contacts externes
+      group/ort_mitglieder:
+        one: Membres
+        other: Membres
+      group/ort_sympathisanten:
+        one: Sympathisant-e-s
+        other: Sympathisant-e-s
+
+      ### ROLES
+
+      group/bund_gewaehlte/bundesrat:
+        one: Conseillers fédéraux / conseillères fédérales
+      group/bund_gewaehlte/bundeskanzler:
+        one: ""
+      group/bund_gewaehlte/staenderat:
+        one: ""
+      group/bund_gewaehlte/nationalrat:
+        one: ""
+      group/bund_gewaehlte/vollamt_bundesrichter:
+        one: Juges fédéraux (temps plein)
+      group/bund_gewaehlte/nebenamt_bundes_richter:
+        one: Juges fédéraux (temps partiel)
+      group/bund_gewaehlte/bundesverwaltungsrichter:
+        one: Juges administratifs fédéraux
+      group/bund_gewaehlte/bundespatentrichter:
+        one: Juges fédérales des brevets
+      group/bund_gewaehlte/bundesstrafrichter:
+        one: "Juges pénales fédéraux "
+      group/bund_parteigremium/praesident:
+        one: ""
+      group/bund_parteigremium/leitung:
+        one: Direction
+      group/bund_parteigremium/mitglied:
+        one: Membre
+      group/bund_parteigremium/gast:
+        one: Invité-e
+      group/bund_praesidium/praesident:
+        one: ""
+      group/bund_praesidium/vizepraesident:
+        one: ""
+      group/bund_praesidium/kassier:
+        one: ""
+      group/bund_praesidium/mitglied:
+        one: Membre
+      group/bund_praesidium/gast:
+        one: Invité-e
+      group/bund_sekretariat/leitung:
+        one: Direction
+      group/bund_sekretariat/mitarbeiter:
+        one: ""
+      group/bund_sekretariat/it_support:
+        one: Support informatique
+      group/bund_sekretariat/kassier:
+        one: ""
+      group/bund_sekretariat/webadministrator:
+        one: ""
+      group/bund_kommission/praesident:
+        one: ""
+      group/bund_kommission/leitung:
+        one: Direction
+      group/bund_kommission/mitglied:
+        one: Membre
+      group/bund_arbeitsgruppe/praesident:
+        one: ""
+      group/bund_arbeitsgruppe/leitung:
+        one: Direction
+      group/bund_arbeitsgruppe/mitglied:
+        one: Membre
+      group/bund_arbeitsgruppe/gast:
+        one: Invité-e
+      group/bund_delegierte/delegierte:
+        one: ""
+      group/bund_delegierte/ersatzdelegierte:
+        one: ""
+      group/bund_delegierte/delegierte_von_amtes_wegen:
+        one: ""
+      group/bund_externe_kontakte/medien:
+        one: Médias
+      group/bund_externe_kontakte/spender:
+        one: ""
+      group/bund_externe_kontakte/kontakt:
+        one: Contact
+      group/bund_mitglieder/mitglied:
+        one: Membre
+      group/bund_sympathisanten/sympathisant:
+        one: ""
+
+      group/kanton_gewaehlte/fraktionschef:
+        one: ""
+      group/kanton_gewaehlte/kantonale_exekutive:
+        one: Exécutif cantonaux
+      group/kanton_gewaehlte/kantonale_legislative:
+        one: Législatif cantonaux
+      group/kanton_gewaehlte/mitglied_kantonales_gericht_erste_instanz:
+        one: ""
+      group/kanton_gewaehlte/mitglied_kantonales_gericht_zweite_instanz:
+        one: ""
+      group/kanton_gewaehlte/staatsanwaltschaft:
+        one: ""
+      group/kanton_gewaehlte/parlamentarische_geschaeftsfuehrung:
+        one: ""
+      group/kanton_gewaehlte/weitere_mandate:
+        one: ""
+      group/kanton_parteigremium/praesident:
+        one: ""
+      group/kanton_parteigremium/leitung:
+        one: Direction
+      group/kanton_parteigremium/mitglied:
+        one: Membre
+      group/kanton_parteigremium/gast:
+        one: Invité-e
+      group/kanton_praesidium/praesident:
+        one: ""
+      group/kanton_praesidium/vizepraesident:
+        one: ""
+      group/kanton_praesidium/kassier:
+        one: ""
+      group/kanton_praesidium/mitglied:
+        one: Membre
+      group/kanton_praesidium/gast:
+        one: Invité-e
+      group/kanton_sekretariat/leitung:
+        one: Direction
+      group/kanton_sekretariat/mitarbeiter:
+        one: ""
+      group/kanton_kommission/praesident:
+        one: ""
+      group/kanton_kommission/leitung:
+        one: Direction
+      group/kanton_kommission/mitglied:
+        one: Membre
+      group/kanton_sekretariat/webadministrator:
+        one: ""
+      group/kanton_arbeitsgruppe/praesident:
+        one: ""
+      group/kanton_arbeitsgruppe/leitung:
+        one: Direction
+      group/kanton_arbeitsgruppe/mitglied:
+        one: Membre
+      group/kanton_arbeitsgruppe/gast:
+        one: Invité-e
+      group/kanton_externe_kontakte/medien:
+        one: Médias
+      group/kanton_externe_kontakte/spender:
+        one: ""
+      group/kanton_externe_kontakte/kontakt:
+        one: Contact
+      group/kanton_delegierte/delegierte:
+        one: ""
+      group/kanton_delegierte/delegierte_von_amtes_wegen:
+        one: ""
+      group/kanton_delegierte/ersatzdelegierte:
+        one: ""
+      group/kanton_mitglieder/mitglied:
+        one: Membre
+      group/kanton_mitglieder/sympathisant_nach_kantonalem_statut:
+        one: ""
+      group/kanton_sympathisanten/sympathisant:
+        one: ""
+
+      group/vereinigung_gewaehlte/fraktionschef:
+        one: ""
+      group/vereinigung_gewaehlte/vereinigung_exekutive:
+        one: ""
+      group/vereinigung_gewaehlte/vereinigung_legislative:
+        one: ""
+      group/vereinigung_parteigremium/praesident:
+        one: ""
+      group/vereinigung_parteigremium/leitung:
+        one: Direction
+      group/vereinigung_parteigremium/mitglied:
+        one: Membre
+      group/vereinigung_parteigremium/gast:
+        one: Invité-e
+      group/vereinigung_praesidium/praesident:
+        one: ""
+      group/vereinigung_praesidium/vizepraesident:
+        one: ""
+      group/vereinigung_praesidium/kassier:
+        one: ""
+      group/vereinigung_praesidium/mitglied:
+        one: Membre
+      group/vereinigung_sekretariat/leitung:
+        one: Direction
+      group/vereinigung_sekretariat/mitarbeiter:
+        one: ""
+      group/vereinigung_sekretariat/webadministrator:
+        one: ""
+      group/vereinigung_kommission/praesident:
+        one: ""
+      group/vereinigung_kommission/mitglied:
+        one: Membre
+      group/vereinigung_arbeitsgruppe/praesident:
+        one: ""
+      group/vereinigung_arbeitsgruppe/leitung:
+        one: Direction
+      group/vereinigung_arbeitsgruppe/mitglied:
+        one: Membre
+      group/vereinigung_arbeitsgruppe/gast:
+        one: Invité-e
+      group/vereinigung_externe_kontakte/medien:
+        one: Médias
+      group/vereinigung_externe_kontakte/spender:
+        one: ""
+      group/vereinigung_externe_kontakte/kontakt:
+        one: Contact
+      group/vereinigung_mitglieder/mitglied:
+        one: Membres
+      group/vereinigung_sympathisanten/sympathisant:
+        one: ""
+      group/vereinigung_delegierte/delegierte:
+        one: ""
+      group/vereinigung_delegierte/ersatzdelegierte:
+        one: ""
+      group/vereinigung_delegierte/delegierte_von_amtes_wegen:
+        one: ""
+
+      group/region_gewaehlte/fraktionschef:
+        one: ""
+      group/region_gewaehlte/region_exekutive:
+        one: ""
+      group/region_gewaehlte/region_legislative:
+        one: ""
+      group/region_gewaehlte/region_judikative:
+        one: ""
+      group/region_parteigremium/praesident:
+        one: ""
+      group/region_parteigremium/leitung:
+        one: Direction
+      group/region_parteigremium/mitglied:
+        one: Membre
+      group/region_parteigremium/gast:
+        one: Invité-e
+      group/region_praesidium/praesident:
+        one: ""
+      group/region_praesidium/vizepraesident:
+        one: ""
+      group/region_praesidium/kassier:
+        one: ""
+      group/region_praesidium/mitglied:
+        one: Membre
+      group/region_sekretariat/leitung:
+        one: Direction
+      group/region_sekretariat/mitarbeiter:
+        one: ""
+      group/region_sekretariat/webadministrator:
+        one: ""
+      group/region_kommission/praesident:
+        one: ""
+      group/region_kommission/mitglied:
+        one: Membre
+      group/region_arbeitsgruppe/praesident:
+        one: ""
+      group/region_arbeitsgruppe/leitung:
+        one: Direction
+      group/region_arbeitsgruppe/mitglied:
+        one: Membre
+      group/region_arbeitsgruppe/gast:
+        one: Invité-e
+      group/region_delegierte/delegierte:
+        one: ""
+      group/region_delegierte/ersatzdelegierte:
+        one: ""
+      group/region_mitglieder/mitglied:
+        one: Membres
+      group/region_sympathisanten/sympathisant:
+        one: ""
+      group/region_externe_kontakte/medien:
+        one: Médias
+      group/region_externe_kontakte/spender:
+        one: ""
+      group/region_externe_kontakte/kontakt:
+        one: Contact
+
+      group/ort_gewaehlte/fraktionschef:
+        one: ""
+      group/ort_gewaehlte/mitglied:
+        one: Membre
+      group/ort_gewaehlte/kommunale_exekutive:
+        one: ""
+      group/ort_gewaehlte/kommunale_legislative:
+        one: ""
+      group/ort_gewaehlte/schulpflegekommission:
+        one: ""
+      group/ort_gewaehlte/rechnungspruefungskommission:
+        one: ""
+      group/ort_gewaehlte/mitglied_weitere_gemeinde_kommissionen:
+        one: ""
+      group/ort_parteigremium/praesident:
+        one: ""
+      group/ort_parteigremium/leitung:
+        one: Direction
+      group/ort_parteigremium/mitglied:
+        one: Membre
+      group/ort_parteigremium/gast:
+        one: Invité-e
+      group/ort_praesidium/praesident:
+        one: ""
+      group/ort_praesidium/vizepraesident:
+        one: ""
+      group/ort_praesidium/kassier:
+        one: ""
+      group/ort_praesidium/mitglied:
+        one: Membre
+      group/ort_praesidium/gast:
+        one: Invité-e
+      group/ort_praesidium/adressverwalter:
+        one: ""
+      group/ort_sekretariat/leitung:
+        one: Direction
+      group/ort_sekretariat/mitarbeiter:
+        one: ""
+      group/ort_arbeitsgruppe/praesident:
+        one: ""
+      group/ort_arbeitsgruppe/leitung:
+        one: Direction
+      group/ort_sekretariat/webadministrator:
+        one: ""
+      group/ort_arbeitsgruppe/mitglied:
+        one: Membre
+      group/ort_arbeitsgruppe/gast:
+        one: Invité-e
+      group/ort_externe_kontakte/medien:
+        one: Médias
+      group/ort_externe_kontakte/spender:
+        one: ""
+      group/ort_externe_kontakte/kontakt:
+        one: Contact
+      group/ort_mitglieder/mitglied:
+        one: Membre
+      group/ort_mitglieder/sympathisant_nach_kantonalem_statut:
+        one: ""
+      group/ort_sympathisanten/sympathisant:
+        one: ""
+
+      salutation:
+        one: Adresse
+        other: Adresses
+        default:
+          label: "Salut [nom]"
+          value:
+            m: "Salut %{greeting_name}"
+            w: "Salut %{greeting_name}"
+            other: "Salut %{greeting_name}"
+        available:
+          lieber_vorname:
+            label: "Cher/chère [prénom]"
+            value:
+              m: "Cher %{first_name}"
+              w: "Chère %{first_name}"
+              other: "Cher %{first_name}"
+          lieber_titel_nachname:
+            label: "Chère Madame la, cher Monsieur [titre] [nom]"
+            value:
+              m: "Cher Monsieur %{title_last_name}"
+              w: "Chère Madame %{title_last_name}"
+              other: "Chère Madame / Cher Monsieur %{title_last_name}"
+          sehr_geehrter_titel_nachname:
+            label: "Chère Madame la, cher Monsieur [titre] [nom]"
+            value:
+              m: "Cher Monsieur %{title_last_name}"
+              w: "Chère Madame %{title_last_name}"
+              other: "Chère Madame / Cher Monsieur %{title_last_name}"
+
+    attributes:
+      person:
+        salutation: Adresse
+        salutation_value: Adresse
+        title: Titre
+        website: Site web
+        correspondence_language: Langue de correspondance
+        civil_status: État civil
+        correspondence_languages:
+          de: Allemand
+          en: Anglais
+          fr: Français
+          it: Italien
+        civil_statuses:
+          single: Célibataire
+          registered_partnership: Partenariat enregistré
+          married: Marié-e
+          divorced: Divorcé-e
+          widowed: Veuf / veuve
