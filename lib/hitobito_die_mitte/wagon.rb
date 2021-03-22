@@ -47,6 +47,10 @@ module HitobitoDieMitte
       end
     end
 
+    initializer 'die_mitte.configure_devise' do |_app|
+      Devise.reset_password_within = 2.weeks
+    end
+
     private
 
     def seed_fixtures
