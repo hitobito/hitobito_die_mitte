@@ -11,7 +11,7 @@ application:
     it: Italienisch
   logo:
     image: die_mitte.svg
-    width: 80
+    width: 213
     height: 68
 
 # The person with this email has root access to everything
