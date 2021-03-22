@@ -23,6 +23,8 @@ module HitobitoDieMitte
       Role.send         :include, DieMitte::Role
       Person.send       :include, DieMitte::Person
 
+      Person::FILTER_ATTRS << :correspondence_language << :email
+
       RoleDecorator.send :prepend, DieMitte::RoleDecorator
       GroupDecorator.send :prepend, DieMitte::GroupDecorator
       # rubocop:enable SingleSpaceBeforeFirstArg
@@ -30,6 +32,9 @@ module HitobitoDieMitte
 
       PeopleController.send :prepend, DieMitte::PeopleController
       FilterNavigation::People.send :prepend, DieMitte::FilterNavigation::People
+
+
+      Person::Filter::Attributes.send :prepend, DieMitte::Person::Filter::Attributes
 
       Export::Pdf::Messages::Letter::Content.placeholders << :salutation
       Export::Pdf::Messages::Letter::Content.send :prepend,
