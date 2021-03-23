@@ -66,4 +66,7 @@ describe Person do
 
   end
 
+  it "accepts rm as correspondence language" do
+    expect(person.update(correspondence_language: "rm")).to eq true
+  end
 end

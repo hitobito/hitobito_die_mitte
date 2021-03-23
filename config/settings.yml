@@ -9,6 +9,7 @@ application:
     de: Deutsch
     fr: Französisch
     it: Italienisch
+    rm: Rätoromanisch
   logo:
     image: die_mitte.svg
     width: 213
