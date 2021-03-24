@@ -506,6 +506,8 @@ de:
               other: Sehr geehrte*r Frau*Herr %{title_last_name}
 
     attributes:
+      mailing_list:
+        correspondence_language: Korrespondenzsprache
       person:
         salutation: Anrede
         salutation_value: Anrede

@@ -30,6 +30,8 @@ module HitobitoDieMitte
       # rubocop:enable SingleSpaceBeforeFirstArg
       Event.role_types -= [Event::Role::Cook]
 
+      MailingListsController.permitted_attrs << :correspondence_language
+
       PeopleController.send :prepend, DieMitte::PeopleController
       FilterNavigation::People.send :prepend, DieMitte::FilterNavigation::People
 
@@ -39,6 +41,8 @@ module HitobitoDieMitte
       Export::Pdf::Messages::Letter::Content.placeholders << :salutation
       Export::Pdf::Messages::Letter::Content.send :prepend,
                                                   DieMitte::Export::Pdf::Messages::Letter::Content
+
+      MailingList::Subscribers.send :prepend, DieMitte::MailingList::Subscribers
     end
 
     initializer 'die_mitte.add_settings' do |_app|
