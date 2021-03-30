@@ -79,9 +79,6 @@ it:
       group/vereinigung:
         one: Associazione
         other: Associazioni
-      group/vereinigung_gewaehlte:
-        one: Eletto
-        other: Eletti
       group/vereinigung_parteigremium:
         one: Comitato del Partito
         other: Comitato del Partito
@@ -113,9 +110,6 @@ it:
       group/region:
         one: Regione
         other: Regioni
-      group/region_gewaehlte:
-        one: Eletto
-        other: Eletti
       group/region_parteigremium:
         one: Comitato del Partito
         other: Comitato del Partito
@@ -321,12 +315,6 @@ it:
       group/kanton_sympathisanten/sympathisant:
         one: ""
 
-      group/vereinigung_gewaehlte/fraktionschef:
-        one: ""
-      group/vereinigung_gewaehlte/vereinigung_exekutive:
-        one: ""
-      group/vereinigung_gewaehlte/vereinigung_legislative:
-        one: ""
       group/vereinigung_parteigremium/praesident:
         one: ""
       group/vereinigung_parteigremium/leitung:
@@ -378,14 +366,6 @@ it:
       group/vereinigung_delegierte/delegierte_von_amtes_wegen:
         one: ""
 
-      group/region_gewaehlte/fraktionschef:
-        one: ""
-      group/region_gewaehlte/region_exekutive:
-        one: ""
-      group/region_gewaehlte/region_legislative:
-        one: ""
-      group/region_gewaehlte/region_judikative:
-        one: ""
       group/region_parteigremium/praesident:
         one: ""
       group/region_parteigremium/leitung:
@@ -526,6 +506,8 @@ it:
               other: ""
 
     attributes:
+      mailing_list:
+        correspondence_language: ""
       person:
         salutation: Saluto
         salutation_value: Saluto
@@ -538,6 +520,7 @@ it:
           en: inglese
           fr: francese
           it: italiano
+          rm: ""
         civil_statuses:
           single: Singolo
           registered_partnership: Unione registrata

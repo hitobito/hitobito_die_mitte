@@ -79,9 +79,6 @@ fr:
       group/vereinigung:
         one: Groupements
         other: Groupements
-      group/vereinigung_gewaehlte:
-        one: 'Élu-e-s '
-        other: Élu-e-s
       group/vereinigung_parteigremium:
         one: Organes du parti
         other: Organes du parti
@@ -113,9 +110,6 @@ fr:
       group/region:
         one: Régions
         other: Régions
-      group/region_gewaehlte:
-        one: Élu-e-s
-        other: Élu-e-s
       group/region_parteigremium:
         one: Organes du parti
         other: Organes du parti
@@ -174,11 +168,11 @@ fr:
       group/bund_gewaehlte/bundesrat:
         one: Conseillers fédéraux / conseillères fédérales
       group/bund_gewaehlte/bundeskanzler:
-        one: ""
+        one: Chancelier fédéral
       group/bund_gewaehlte/staenderat:
-        one: ""
+        one: Conseil des Etats
       group/bund_gewaehlte/nationalrat:
-        one: ""
+        one: Conseil national
       group/bund_gewaehlte/vollamt_bundesrichter:
         one: Juges fédéraux (temps plein)
       group/bund_gewaehlte/nebenamt_bundes_richter:
@@ -190,7 +184,7 @@ fr:
       group/bund_gewaehlte/bundesstrafrichter:
         one: "Juges pénales fédéraux "
       group/bund_parteigremium/praesident:
-        one: ""
+        one: Président-e
       group/bund_parteigremium/leitung:
         one: Direction
       group/bund_parteigremium/mitglied:
@@ -198,11 +192,11 @@ fr:
       group/bund_parteigremium/gast:
         one: Invité-e
       group/bund_praesidium/praesident:
-        one: ""
+        one: Président-e
       group/bund_praesidium/vizepraesident:
-        one: ""
+        one: Vice-président-e
       group/bund_praesidium/kassier:
-        one: ""
+        one: Responsable des finances
       group/bund_praesidium/mitglied:
         one: Membre
       group/bund_praesidium/gast:
@@ -210,21 +204,21 @@ fr:
       group/bund_sekretariat/leitung:
         one: Direction
       group/bund_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaborateur / collaboratrice
       group/bund_sekretariat/it_support:
         one: Support informatique
       group/bund_sekretariat/kassier:
-        one: ""
+        one: Responsable des finances
       group/bund_sekretariat/webadministrator:
-        one: ""
+        one: Administration web
       group/bund_kommission/praesident:
-        one: ""
+        one: Président-e
       group/bund_kommission/leitung:
         one: Direction
       group/bund_kommission/mitglied:
         one: Membre
       group/bund_arbeitsgruppe/praesident:
-        one: ""
+        one: Président-e
       group/bund_arbeitsgruppe/leitung:
         one: Direction
       group/bund_arbeitsgruppe/mitglied:
@@ -232,40 +226,40 @@ fr:
       group/bund_arbeitsgruppe/gast:
         one: Invité-e
       group/bund_delegierte/delegierte:
-        one: ""
+        one: Délégué-e-s
       group/bund_delegierte/ersatzdelegierte:
-        one: ""
+        one: Délégué-e-s suppléant-e-s
       group/bund_delegierte/delegierte_von_amtes_wegen:
-        one: ""
+        one: Délégué-e-s d'office
       group/bund_externe_kontakte/medien:
         one: Médias
       group/bund_externe_kontakte/spender:
-        one: ""
+        one: Donateur / Donatrice
       group/bund_externe_kontakte/kontakt:
         one: Contact
       group/bund_mitglieder/mitglied:
         one: Membre
       group/bund_sympathisanten/sympathisant:
-        one: ""
+        one: Sympathisant-e
 
       group/kanton_gewaehlte/fraktionschef:
-        one: ""
+        one: Chef de groupe / Cheffe de groupe
       group/kanton_gewaehlte/kantonale_exekutive:
         one: Exécutif cantonaux
       group/kanton_gewaehlte/kantonale_legislative:
         one: Législatif cantonaux
       group/kanton_gewaehlte/mitglied_kantonales_gericht_erste_instanz:
-        one: ""
+        one: Membre du tribunal cantonal de première instance
       group/kanton_gewaehlte/mitglied_kantonales_gericht_zweite_instanz:
-        one: ""
+        one: Membre du tribunal cantonal de deuxième instance
       group/kanton_gewaehlte/staatsanwaltschaft:
-        one: ""
+        one: Procureur-e
       group/kanton_gewaehlte/parlamentarische_geschaeftsfuehrung:
-        one: ""
+        one: Gestion parlementaire
       group/kanton_gewaehlte/weitere_mandate:
-        one: ""
+        one: Autres mandats
       group/kanton_parteigremium/praesident:
-        one: ""
+        one: Président-e
       group/kanton_parteigremium/leitung:
         one: Direction
       group/kanton_parteigremium/mitglied:
@@ -273,11 +267,11 @@ fr:
       group/kanton_parteigremium/gast:
         one: Invité-e
       group/kanton_praesidium/praesident:
-        one: ""
+        one: Président-e
       group/kanton_praesidium/vizepraesident:
-        one: ""
+        one: Vice-président-e
       group/kanton_praesidium/kassier:
-        one: ""
+        one: Responsable des finances
       group/kanton_praesidium/mitglied:
         one: Membre
       group/kanton_praesidium/gast:
@@ -285,17 +279,17 @@ fr:
       group/kanton_sekretariat/leitung:
         one: Direction
       group/kanton_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaborateur / collaboratrice
       group/kanton_kommission/praesident:
-        one: ""
+        one: Président-e
       group/kanton_kommission/leitung:
         one: Direction
       group/kanton_kommission/mitglied:
         one: Membre
       group/kanton_sekretariat/webadministrator:
-        one: ""
+        one: Administration web
       group/kanton_arbeitsgruppe/praesident:
-        one: ""
+        one: Président-e
       group/kanton_arbeitsgruppe/leitung:
         one: Direction
       group/kanton_arbeitsgruppe/mitglied:
@@ -305,30 +299,24 @@ fr:
       group/kanton_externe_kontakte/medien:
         one: Médias
       group/kanton_externe_kontakte/spender:
-        one: ""
+        one: Donateur / donatrice
       group/kanton_externe_kontakte/kontakt:
         one: Contact
       group/kanton_delegierte/delegierte:
-        one: ""
+        one: Délégué-e-s
       group/kanton_delegierte/delegierte_von_amtes_wegen:
-        one: ""
+        one: Délégué-e-s d'office
       group/kanton_delegierte/ersatzdelegierte:
-        one: ""
+        one: Délégué-e-s suppléant-e-s
       group/kanton_mitglieder/mitglied:
         one: Membre
       group/kanton_mitglieder/sympathisant_nach_kantonalem_statut:
-        one: ""
+        one: Sympathisant-e d'après son statut cantonal
       group/kanton_sympathisanten/sympathisant:
-        one: ""
+        one: Sympathisant-e
 
-      group/vereinigung_gewaehlte/fraktionschef:
-        one: ""
-      group/vereinigung_gewaehlte/vereinigung_exekutive:
-        one: ""
-      group/vereinigung_gewaehlte/vereinigung_legislative:
-        one: ""
       group/vereinigung_parteigremium/praesident:
-        one: ""
+        one: Président-e
       group/vereinigung_parteigremium/leitung:
         one: Direction
       group/vereinigung_parteigremium/mitglied:
@@ -336,25 +324,25 @@ fr:
       group/vereinigung_parteigremium/gast:
         one: Invité-e
       group/vereinigung_praesidium/praesident:
-        one: ""
+        one: Présidente
       group/vereinigung_praesidium/vizepraesident:
-        one: ""
+        one: Vice-présidente
       group/vereinigung_praesidium/kassier:
-        one: ""
+        one: Responsable des finances
       group/vereinigung_praesidium/mitglied:
         one: Membre
       group/vereinigung_sekretariat/leitung:
         one: Direction
       group/vereinigung_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaborateur / collaboratrice
       group/vereinigung_sekretariat/webadministrator:
-        one: ""
+        one: Administration web
       group/vereinigung_kommission/praesident:
-        one: ""
+        one: Président-e
       group/vereinigung_kommission/mitglied:
         one: Membre
       group/vereinigung_arbeitsgruppe/praesident:
-        one: ""
+        one: Président-e
       group/vereinigung_arbeitsgruppe/leitung:
         one: Direction
       group/vereinigung_arbeitsgruppe/mitglied:
@@ -364,30 +352,22 @@ fr:
       group/vereinigung_externe_kontakte/medien:
         one: Médias
       group/vereinigung_externe_kontakte/spender:
-        one: ""
+        one: Donateur / donatrice
       group/vereinigung_externe_kontakte/kontakt:
         one: Contact
       group/vereinigung_mitglieder/mitglied:
         one: Membres
       group/vereinigung_sympathisanten/sympathisant:
-        one: ""
+        one: Sympathisant-e
       group/vereinigung_delegierte/delegierte:
-        one: ""
+        one: Délégué-e-s
       group/vereinigung_delegierte/ersatzdelegierte:
-        one: ""
+        one: Délégué-e-s suppléant-e-s
       group/vereinigung_delegierte/delegierte_von_amtes_wegen:
-        one: ""
+        one: Délégué-e-s d'office
 
-      group/region_gewaehlte/fraktionschef:
-        one: ""
-      group/region_gewaehlte/region_exekutive:
-        one: ""
-      group/region_gewaehlte/region_legislative:
-        one: ""
-      group/region_gewaehlte/region_judikative:
-        one: ""
       group/region_parteigremium/praesident:
-        one: ""
+        one: Président-e
       group/region_parteigremium/leitung:
         one: Direction
       group/region_parteigremium/mitglied:
@@ -395,25 +375,25 @@ fr:
       group/region_parteigremium/gast:
         one: Invité-e
       group/region_praesidium/praesident:
-        one: ""
+        one: Président-e
       group/region_praesidium/vizepraesident:
-        one: ""
+        one: Vice-président-e
       group/region_praesidium/kassier:
-        one: ""
+        one: Responsable des finances
       group/region_praesidium/mitglied:
         one: Membre
       group/region_sekretariat/leitung:
         one: Direction
       group/region_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaborateur / collaboratrice
       group/region_sekretariat/webadministrator:
-        one: ""
+        one: Administration web
       group/region_kommission/praesident:
-        one: ""
+        one: Président-e
       group/region_kommission/mitglied:
         one: Membre
       group/region_arbeitsgruppe/praesident:
-        one: ""
+        one: Président-e
       group/region_arbeitsgruppe/leitung:
         one: Direction
       group/region_arbeitsgruppe/mitglied:
@@ -421,36 +401,36 @@ fr:
       group/region_arbeitsgruppe/gast:
         one: Invité-e
       group/region_delegierte/delegierte:
-        one: ""
+        one: Délégué-e-s
       group/region_delegierte/ersatzdelegierte:
-        one: ""
+        one: Délégué-e-s suppléant-e-s
       group/region_mitglieder/mitglied:
         one: Membres
       group/region_sympathisanten/sympathisant:
-        one: ""
+        one: Sympathisant-e
       group/region_externe_kontakte/medien:
         one: Médias
       group/region_externe_kontakte/spender:
-        one: ""
+        one: Donateur / donatrice
       group/region_externe_kontakte/kontakt:
         one: Contact
 
       group/ort_gewaehlte/fraktionschef:
-        one: ""
+        one: Chef de groupe / cheffe de groupe
       group/ort_gewaehlte/mitglied:
         one: Membre
       group/ort_gewaehlte/kommunale_exekutive:
-        one: ""
+        one: Exécutif communal
       group/ort_gewaehlte/kommunale_legislative:
-        one: ""
+        one: Législatif communal
       group/ort_gewaehlte/schulpflegekommission:
-        one: ""
+        one: Commission scolaire
       group/ort_gewaehlte/rechnungspruefungskommission:
-        one: ""
+        one: Commission de vérification des comptes
       group/ort_gewaehlte/mitglied_weitere_gemeinde_kommissionen:
-        one: ""
+        one: Membre de diverses commissions communales
       group/ort_parteigremium/praesident:
-        one: ""
+        one: Président-e
       group/ort_parteigremium/leitung:
         one: Direction
       group/ort_parteigremium/mitglied:
@@ -458,27 +438,27 @@ fr:
       group/ort_parteigremium/gast:
         one: Invité-e
       group/ort_praesidium/praesident:
-        one: ""
+        one: Président-e
       group/ort_praesidium/vizepraesident:
-        one: ""
+        one: Vice-président-e
       group/ort_praesidium/kassier:
-        one: ""
+        one: Responsable des finances
       group/ort_praesidium/mitglied:
         one: Membre
       group/ort_praesidium/gast:
         one: Invité-e
       group/ort_praesidium/adressverwalter:
-        one: ""
+        one: Gestion des adresses
       group/ort_sekretariat/leitung:
         one: Direction
       group/ort_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaborateur / collaboratrice
       group/ort_arbeitsgruppe/praesident:
-        one: ""
+        one: Président-e
       group/ort_arbeitsgruppe/leitung:
         one: Direction
       group/ort_sekretariat/webadministrator:
-        one: ""
+        one: Administration web
       group/ort_arbeitsgruppe/mitglied:
         one: Membre
       group/ort_arbeitsgruppe/gast:
@@ -486,15 +466,15 @@ fr:
       group/ort_externe_kontakte/medien:
         one: Médias
       group/ort_externe_kontakte/spender:
-        one: ""
+        one: Donateur / donatrice
       group/ort_externe_kontakte/kontakt:
         one: Contact
       group/ort_mitglieder/mitglied:
         one: Membre
       group/ort_mitglieder/sympathisant_nach_kantonalem_statut:
-        one: ""
+        one: Sympathisant-e d'après son statut cantonal
       group/ort_sympathisanten/sympathisant:
-        one: ""
+        one: Sympathisant-e
 
       salutation:
         one: Adresse
@@ -526,6 +506,8 @@ fr:
               other: "Chère Madame / Cher Monsieur %{title_last_name}"
 
     attributes:
+      mailing_list:
+        correspondence_language: Langue
       person:
         salutation: Adresse
         salutation_value: Adresse
@@ -538,6 +520,7 @@ fr:
           en: Anglais
           fr: Français
           it: Italien
+          rm: Romanche
         civil_statuses:
           single: Célibataire
           registered_partnership: Partenariat enregistré
