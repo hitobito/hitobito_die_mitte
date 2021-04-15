@@ -8,7 +8,7 @@
 class Group::OrtSekretariat < Group
 
   class Leitung < Role
-    self.permissions = [:layer_full]
+    self.permissions = [:layer_full, :contact_data, :finance]
   end
 
   class Mitarbeiter < Role

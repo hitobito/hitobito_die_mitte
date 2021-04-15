@@ -103,11 +103,6 @@ Status](https://travis-ci.org/hitobito/hitobito_die_mitte.svg)](https://travis-c
       * Sympathisanten
         * SympathisantIn: []
     * Region
-      * Gewählte
-        * FraktionschefIn: []
-        * Region Exekutive: []
-        * Region Legislative: []
-        * Region Judikative: []
       * Parteigremium
         * PräsidentIn: []
         * Leitung: [:group_full]
@@ -159,7 +154,7 @@ Status](https://travis-ci.org/hitobito/hitobito_die_mitte.svg)](https://travis-c
         * AdressverwalterIn: [:layer_and_below_full]
         * Gast: []
       * Sekretariat
-        * Leitung: [:layer_full]
+        * Leitung: [:layer_full, :contact_data, :finance]
         * MitarbeiterIn: [:layer_full]
         * WebadministratorIn: []
       * Arbeitsgruppe
@@ -176,10 +171,6 @@ Status](https://travis-ci.org/hitobito/hitobito_die_mitte.svg)](https://travis-c
       * Sympathisanten
         * SympathisantIn: []
     * Vereinigung
-      * Gewählte
-        * FraktionschefIn: []
-        * Vereinigung Exekutive: []
-        * Vereinigung Legislative: []
       * Parteigremium
         * PräsidentIn: []
         * Leitung: [:group_full]
