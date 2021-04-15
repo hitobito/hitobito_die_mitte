@@ -8,7 +8,7 @@
 class Group::KantonPraesidium < Group
 
   class Praesident < Role
-    self.permissions = [:contact_data]
+    self.permissions = [:layer_and_below_full, :contact_data, :finance]
   end
 
   class Vizepraesident < Role

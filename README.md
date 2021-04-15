@@ -20,42 +20,42 @@ Status](https://travis-ci.org/hitobito/hitobito_die_mitte.svg)](https://travis-c
         * Bundespatentrichter: []
         * Bundesstrafrichter: []
       * Parteigremium
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Praesidium
-        * Präsident: []
-        * Vizepräsident: []
+        * PräsidentIn: [:layer_and_below_full, :contact_data, :finance]
+        * VizepräsidentIn: []
         * Mitglied: []
         * Gast: []
       * Sekretariat
         * Leitung: [:layer_and_below_full, :contact_data, :admin]
-        * Mitarbeiter: [:layer_and_below_full, :contact_data, :admin]
+        * MitarbeiterIn: [:layer_and_below_full, :contact_data, :admin]
         * It-Support: [:impersonation]
-        * Kassier: [:finance]
-        * Webadministrator: []
+        * KassierIn: [:finance]
+        * WebadministratorIn: []
       * Kommission
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
       * Arbeitsgruppe
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Externe Kontakte
         * Medien: []
-        * Spender: []
+        * SpenderIn: []
         * Kontakt: []
       * Delegierte
-        * Delegierte: []
-        * Ersatzdelegierte: []
-        * Delegierte von Amtes wegen: []
+        * DelegierteR: []
+        * ErsatzdelegierteR: []
+        * DelegierteR von Amtes wegen: []
       * Mitglieder
         * Mitglied: []
       * Sympathisanten
-        * Sympathisant: []
+        * SympathisantIn: []
     * Kanton
       * Gewählte
         * Kantonale Exekutive: []
@@ -64,144 +64,153 @@ Status](https://travis-ci.org/hitobito/hitobito_die_mitte.svg)](https://travis-c
         * Mitglied kantonales Gericht zweite Instanz: []
         * Staatsanwaltschaft: []
         * Parlamentarische Geschaeftsfuehrung: []
-        * Fraktionschef: []
+        * FraktionschefIn: []
         * Weitere Mandate: []
       * Parteigremium
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Praesidium
-        * Präsident: [:contact_data]
-        * Vizepräsident: []
+        * PräsidentIn: [:layer_and_below_full, :contact_data, :finance]
+        * VizepräsidentIn: []
         * Mitglied: []
         * Gast: []
-        * Kassier: [:finance]
+        * KassierIn: [:finance]
       * Sekretariat
         * Leitung: [:layer_and_below_full, :finance, :contact_data]
-        * Mitarbeiter: [:layer_and_below_full]
-        * Webadministrator: []
+        * MitarbeiterIn: [:layer_and_below_full]
+        * WebadministratorIn: []
       * Kommission
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
       * Arbeitsgruppe
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Externe Kontakte
         * Medien: []
-        * Spender: []
+        * SpenderIn: []
         * Kontakt: []
       * Delegierte
-        * Delegierte: []
-        * Ersatzdelegierte: []
-        * Delegierte von Amtes wegen: []
+        * DelegierteR: []
+        * ErsatzdelegierteR: []
+        * DelegierteR von Amtes wegen: []
       * Mitglieder
         * Mitglied: []
       * Sympathisanten
-        * Sympathisant: []
+        * SympathisantIn: []
     * Region
+      * Gewählte
+        * FraktionschefIn: []
+        * Region Exekutive: []
+        * Region Legislative: []
+        * Region Judikative: []
       * Parteigremium
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Praesidium
-        * Präsident: []
-        * Vizepräsident: []
-        * Kassier: [:finance]
+        * PräsidentIn: [:layer_and_below_full, :contact_data, :finance]
+        * VizepräsidentIn: []
+        * KassierIn: [:finance]
         * Mitglied: []
       * Sekretariat
         * Leitung: [:layer_and_below_full]
-        * Mitarbeiter: [:layer_and_below_full]
-        * Webadministrator: []
+        * MitarbeiterIn: [:layer_and_below_full]
+        * WebadministratorIn: []
       * Arbeitsgruppe
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Delegierte
-        * Delegierte: []
-        * Ersatzdelegierte: []
+        * DelegierteR: []
+        * ErsatzdelegierteR: []
       * Mitglieder
         * Mitglieder: []
       * Sympathisanten
-        * Sympathisant: []
+        * SympathisantIn: []
       * Externe Kontakte
         * Medien: []
-        * Spender: []
+        * SpenderIn: []
         * Kontakt: []
     * Ortspartei
       * Gewählte
-        * Fraktionschef: []
+        * FraktionschefIn: []
         * Kommunale Exekutive: []
         * Kommunale Legislative: []
         * Schulpflege/- kommission: []
         * Rechnungsprüfungskommission: []
         * Mitglied weitere Gemeindekommissionen: []
       * Parteigremium
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Praesidium
-        * Präsident: [:contact_data]
-        * Vizepräsident: []
-        * Kassier: [:finance]
+        * PräsidentIn: [:layer_and_below_full, :contact_data, :finance]
+        * VizepräsidentIn: []
+        * KassierIn: [:finance]
         * Mitglied: []
-        * Adressverwalter: [:layer_and_below_full]
+        * AdressverwalterIn: [:layer_and_below_full]
         * Gast: []
       * Sekretariat
         * Leitung: [:layer_full]
-        * Mitarbeiter: [:layer_full]
-        * Webadministrator: []
+        * MitarbeiterIn: [:layer_full]
+        * WebadministratorIn: []
       * Arbeitsgruppe
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Externe Kontakte
         * Medien: []
-        * Spender: []
+        * SpenderIn: []
         * Kontakt: []
       * Mitglieder
         * Mitglied: []
       * Sympathisanten
-        * Sympathisant: []
+        * SympathisantIn: []
     * Vereinigung
+      * Gewählte
+        * FraktionschefIn: []
+        * Vereinigung Exekutive: []
+        * Vereinigung Legislative: []
       * Parteigremium
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Praesidium
-        * Präsident: [:contact_data]
-        * Vizepräsident: []
-        * Kassier: [:finance]
+        * PräsidentIn: [:layer_and_below_full, :contact_data, :finance]
+        * VizepräsidentIn: []
+        * KassierIn: [:finance]
         * Mitglied: []
       * Sekretariat
         * Leitung: [:layer_and_below_full, :contact_data, :finance]
-        * Mitarbeiter: [:layer_and_below_full]
-        * Webadministrator: []
+        * MitarbeiterIn: [:layer_and_below_full]
+        * WebadministratorIn: []
       * Kommission
-        * Präsident: []
+        * PräsidentIn: []
         * Mitglied: []
       * Arbeitsgruppe
-        * Präsident: []
+        * PräsidentIn: []
         * Leitung: [:group_full]
         * Mitglied: [:group_read]
         * Gast: []
       * Externe Kontakte
         * Medien: []
-        * Spender: []
+        * SpenderIn: []
         * Kontakt: []
       * Mitglieder
         * Mitglieder: []
       * Sympathisanten
-        * Sympathisant: []
+        * SympathisantIn: []
       * Delegierte
-        * Delegierte: []
-        * Ersatzdelegierte: []
-        * Delegierte von Amtes wegen: []
+        * DelegierteR: []
+        * ErsatzdelegierteR: []
+        * DelegierteR von Amtes wegen: []
