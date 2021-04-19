@@ -25,7 +25,7 @@ root_email: hitobito-cvp@puzzle.ch
 messages:
   enable_writing: true
   pdf:
-    logo: right
+    logo_position: right
 
 assignments:
   enabled: true
