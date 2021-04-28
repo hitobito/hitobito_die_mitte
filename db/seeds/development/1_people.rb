@@ -28,6 +28,17 @@ class DieMittePersonSeeder < PersonSeeder
     end
   end
 
+  def seed_printer
+    attrs = {
+      email: 'info@sutergerteis.ch',
+      company: true,
+      company_name: 'Suter & Gerteis AG',
+      encrypted_password: encrypted_password
+    }
+    printer = Person.seed_once(attrs).first
+    seed_role(printer, Group.root, Group::BundExterneKontakte::Kontakt)
+  end
+
 end
 
 puzzlers = ['Pascal Zumkehr',
@@ -48,6 +59,8 @@ puzzlers.each do |puz|
 end
 
 seeder = DieMittePersonSeeder.new
+
+seeder.seed_printer
 
 seeder.seed_all_roles
 

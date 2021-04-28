@@ -29,4 +29,4 @@ messages:
 
 assignments:
   enabled: true
-
+  default_assignee_email: info@sutergerteis.ch
