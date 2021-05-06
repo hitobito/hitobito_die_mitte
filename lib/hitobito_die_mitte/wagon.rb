@@ -38,9 +38,6 @@ module HitobitoDieMitte
 
       Person::Filter::Attributes.send :prepend, DieMitte::Person::Filter::Attributes
 
-      Export::Pdf::Messages::Letter::Content.placeholders << :salutation
-      Export::Pdf::Messages::Letter::Content.send :prepend,
-                                                  DieMitte::Export::Pdf::Messages::Letter::Content
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
 
       MailingList::Subscribers.send :prepend, DieMitte::MailingList::Subscribers
