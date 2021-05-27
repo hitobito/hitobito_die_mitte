@@ -23,9 +23,8 @@ application:
 root_email: hitobito-cvp@puzzle.ch
 
 messages:
+  personal_salutation: true
   enable_writing: true
-  pdf:
-    logo_position: right
 
 assignments:
   enabled: true
