@@ -493,13 +493,13 @@ fr:
               w: "Chère %{first_name}"
               other: "Cher %{first_name}"
           lieber_titel_nachname:
-            label: "Chère Madame la, cher Monsieur [titre] [nom]"
+            label: "Chère Madame, cher Monsieur [titre] [nom]"
             value:
               m: "Cher Monsieur %{title_last_name}"
               w: "Chère Madame %{title_last_name}"
               other: "Chère Madame / Cher Monsieur %{title_last_name}"
           sehr_geehrter_titel_nachname:
-            label: "Chère Madame la, cher Monsieur [titre] [nom]"
+            label: "Chère Madame, cher Monsieur [titre] [nom]"
             value:
               m: "Cher Monsieur %{title_last_name}"
               w: "Chère Madame %{title_last_name}"

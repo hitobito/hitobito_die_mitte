@@ -160,8 +160,8 @@ it:
         one: Membro
         other: Membri
       group/ort_sympathisanten:
-        one: ''
-        other: ''
+        one: Simpatizzanti
+        other: Simpatizzanti
 
       ### ROLES
 
@@ -184,239 +184,239 @@ it:
       group/bund_gewaehlte/bundesstrafrichter:
         one: ""
       group/bund_parteigremium/praesident:
-        one: ""
+        one: Presidente
       group/bund_parteigremium/leitung:
-        one: ""
+        one: Responsabile
       group/bund_parteigremium/mitglied:
         one: Membro
       group/bund_parteigremium/gast:
         one: Ospite
       group/bund_praesidium/praesident:
-        one: ""
+        one: Presidente
       group/bund_praesidium/vizepraesident:
-        one: ""
+        one: Vicepresidente
       group/bund_praesidium/kassier:
-        one: ""
+        one: Cassiera
       group/bund_praesidium/mitglied:
         one: Membro
       group/bund_praesidium/gast:
         one: Ospite
       group/bund_sekretariat/leitung:
-        one: ""
+        one: Responsabile
       group/bund_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaboratrice
       group/bund_sekretariat/it_support:
-        one: ""
+        one: Supporto informatico
       group/bund_sekretariat/kassier:
-        one: ""
+        one: Cassiera
       group/bund_sekretariat/webadministrator:
-        one: ""
+        one: Amministratrice web
       group/bund_kommission/praesident:
-        one: ""
+        one: Presidente
       group/bund_kommission/leitung:
-        one: ""
+        one: Responsabile
       group/bund_kommission/mitglied:
-        one: ""
+        one: Membro
       group/bund_arbeitsgruppe/praesident:
-        one: ""
+        one: Presidente
       group/bund_arbeitsgruppe/leitung:
-        one: ""
+        one: Direzione
       group/bund_arbeitsgruppe/mitglied:
         one: Membro
       group/bund_arbeitsgruppe/gast:
         one: Ospite
       group/bund_delegierte/delegierte:
-        one: ""
+        one: Delegato
       group/bund_delegierte/ersatzdelegierte:
-        one: ""
+        one: Delegato supplente
       group/bund_delegierte/delegierte_von_amtes_wegen:
-        one: ""
+        one: Delegato di diritto
       group/bund_externe_kontakte/medien:
-        one: ""
+        one: Media
       group/bund_externe_kontakte/spender:
-        one: ""
+        one: Donatore
       group/bund_externe_kontakte/kontakt:
-        one: ""
+        one: Contatto
       group/bund_mitglieder/mitglied:
-        one: ""
+        one: Membro
       group/bund_sympathisanten/sympathisant:
-        one: ""
+        one: Simpatizzante
 
       group/kanton_gewaehlte/fraktionschef:
-        one: ""
+        one: Capogruppo
       group/kanton_gewaehlte/kantonale_exekutive:
         one: Esecutivo cantonale
       group/kanton_gewaehlte/kantonale_legislative:
         one: Legislativo cantonale
       group/kanton_gewaehlte/mitglied_kantonales_gericht_erste_instanz:
-        one: ""
+        one: Membro del Tribunale cantonale di prima istanza
       group/kanton_gewaehlte/mitglied_kantonales_gericht_zweite_instanz:
-        one: ""
+        one: Membro del Tribunale cantonale di seconda istanza
       group/kanton_gewaehlte/staatsanwaltschaft:
-        one: ""
+        one: Ministero Pubblico
       group/kanton_gewaehlte/parlamentarische_geschaeftsfuehrung:
-        one: ""
+        one: Gestione parlamentare
       group/kanton_gewaehlte/weitere_mandate:
         one: Altri mandati
       group/kanton_parteigremium/praesident:
-        one: ""
+        one: Presidente
       group/kanton_parteigremium/leitung:
-        one: ""
+        one: Direzione
       group/kanton_parteigremium/mitglied:
-        one: ""
+        one: Membro
       group/kanton_parteigremium/gast:
-        one: ""
+        one: Ospite
       group/kanton_praesidium/praesident:
-        one: ""
+        one: Presidente
       group/kanton_praesidium/vizepraesident:
-        one: ""
+        one: Vicepresidente
       group/kanton_praesidium/kassier:
-        one: ""
+        one: Cassiere
       group/kanton_praesidium/mitglied:
-        one: ""
+        one: Membro
       group/kanton_praesidium/gast:
-        one: ""
+        one: Ospite
       group/kanton_sekretariat/leitung:
-        one: ""
+        one: Direzione
       group/kanton_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaboratrice
       group/kanton_kommission/praesident:
-        one: ""
+        one: Presidente
       group/kanton_kommission/leitung:
-        one: ""
+        one: Direzione
       group/kanton_kommission/mitglied:
-        one: ""
+        one: Membro
       group/kanton_sekretariat/webadministrator:
-        one: ""
+        one: Amministratrice web
       group/kanton_arbeitsgruppe/praesident:
-        one: ""
+        one: Presidente
       group/kanton_arbeitsgruppe/leitung:
-        one: ""
+        one: Direzione
       group/kanton_arbeitsgruppe/mitglied:
-        one: ""
+        one: Membro
       group/kanton_arbeitsgruppe/gast:
-        one: ""
+        one: Ospite
       group/kanton_externe_kontakte/medien:
-        one: ""
+        one: Media
       group/kanton_externe_kontakte/spender:
-        one: ""
+        one: Donatore
       group/kanton_externe_kontakte/kontakt:
-        one: ""
+        one: Contatto
       group/kanton_delegierte/delegierte:
-        one: ""
+        one: Delegato
       group/kanton_delegierte/delegierte_von_amtes_wegen:
-        one: ""
+        one: Delegato d'ufficio
       group/kanton_delegierte/ersatzdelegierte:
-        one: ""
+        one: Delegato supplente
       group/kanton_mitglieder/mitglied:
-        one: ""
+        one: Membro
       group/kanton_mitglieder/sympathisant_nach_kantonalem_statut:
-        one: ""
+        one: Simpatizzante secondo statuto cantonale
       group/kanton_sympathisanten/sympathisant:
-        one: ""
+        one: Simpatizzante
 
       group/vereinigung_parteigremium/praesident:
-        one: ""
+        one: Presidente
       group/vereinigung_parteigremium/leitung:
-        one: ""
+        one: Direzione
       group/vereinigung_parteigremium/mitglied:
-        one: ""
+        one: Membro
       group/vereinigung_parteigremium/gast:
-        one: ""
+        one: Ospite
       group/vereinigung_praesidium/praesident:
-        one: ""
+        one: Presidente
       group/vereinigung_praesidium/vizepraesident:
-        one: ""
+        one: Vicepresidente
       group/vereinigung_praesidium/kassier:
-        one: ""
+        one: Cassiera
       group/vereinigung_praesidium/mitglied:
-        one: ""
+        one: Membro
       group/vereinigung_sekretariat/leitung:
-        one: ""
+        one: Direzione
       group/vereinigung_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaboratrice
       group/vereinigung_sekretariat/webadministrator:
-        one: ""
+        one: Amministratrice web
       group/vereinigung_kommission/praesident:
-        one: ""
+        one: Presidente
       group/vereinigung_kommission/mitglied:
-        one: ""
+        one: Membro
       group/vereinigung_arbeitsgruppe/praesident:
-        one: ""
+        one: Presidente
       group/vereinigung_arbeitsgruppe/leitung:
-        one: ""
+        one: Direzione
       group/vereinigung_arbeitsgruppe/mitglied:
-        one: ""
+        one: Membro
       group/vereinigung_arbeitsgruppe/gast:
-        one: ""
+        one: Ospite
       group/vereinigung_externe_kontakte/medien:
-        one: ""
+        one: Media
       group/vereinigung_externe_kontakte/spender:
-        one: ""
+        one: Donatore
       group/vereinigung_externe_kontakte/kontakt:
-        one: ""
+        one: Contatto
       group/vereinigung_mitglieder/mitglied:
-        one: ""
+        one: membri
       group/vereinigung_sympathisanten/sympathisant:
-        one: ""
+        one: Simpatizzante
       group/vereinigung_delegierte/delegierte:
-        one: ""
+        one: Delegato
       group/vereinigung_delegierte/ersatzdelegierte:
-        one: ""
+        one: Delegato supplente
       group/vereinigung_delegierte/delegierte_von_amtes_wegen:
-        one: ""
+        one: Delegato d'ufficio
 
       group/region_parteigremium/praesident:
-        one: ""
+        one: Presidente
       group/region_parteigremium/leitung:
-        one: ""
+        one: Direzione
       group/region_parteigremium/mitglied:
-        one: ""
+        one: Membro
       group/region_parteigremium/gast:
-        one: ""
+        one: Ospite
       group/region_praesidium/praesident:
-        one: ""
+        one: Presidente
       group/region_praesidium/vizepraesident:
-        one: ""
+        one: vicepresidente
       group/region_praesidium/kassier:
-        one: ""
+        one: Cassiera
       group/region_praesidium/mitglied:
-        one: ""
+        one: Membro
       group/region_sekretariat/leitung:
-        one: ""
+        one: Direzione
       group/region_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaboratrice
       group/region_sekretariat/webadministrator:
-        one: ""
+        one: Amministratrice web
       group/region_kommission/praesident:
-        one: ""
+        one: Presidente
       group/region_kommission/mitglied:
-        one: ""
+        one: Membro
       group/region_arbeitsgruppe/praesident:
-        one: ""
+        one: Presidente
       group/region_arbeitsgruppe/leitung:
-        one: ""
+        one: Direzione
       group/region_arbeitsgruppe/mitglied:
-        one: ""
+        one: Membro
       group/region_arbeitsgruppe/gast:
         one: Ospite
       group/region_delegierte/delegierte:
-        one: ""
+        one: Delegato
       group/region_delegierte/ersatzdelegierte:
-        one: ""
+        one: Delegato supplente
       group/region_mitglieder/mitglied:
-        one: ""
+        one: Membri
       group/region_sympathisanten/sympathisant:
-        one: ""
+        one: Simpatizzante
       group/region_externe_kontakte/medien:
-        one: ""
+        one: Media
       group/region_externe_kontakte/spender:
-        one: ""
+        one: Donatore
       group/region_externe_kontakte/kontakt:
         one: Contatto
 
       group/ort_gewaehlte/fraktionschef:
-        one: ""
+        one: Capogruppo
       group/ort_gewaehlte/mitglied:
         one: Membro
       group/ort_gewaehlte/kommunale_exekutive:
@@ -430,35 +430,35 @@ it:
       group/ort_gewaehlte/mitglied_weitere_gemeinde_kommissionen:
         one: membro altre commissioni comunali
       group/ort_parteigremium/praesident:
-        one: ""
+        one: Presidente
       group/ort_parteigremium/leitung:
-        one: ""
+        one: Direzione
       group/ort_parteigremium/mitglied:
         one: Membro
       group/ort_parteigremium/gast:
         one: Ospite
       group/ort_praesidium/praesident:
-        one: ""
+        one: Presidente
       group/ort_praesidium/vizepraesident:
-        one: ""
+        one: Vicepresidente
       group/ort_praesidium/kassier:
-        one: ""
+        one: Cassiera
       group/ort_praesidium/mitglied:
         one: Membro
       group/ort_praesidium/gast:
         one: Ospite
       group/ort_praesidium/adressverwalter:
-        one: ""
+        one: Responsabile dell'indirizzo
       group/ort_sekretariat/leitung:
-        one: ""
+        one: Direzione
       group/ort_sekretariat/mitarbeiter:
-        one: ""
+        one: Collaboratrice
       group/ort_arbeitsgruppe/praesident:
-        one: ""
+        one: Presidente
       group/ort_arbeitsgruppe/leitung:
         one: Gestione
       group/ort_sekretariat/webadministrator:
-        one: ""
+        one: Amministratrice web
       group/ort_arbeitsgruppe/mitglied:
         one: Membro
       group/ort_arbeitsgruppe/gast:
@@ -466,32 +466,32 @@ it:
       group/ort_externe_kontakte/medien:
         one: Media
       group/ort_externe_kontakte/spender:
-        one: ""
+        one: Donatore
       group/ort_externe_kontakte/kontakt:
-        one: ""
+        one: Contatto
       group/ort_mitglieder/mitglied:
-        one: ""
+        one: Membro
       group/ort_mitglieder/sympathisant_nach_kantonalem_statut:
-        one: ""
+        one: Simpatizzante secondo statuto cantonale
       group/ort_sympathisanten/sympathisant:
-        one: ""
+        one: Simpatizzante
 
       salutation:
-        one: ""
-        other: ""
+        one: Saluto
+        other: Saluti
         default:
-          label: ""
+          label: "Ciao [nome]"
           value:
             m: Ciao
             w: Ciao
             other: Ciao
         available:
           lieber_vorname:
-            label: ""
+            label: "Caro [nome]"
             value:
               m: Caro
               w: Cara
-              other: ""
+              other: Caro
           lieber_titel_nachname:
             label: ""
             value:
@@ -507,20 +507,20 @@ it:
 
     attributes:
       mailing_list:
-        correspondence_language: ""
+        correspondence_language: Lingua di corrispondenza
       person:
         salutation: Saluto
         salutation_value: Saluto
         title: Titolo
         website: Sito web
         correspondence_language: lingua di corrispondenza
-        civil_status: ""
+        civil_status: Stato civile
         correspondence_languages:
           de: tedesco
           en: inglese
           fr: francese
           it: italiano
-          rm: ""
+          rm: Romancio
         civil_statuses:
           single: Singolo
           registered_partnership: Unione registrata
