@@ -35,6 +35,8 @@ module HitobitoDieMitte
       PeopleController.prepend DieMitte::PeopleController
       FilterNavigation::People.prepend DieMitte::FilterNavigation::People
 
+      PersonSerializer.include DieMitte::PersonSerializer
+
       Person::Filter::Attributes.prepend DieMitte::Person::Filter::Attributes
 
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
