@@ -19,28 +19,29 @@ module HitobitoDieMitte
 
     config.to_prepare do
       # extend application classes here
-      Group.send        :include, DieMitte::Group
-      Role.send         :include, DieMitte::Role
-      Person.send       :include, DieMitte::Person
+      Group.include DieMitte::Group
+      Role.include DieMitte::Role
+      Person.include DieMitte::Person
 
       Person::FILTER_ATTRS << :correspondence_language << :email
 
-      RoleDecorator.send :prepend, DieMitte::RoleDecorator
-      GroupDecorator.send :prepend, DieMitte::GroupDecorator
-      # rubocop:enable SingleSpaceBeforeFirstArg
+      RoleDecorator.prepend DieMitte::RoleDecorator
+      GroupDecorator.prepend DieMitte::GroupDecorator
+
       Event.role_types -= [Event::Role::Cook]
 
       MailingListsController.permitted_attrs << :correspondence_language
 
-      PeopleController.send :prepend, DieMitte::PeopleController
-      FilterNavigation::People.send :prepend, DieMitte::FilterNavigation::People
+      PeopleController.prepend DieMitte::PeopleController
+      FilterNavigation::People.prepend DieMitte::FilterNavigation::People
 
+      PersonSerializer.include DieMitte::PersonSerializer
 
-      Person::Filter::Attributes.send :prepend, DieMitte::Person::Filter::Attributes
+      Person::Filter::Attributes.prepend DieMitte::Person::Filter::Attributes
 
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
 
-      MailingList::Subscribers.send :prepend, DieMitte::MailingList::Subscribers
+      MailingList::Subscribers.prepend DieMitte::MailingList::Subscribers
     end
 
     initializer 'die_mitte.add_settings' do |_app|
