@@ -8,5 +8,5 @@
 module PersonIndex; end
 
 ThinkingSphinx::Index.define_partial :person do
-  indexes roles.label
+  indexes roles.translations.label
 end
