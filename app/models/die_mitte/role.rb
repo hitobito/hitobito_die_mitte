@@ -9,6 +9,8 @@ module DieMitte::Role
   extend ActiveSupport::Concern
 
   included do
+    translates :label
+
     alias_method_chain :to_s, :merkmal
   end
 
