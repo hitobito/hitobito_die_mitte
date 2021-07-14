@@ -9,26 +9,28 @@ class TranslateRoleLabels < ActiveRecord::Migration[6.0]
       })
     end
 
-    I18n.with_locale(:fr) do
-      say_with_time('migrate role-labels for french groups') do
-        [
-          158, 164, 174, 155, 159, 162, 176, 172,
-          108, 37563, 98, 100, 119, 241, 38742, 38800, 36851, 255, 52966, 257
-        ].each do |group_id|
-          role_group_ids = Group.find(group_id).descendants.pluck(:id)
+    if Rails.env.production?
+      I18n.with_locale(:fr) do
+        say_with_time('migrate role-labels for french groups') do
+          [
+            158, 164, 174, 155, 159, 162, 176, 172,
+            108, 37563, 98, 100, 119, 241, 38742, 38800, 36851, 255, 52966, 257
+          ].each do |group_id|
+            role_group_ids = Group.find(group_id).descendants.pluck(:id)
 
-          next if role_group_ids.empty?
+            next if role_group_ids.empty?
 
-          say "migrating roles in #{role_group_ids.count} subgroups", true
-          migrate_role_labels(I18n.locale, "group_id IN (#{role_group_ids.join(', ')})")
+            say "migrating roles in #{role_group_ids.count} subgroups", true
+            migrate_role_labels(I18n.locale, "group_id IN (#{role_group_ids.join(', ')})")
+          end
         end
       end
     end
 
+    # everything else
     I18n.with_locale(:de) do
       say_with_time('migrate role-labels for german groups') do
-        labeled_roles = Role
-          .where("#{Role.quoted_table_name}.label IS NULL OR #{Role.quoted_table_name}.label = ''")
+        labeled_roles = Role.where("roles.label IS NULL OR roles.label = ''")
 
         total = (labeled_roles.count / 1000.0).ceil
 
