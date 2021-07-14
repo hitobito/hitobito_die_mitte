@@ -20,7 +20,7 @@
 = field_set_tag Role.human_attribute_name(:label) do
   - Settings.application.languages.each do |code, name|
     = f.labeled_input_field(:"label_#{code}",
-                            data: { provide: :typeahead, source: entry.klass.available_labels },
+                            data: { provide: :typeahead, source: entry.klass.available_labels(code) },
                             label: name)
 
   %small
