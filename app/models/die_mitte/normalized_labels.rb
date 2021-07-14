@@ -6,7 +6,7 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::NormalizedLabels
-  def available_labels(lang)
+  def available_labels(lang = I18n.locale)
     Rails.cache.fetch(labels_cache_key(lang)) do
       load_available_labels(lang)
     end
