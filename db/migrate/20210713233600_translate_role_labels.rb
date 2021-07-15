@@ -16,9 +16,9 @@ class TranslateRoleLabels < ActiveRecord::Migration[6.0]
             158, 164, 174, 155, 159, 162, 176, 172,
             108, 37563, 98, 100, 119, 241, 38742, 38800, 36851, 255, 52966, 257
           ].each do |group_id|
-            role_group_ids = Group.find(group_id).descendants.pluck(:id)
+            role_group_ids = Group.where(id: group_id).first&.descendants&.pluck(:id)
 
-            next if role_group_ids.empty?
+            next if role_group_ids.blank?
 
             say "migrating roles in #{role_group_ids.count} subgroups", true
             migrate_role_labels(I18n.locale, "group_id IN (#{role_group_ids.join(', ')})")
