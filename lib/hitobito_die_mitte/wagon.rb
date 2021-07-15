@@ -21,6 +21,7 @@ module HitobitoDieMitte
       # extend application classes here
       Group.include DieMitte::Group
       Role.include DieMitte::Role
+      Role.extend DieMitte::NormalizedLabels
       Person.include DieMitte::Person
 
       Person::FILTER_ATTRS << :correspondence_language << :email
