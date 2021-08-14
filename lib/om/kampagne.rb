@@ -9,9 +9,16 @@ class Kampagne < SourceModel
   belongs_to :kontakt, foreign_key: :auftraggeber_kunden_id
   has_many :segmente, class_name: 'KampagneSegment', foreign_key: :kampagnen_nummer
   has_many :spenden, class_name: 'Spende', foreign_key: :kampagnen_nummer
+  has_many :kontakte, class_name: 'Kontakt', through: :spenden, foreign_key: :kunden_id
 
   scope :list, -> { order(postaufgabe_am: :desc) }
   scope :all_year, -> { where(postaufgabe_am: Date.today.all_year) }
+
+  FUNDRAISING_BISHER = 15063
+
+  def self.fundraising
+    find(FUNDRAISING_BISHER)
+  end
 
   self.attrs = %w(
     kampagnen_nummer
