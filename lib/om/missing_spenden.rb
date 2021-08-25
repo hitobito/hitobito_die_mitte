@@ -23,6 +23,8 @@ module MissingSpenden
   INVOICES = "#{ENV['HOME']}/updatable_invoices.csv"
   INVOICES_NEW = "#{ENV['HOME']}/new_invoices.csv"
   INVOICES_SHORT = "#{ENV['HOME']}/updatable_invoices_short.csv"
+  SPENDEN_UNASSIGNABLE = "#{ENV['HOME']}/spenden_unassignable.csv"
+
 
   class Import
 
@@ -118,6 +120,7 @@ module MissingSpenden
       export_invoices
       export_invoices_new
       export_invoices_summary
+      export_unassignable
     end
 
     def export_invoices
@@ -138,6 +141,16 @@ module MissingSpenden
         end
         puts "Exported New Invoices: #{new_invoices.size}"
       end
+    end
+
+    def export_unassignable
+      CSV.open(SPENDEN_UNASSIGNABLE, "wb") do |csv|
+        csv << unassignable_spenden.first.keys
+        unassignable_spenden.each do |spende|
+          csv << spende.values
+        end
+      end
+
     end
 
     def export_invoices_summary
@@ -251,6 +264,17 @@ module MissingSpenden
 
     def unassignable
       (spenden.collect(&:kunden_id) - kunden_ids ).uniq
+    end
+
+    def unassignable_spenden
+      @unassignable_spenden ||= spenden.includes(:kontakt).where(kunden_id: unassignable).collect do |spende|
+        spende.prepare.merge(kontakt: spende.kontakt.to_s, kunden_id: spende.kunden_id)
+      end
+    end
+
+    def kunden(kunden_id)
+      @kunden ||= Kontakt.index_by { |k| [k.kunden_id, k.to_s] }.to_h
+      @kunden.fetch(kunden_id)
     end
 
     def assignable
