@@ -30,7 +30,7 @@ class TranslateRoleLabels < ActiveRecord::Migration[6.0]
     # everything else
     I18n.with_locale(:de) do
       say_with_time('migrate role-labels for german groups') do
-        labeled_roles = Role.where("roles.label IS NULL OR roles.label = ''")
+        labeled_roles = Role.where.not("(roles.label IS NULL OR roles.label = '')")
 
         total = (labeled_roles.count / 1000.0).ceil
 
