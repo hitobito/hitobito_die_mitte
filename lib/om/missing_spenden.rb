@@ -24,6 +24,7 @@ module MissingSpenden
   INVOICES_NEW = "#{ENV['HOME']}/new_invoices.csv"
   INVOICES_SHORT = "#{ENV['HOME']}/updatable_invoices_short.csv"
   SPENDEN_UNASSIGNABLE = "#{ENV['HOME']}/spenden_unassignable.csv"
+  SPENDEN_UNASSIGNABLE_WITH_KONTAKT = "#{ENV['HOME']}/spenden_unassignable_with_kontakts.csv"
 
 
   class Import
@@ -106,21 +107,30 @@ module MissingSpenden
   class Export
 
     def run
+      # infos
+
+      # export_kampagnen
+      # export_invoices
+      # export_invoices_new
+      # export_invoices_summary
+      # export_unassignable
+      export_unassignable_with_kontakt
+    end
+
+    def infos
       puts "kampagnen: #{kampagnen.count}"
-      puts "spenden: #{spenden.count}"
-      puts " assignable: #{assignable_spenden.count}"
-      puts "invoices: #{invoices.count}"
-      puts "  assigned: #{invoices_assigned.count}"
-      puts "  unassigned: #{invoices_unassigned.count}"
+      puts "spenden: #{spenden.count}, #{sum(spenden)}"
+      puts " assignable: #{assignable_spenden.count}, #{sum(assignable_spenden)}"
+      puts "invoices: #{invoices.count}, #{invoices.sum(:total)}"
+      puts "  assigned: #{invoices_assigned.count}, #{invoices_assigned.sum(:total)}"
+      puts "  unassigned: #{invoices_unassigned.count}, #{invoices_unassigned.sum(:total)}"
       puts "  assignable: #{assignable.count}"
       puts "  unassignable: #{unassignable.count}"
-      puts "  new: #{new_invoices.count}"
+      puts "  new: #{new_invoices.count}, #{new_invoices.sum { |i| i[:total].to_f }}"
+    end
 
-      export_kampagnen
-      export_invoices
-      export_invoices_new
-      export_invoices_summary
-      export_unassignable
+    def sum(spenden)
+      spenden.map(&:betrag).map(&:to_f).sum
     end
 
     def export_invoices
@@ -144,13 +154,20 @@ module MissingSpenden
     end
 
     def export_unassignable
-      CSV.open(SPENDEN_UNASSIGNABLE, "wb") do |csv|
-        csv << unassignable_spenden.first.keys
-        unassignable_spenden.each do |spende|
+      export_spenden(SPENDEN_UNASSIGNABLE, with_infos(unassignable_spenden))
+    end
+
+    def export_unassignable_with_kontakt
+      export_spenden(SPENDEN_UNASSIGNABLE_WITH_KONTAKT, with_kontakt(unassignable_spenden))
+    end
+
+    def export_spenden(file, spenden)
+      CSV.open(file, "wb") do |csv|
+        csv << spenden.first.keys
+        spenden.each do |spende|
           csv << spende.values
         end
       end
-
     end
 
     def export_invoices_summary
@@ -170,14 +187,18 @@ module MissingSpenden
       CSV.open(MISSING_INVOICE_LISTS, "wb") do |csv|
         csv << kampagnen.first.prepare.keys
         kampagnen.find_each do |kampagne|
-          csv <<  kampagne.prepare.values(group_id: Group::Bund.first.id)
+          csv <<  kampagne.prepare.merge(group_id: Group::Bund.first.id).values
         end
         puts "Exported Kampagnen: #{kampagnen.size}"
       end
     end
 
+    def missing_assignable_spenden
+      assignable_spenden.where.not(spenden_nummer: invoices.pluck(:id))
+    end
+
     def new_invoices
-      assignable_spenden.where.not(spenden_nummer: invoices.pluck(:id)).collect do |row|
+      missing_assignable_spenden.collect do |row|
         next unless recipient_id(row['kunden_id'])
 
         row.prepare.merge(
@@ -263,12 +284,38 @@ module MissingSpenden
     end
 
     def unassignable
-      (spenden.collect(&:kunden_id) - kunden_ids ).uniq
+      (spenden.collect(&:kunden_id) - kunden_ids).uniq
     end
 
     def unassignable_spenden
-      @unassignable_spenden ||= spenden.includes(:kontakt).where(kunden_id: unassignable).collect do |spende|
-        spende.prepare.merge(kontakt: spende.kontakt.to_s, kunden_id: spende.kunden_id)
+      @unassignable_spenden ||= spenden.includes(:kontakt).where(kunden_id: unassignable)
+    end
+
+    def with_kontakt(list)
+      people_ids = Person.pluck(:kunden_id, :id).to_h
+      binding.pry
+      list.collect do |spende|
+        kontakt = spende.kontakt
+        kontakt_attrs = kontakt.prepare.merge(
+          loeschflag: kontakt.loeschflag,
+          person_id: people_ids[kontakt.kunden_id]
+        )
+        spende.prepare.merge(
+          invoice_list_id: spende.kampagnen_nummer,
+          title: spende.kampagne.bezeichnung,
+        ).merge(kontakt_attrs)
+      end
+    end
+
+    def with_infos(spenden)
+      spenden.collect do |spende|
+        spende.prepare.merge({
+          kontakt: spende.kontakt.to_s,
+          email: spende.kontakt&.email,
+          strasse: spende.kontakt&.strasse,
+          ortschaft: spende.kontakt&.ortschaft,
+          kunden_id: spende.kunden_id,
+        })
       end
     end
 
