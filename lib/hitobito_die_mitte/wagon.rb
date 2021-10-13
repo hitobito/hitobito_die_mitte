@@ -38,6 +38,7 @@ module HitobitoDieMitte
 
       PersonSerializer.include DieMitte::PersonSerializer
 
+      Person::Address.prepend DieMitte::Person::Address
       Person::Filter::Attributes.prepend DieMitte::Person::Filter::Attributes
 
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
