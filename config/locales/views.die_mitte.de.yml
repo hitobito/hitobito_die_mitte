@@ -4,4 +4,7 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 de:
+  people:
+    address:
+      two_with_same_last_name: '%{first} und %{second} %{last_name}'
   placeholder: Platzhalter
