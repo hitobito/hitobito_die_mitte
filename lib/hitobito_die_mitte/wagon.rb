@@ -40,6 +40,7 @@ module HitobitoDieMitte
 
       Person::Address.prepend DieMitte::Person::Address
       Person::Filter::Attributes.prepend DieMitte::Person::Filter::Attributes
+      Salutation.prepend DieMitte::Salutation
 
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
 
