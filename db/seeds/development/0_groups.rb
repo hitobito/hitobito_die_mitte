@@ -13,9 +13,9 @@ bund = Group.roots.first
 srand(42)
 
 if bund.address.blank?
-  bund.update_attributes(seeder.group_attributes)
+  bund.update(seeder.group_attributes)
   bund.default_children.each do |child_class|
-    child_class.first.update_attributes(seeder.group_attributes)
+    child_class.first.update(seeder.group_attributes)
   end
 end
 
