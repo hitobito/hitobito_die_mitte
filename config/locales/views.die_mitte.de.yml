@@ -4,6 +4,14 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 de:
+  export:
+    tabular:
+      messages:
+        letters_with_invoice:
+          housemate_n_attr: 'Person %{index} %{attr}'
+  messages:
+    actions_show_die_mitte:
+      button_export_csv: CSV exportieren
   people:
     address:
       two_with_same_last_name: '%{first} und %{second} %{last_name}'

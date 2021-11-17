@@ -32,6 +32,7 @@ module HitobitoDieMitte
       Event.role_types -= [Event::Role::Cook]
 
       MailingListsController.permitted_attrs << :correspondence_language
+      MessagesController.prepend DieMitte::MessagesController
 
       PeopleController.prepend DieMitte::PeopleController
       FilterNavigation::People.prepend DieMitte::FilterNavigation::People
@@ -45,6 +46,8 @@ module HitobitoDieMitte
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
 
       MailingList::Subscribers.prepend DieMitte::MailingList::Subscribers
+
+      Export::MessageJob.prepend DieMitte::Export::MessageJob
     end
 
     initializer 'die_mitte.add_settings' do |_app|
