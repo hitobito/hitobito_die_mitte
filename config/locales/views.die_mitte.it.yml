@@ -4,6 +4,9 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 it:
+  messages:
+    actions_show_die_mitte:
+      button_export_csv: Export CSV
   people:
     address:
       two_with_same_last_name: ''

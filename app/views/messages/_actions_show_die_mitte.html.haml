@@ -1,0 +1,4 @@
+- unless entry.invoice? && !entry.dispatched?
+  hello!
+  - if entry.state == 'finished'
+    = action_button(t('.button_export_csv'), group_mailing_list_message_path(*entry.path_args, format: :csv), :download)
