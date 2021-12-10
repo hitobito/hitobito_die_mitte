@@ -18,8 +18,10 @@ module HitobitoDieMitte
                                  #{config.root}/app/jobs ]
 
     config.to_prepare do
+      # rubocop:disable Metrics/LineLength
       # extend application classes here
       Group.include DieMitte::Group
+      GroupSetting.include DieMitte::GroupSetting
       Role.include DieMitte::Role
       Role.extend DieMitte::NormalizedLabels
       Person.include DieMitte::Person
@@ -44,10 +46,13 @@ module HitobitoDieMitte
       Salutation.prepend DieMitte::Salutation
 
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
+      Export::Pdf::Messages::Letter.include DieMitte::Export::Pdf::Messages::Letter
+      Export::Pdf::Messages::LetterWithInvoice.include DieMitte::Export::Pdf::Messages::LetterWithInvoice
 
       MailingList::Subscribers.prepend DieMitte::MailingList::Subscribers
 
       Export::MessageJob.prepend DieMitte::Export::MessageJob
+      # rubocop:enable Metrics/LineLength
     end
 
     initializer 'die_mitte.add_settings' do |_app|
