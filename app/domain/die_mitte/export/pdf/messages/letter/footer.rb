@@ -17,6 +17,7 @@ module DieMitte
           end
 
           def footer_columns
+            pdf.font_size 8
             columns.each_with_index do |column, i|
               render_column(column, left: i * COLUMNS.first)
             end
