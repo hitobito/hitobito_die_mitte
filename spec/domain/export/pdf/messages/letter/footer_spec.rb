@@ -19,7 +19,7 @@ describe DieMitte::Export::Pdf::Messages::Letter::Footer do
                                          shipping_method: 'normal', pp_post: 'CH-3030 Bern, Belpstrasse 37') }
   let(:pdf)        { Prawn::Document.new }
   let(:analyzer) { PDF::Inspector::Text.analyze(pdf.render) }
-  let(:column_attrs) { { footer_column_1: "Hitobito AG\nSchweiz",
+  let(:column_attrs) { { footer_column_1: "Hitobito AG\nSchweiz\nCH00 0000 0000 0000 0000 0",
                          footer_column_2: "Belpstrasse 37\nPostfach\nCH-3030 Bern",
                          footer_column_3: "T 030 123 45 67\ninfo@example.com\nwww.example.com",
                          footer_column_4: "2021-12-09\nBern, Schweiz" } }
@@ -34,16 +34,17 @@ describe DieMitte::Export::Pdf::Messages::Letter::Footer do
     it "is present" do
       subject.render(recipient)
       expect(text_with_position).to eq [
-        [36, 27, 'Hitobito AG'],
-        [36, 14, 'Schweiz'],
-        [151, 27,  'Belpstrasse 37'],
-        [151, 14,  'Postfach'],
-        [151, 0,  'CH-3030 Bern'],
-        [266, 27,  'T 030 123 45 67'],
-        [266, 14,  'info@example.com'],
-        [266, 0,  'www.example.com'],
-        [381, 27,  '2021-12-09'],
-        [381, 14,  'Bern, Schweiz'],
+        [36, 30, 'Hitobito AG'],
+        [36, 21, 'Schweiz'],
+        [36, 12, 'CH00 0000 0000 0000 0000 0'],
+        [151, 30,  'Belpstrasse 37'],
+        [151, 21,  'Postfach'],
+        [151, 12,  'CH-3030 Bern'],
+        [266, 30,  'T 030 123 45 67'],
+        [266, 21,  'info@example.com'],
+        [266, 12,  'www.example.com'],
+        [381, 30,  '2021-12-09'],
+        [381, 21,  'Bern, Schweiz'],
       ]
     end
 
