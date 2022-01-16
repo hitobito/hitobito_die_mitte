@@ -4,9 +4,14 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 it:
+  export:
+    tabular:
+      messages:
+        letters_with_invoice:
+          housemate_n_attr: ''
   messages:
     actions_show_die_mitte:
-      button_export_csv: Export CSV
+      button_export_csv: ""
   people:
     address:
       two_with_same_last_name: ''

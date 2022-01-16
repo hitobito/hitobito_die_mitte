@@ -508,6 +508,11 @@ fr:
     attributes:
       mailing_list:
         correspondence_language: Langue
+      group_setting:
+        footer_column_1: ""
+        footer_column_2: ""
+        footer_column_3: ""
+        footer_column_4: ""
       person:
         salutation: Adresse
         salutation_value: Adresse
@@ -527,3 +532,4 @@ fr:
           married: Marié-e
           divorced: Divorcé-e
           widowed: Veuf / veuve
+        household?: ""

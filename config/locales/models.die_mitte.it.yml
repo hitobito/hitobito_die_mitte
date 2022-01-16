@@ -508,6 +508,11 @@ it:
     attributes:
       mailing_list:
         correspondence_language: Lingua di corrispondenza
+      group_setting:
+        footer_column_1: ""
+        footer_column_2: ""
+        footer_column_3: ""
+        footer_column_4: ""
       person:
         salutation: Saluto
         salutation_value: Saluto
@@ -527,3 +532,4 @@ it:
           married: sposato
           divorced: divorziato
           widowed: vedova
+        household?: ""
