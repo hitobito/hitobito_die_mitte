@@ -506,6 +506,9 @@ de:
               other: Sehr geehrte*r Frau*Herr %{title_last_name}
 
     attributes:
+      invoice:
+        donation_amount: Spendenbetrag
+
       mailing_list:
         correspondence_language: Korrespondenzsprache
       group_setting:

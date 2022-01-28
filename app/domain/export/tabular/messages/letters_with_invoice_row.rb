@@ -83,8 +83,19 @@ module Export::Tabular::Messages
       household[index_for(attr)]&.reference
     end
 
+    def donation_amount
+      return nil unless message.donation_confirmation?
+
+      Donation.new.
+        in_last(1.year).
+        in_layer(entry.group).
+        of_person(entry.recipient).
+        previous_amount.
+        to_s
+    end
+
     def message
-      Message::LetterWithInvoice.find_by(invoice_list: entry.invoice_list)
+      @message ||= Message::LetterWithInvoice.find_by(invoice_list: entry.invoice_list)
     end
 
     private

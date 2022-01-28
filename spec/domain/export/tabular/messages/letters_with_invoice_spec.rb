@@ -14,7 +14,7 @@ describe Export::Tabular::Messages::LettersWithInvoice do
 
   context 'used labels' do
     its(:attributes) do
-      should == [:esr_number, :recipient_email, :recipient_address, :reference, :total,
+      should == [:esr_number, :recipient_email, :recipient_address, :reference, :total, :donation_amount,
                  :first_name, :last_name, :company_name, :company, :email, :address,
                  :zip_code, :town, :country, :gender, :birthday, :salutation, :title,
                  :correspondence_language, :household?]
@@ -22,7 +22,7 @@ describe Export::Tabular::Messages::LettersWithInvoice do
 
     its(:labels) do
       should == ['Referenz Nummer', 'Empfänger E-Mail', 'Empfänger Adresse', 'Referenz',
-                 'Total inkl. MwSt.', 'Vorname', 'Nachname', 'Firmenname', 'Firma',
+                 'Total inkl. MwSt.', 'Spendenbetrag', 'Vorname', 'Nachname', 'Firmenname', 'Firma',
                  'Haupt-E-Mail', 'Adresse', 'PLZ', 'Ort', 'Land', 'Geschlecht',
                  'Geburtstag', 'Anrede', 'Titel', 'Korrespondenzsprache', 'Wohnt in einem Haushalt']
     end

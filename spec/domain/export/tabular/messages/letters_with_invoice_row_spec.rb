@@ -85,4 +85,55 @@ describe Export::Tabular::Messages::LettersWithInvoiceRow do
       expect(subject.fetch(:reference_3)).to be_nil
     end
   end
+
+  context 'donation confirmation' do
+    before do
+      fabricate_donation(200)
+      fabricate_donation(300)
+      fabricate_donation(50)
+    end
+
+    let(:letter_with_invoice_attributes) { 
+      {
+        mailing_list: mailing_lists(:leaders),
+        group: top_layer,
+        subject: 'Spendenaufruf',
+        body: 'Bitte spenden',
+        invoice_attributes: {
+          invoice_items_attributes: {
+            '1': {
+              name: 'Spendenaufruf',
+              count: 1,
+              unit_cost: 0
+            }
+          }
+        }
+      }
+    }
+
+    subject { described_class.new([invoice]) }
+
+    context 'active' do
+      let!(:letter_with_invoice) { Message::LetterWithInvoice.create!(letter_with_invoice_attributes.merge(donation_confirmation: true)) }
+
+      it 'shows donation amount' do
+        expect(subject.fetch(:donation_amount)).to eq(550.to_f.to_s)
+      end
+    end
+
+    context 'inactive' do
+      let!(:letter_with_invoice) { Message::LetterWithInvoice.create!(letter_with_invoice_attributes.merge(donation_confirmation: false)) }
+
+      it 'shows donation amount' do
+        expect(subject.fetch(:donation_amount)).to eq(nil)
+      end
+    end
+  end
+
+  private
+
+  def fabricate_donation(amount, received_at = 1.year.ago)
+    invoice = Fabricate(:invoice, due_at: 10.days.from_now, creator: top_leader, recipient: bottom_member, group: top_layer, state: :payed)
+    Payment.create!(amount: amount, received_at: received_at, invoice: invoice)
+  end
 end
