@@ -7,8 +7,7 @@
 
 module Export::Tabular::Messages
   class LettersWithInvoice < Export::Tabular::Base
-    INCLUDED_ATTRS = %w(esr_number recipient_email recipient_address
-                        reference total donation_amount).freeze
+    INCLUDED_ATTRS = %w(esr_number recipient_email recipient_address reference total).freeze
     PERSON_ATTRS = %w(first_name last_name company_name company email address zip_code town country
                       gender birthday salutation title correspondence_language household?).freeze
     HOUSEMATE_ATTRS = %w(first_name last_name salutation gender correspondence_language
@@ -24,7 +23,9 @@ module Export::Tabular::Messages
     end
 
     def invoice_attribute_labels
-      INCLUDED_ATTRS.collect(&:to_sym).index_with { |attr| attribute_label(attr) }
+      attrs = INCLUDED_ATTRS.dup
+      attrs << :donation_amount if message.donation_confirmation?
+      attrs.collect(&:to_sym).index_with { |attr| attribute_label(attr) }
     end
 
     def person_attribute_labels
@@ -57,6 +58,16 @@ module Export::Tabular::Messages
           index: housemate_index,
           attr: person_attribute(attr, { default: attribute_label(attr)})
       })
+    end
+
+    private
+
+    def message
+      @message ||= Message::LetterWithInvoice.find_by(invoice_list: invoice_list)
+    end
+
+    def invoice_list
+      @invoice_list ||= list.first.first.invoice_list
     end
   end
 end

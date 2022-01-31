@@ -31,7 +31,8 @@ describe Export::MessageJob do
       Message::LetterWithInvoice
         .create!(mailing_list: mailing_lists(:list),
                  body: 'Lorem ipsum',
-                 subject: 'A Sunny Day')
+                 subject: 'A Sunny Day',
+                 donation_confirmation: true)
     end 
 
     before do

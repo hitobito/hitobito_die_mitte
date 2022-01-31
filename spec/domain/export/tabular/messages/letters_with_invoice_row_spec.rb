@@ -117,7 +117,7 @@ describe Export::Tabular::Messages::LettersWithInvoiceRow do
       let!(:letter_with_invoice) { Message::LetterWithInvoice.create!(letter_with_invoice_attributes.merge(donation_confirmation: true)) }
 
       it 'shows donation amount' do
-        expect(subject.fetch(:donation_amount)).to eq(550.to_f.to_s)
+        expect(subject.fetch(:donation_amount)).to eq('550.00')
       end
     end
 

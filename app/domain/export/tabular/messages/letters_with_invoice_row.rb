@@ -86,12 +86,14 @@ module Export::Tabular::Messages
     def donation_amount
       return nil unless message.donation_confirmation?
 
-      Donation.new.
+      amount = Donation.new.
         in_last(1.year).
         in_layer(entry.group).
         of_person(entry.recipient).
         previous_amount.
         to_s
+
+      sprintf('%.2f', amount)
     end
 
     def message
