@@ -31,8 +31,7 @@ describe Export::MessageJob do
       Message::LetterWithInvoice
         .create!(mailing_list: mailing_lists(:list),
                  body: 'Lorem ipsum',
-                 subject: 'A Sunny Day',
-                 donation_confirmation: true)
+                 subject: 'A Sunny Day')
     end 
 
     before do
@@ -55,13 +54,26 @@ describe Export::MessageJob do
       )
     end
 
-    it 'and saves it' do
+    it 'and saves it with combined households' do
+      message.update!(donation_confirmation: false)
+
       subject.perform
 
       lines = File.readlines("#{filepath}.#{format}")
       expect(lines.size).to eq(9) # some addresses contain newlines
-      expect(lines[0]).to eq("Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Total inkl. MwSt.;Spendenbetrag;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt;Person 2 Vorname;Person 2 Nachname;Person 2 Anrede;Person 2 Geschlecht;Person 2 Korrespondenzsprache;Person 2 Referenz\n")
-      expect(lines[0].split(';').count).to match(27)
+      expect(lines[0]).to eq("Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Total inkl. MwSt.;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt;Person 2 Vorname;Person 2 Nachname;Person 2 Anrede;Person 2 Geschlecht;Person 2 Korrespondenzsprache;Person 2 Referenz\n")
+      expect(lines[0].split(';').count).to match(26)
+    end
+
+    it 'and saves it with separate people for donation confirmation' do
+      message.update!(donation_confirmation: true)
+
+      subject.perform
+
+      lines = File.readlines("#{filepath}.#{format}")
+      expect(lines.size).to eq(13) # some addresses contain newlines
+      expect(lines[0]).to eq("Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Total inkl. MwSt.;Spendenbetrag;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt\n")
+      expect(lines[0].split(';').count).to match(21)
     end
   end
 

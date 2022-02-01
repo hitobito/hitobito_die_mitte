@@ -17,9 +17,7 @@ module DieMitte::Export::MessageJob
   private
 
   def recipients
-    @recipients ||= message.send_to_households? || message.is_a?(Message::LetterWithInvoice) ?
-                        People::HouseholdList.new(message.recipients).each :
-                        message.message_recipients
+    @recipients ||= message_recipients
   end
 
   def recipient_invoices
@@ -46,6 +44,18 @@ module DieMitte::Export::MessageJob
     else
       super
     end
+  end
+
+  def message_recipients
+    return message.recipients if message.donation_confirmation?
+
+    send_to_households? ?
+        People::HouseholdList.new(message.recipients).each :
+        message.message_recipients
+  end
+
+  def send_to_households?
+    message.send_to_households? || message.is_a?(Message::LetterWithInvoice)
   end
 
 end
