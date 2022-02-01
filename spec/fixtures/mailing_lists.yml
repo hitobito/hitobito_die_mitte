@@ -9,3 +9,9 @@ list:
   group: sekretariat
   mail_name: sekretaere
   subscribable: true
+
+leaders:
+  group: top_layer
+  name: Leaders
+  mail_name: leaders
+  subscribable: true
