@@ -506,6 +506,9 @@ it:
               other: ""
 
     attributes:
+      invoice:
+        donation_amount: ""
+
       mailing_list:
         correspondence_language: Lingua di corrispondenza
       group_setting:

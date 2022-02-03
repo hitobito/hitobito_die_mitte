@@ -506,6 +506,9 @@ fr:
               other: "Chère Madame / Cher Monsieur %{title_last_name}"
 
     attributes:
+      invoice:
+        donation_amount: ""
+
       mailing_list:
         correspondence_language: Langue
       group_setting:
