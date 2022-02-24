@@ -19,6 +19,6 @@ module DieMitte::MessagesController
   private
 
   def render_tabular_in_background(format)
-    render_in_background(format, entry.subject.parameterize)
+    render_in_background(entry, format, entry.subject.parameterize)
   end
 end
