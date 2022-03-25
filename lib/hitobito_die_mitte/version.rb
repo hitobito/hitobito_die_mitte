@@ -6,5 +6,5 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module HitobitoDieMitte
-  VERSION = '1.27.10'
+  VERSION = '1.27.13'
 end
