@@ -12,7 +12,7 @@ module DieMitte
         class Footer < ::Export::Pdf::Messages::Letter::Section
           COLUMNS = [115, 40].freeze
 
-          def render(recipient)
+          def render(recipient, font_size: 9)
             stamped :footer_columns
           end
 
