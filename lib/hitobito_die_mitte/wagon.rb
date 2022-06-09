@@ -50,7 +50,7 @@ module HitobitoDieMitte
       Export::Pdf::Messages::LetterWithInvoice.include DieMitte::Export::Pdf::Messages::LetterWithInvoice
       Export::Pdf::Messages::Letter::BODY_FONT_SIZE = 10.5
 
-      MailingList::Subscribers.prepend DieMitte::MailingList::Subscribers
+      MailingLists::Subscribers.prepend DieMitte::MailingLists::Subscribers
 
       Export::MessageJob.prepend DieMitte::Export::MessageJob
       # rubocop:enable Metrics/LineLength

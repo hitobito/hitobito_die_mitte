@@ -3,8 +3,7 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_die_mitte.
 
-module DieMitte::MailingList::Subscribers
-
+module DieMitte::MailingLists::Subscribers
   def people
     super.where(correspondence_language_condition)
   end
