@@ -17,6 +17,8 @@ module DieMitte::Role
 
     self.used_attributes += globalize_attribute_names
 
+    self.merge_excluded_attributes = globalize_attribute_names
+
     alias_method_chain :to_s, :merkmal
   end
 
