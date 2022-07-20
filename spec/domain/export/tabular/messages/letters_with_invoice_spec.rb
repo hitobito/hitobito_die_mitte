@@ -46,7 +46,7 @@ describe Export::Tabular::Messages::LettersWithInvoice do
 
         its(:labels) do
           should == ['Referenz Nummer', 'Empfänger E-Mail', 'Empfänger Adresse', 'Referenz',
-                     'Total inkl. MwSt.', 'Spendenbetrag', 'Vorname', 'Nachname', 'Firmenname', 'Firma',
+                     'Rechnungsbetrag', 'Spendenbetrag', 'Vorname', 'Nachname', 'Firmenname', 'Firma',
                      'Haupt-E-Mail', 'Adresse', 'PLZ', 'Ort', 'Land', 'Geschlecht',
                      'Geburtstag', 'Anrede', 'Titel', 'Korrespondenzsprache', 'Wohnt in einem Haushalt']
         end
@@ -65,7 +65,7 @@ describe Export::Tabular::Messages::LettersWithInvoice do
 
           its(:labels) do
             should == ['Referenz Nummer', 'Empfänger E-Mail', 'Empfänger Adresse', 'Referenz',
-                       'Total inkl. MwSt.', 'Vorname', 'Nachname', 'Firmenname', 'Firma',
+                       'Rechnungsbetrag', 'Vorname', 'Nachname', 'Firmenname', 'Firma',
                        'Haupt-E-Mail', 'Adresse', 'PLZ', 'Ort', 'Land', 'Geschlecht',
                        'Geburtstag', 'Anrede', 'Titel', 'Korrespondenzsprache', 'Wohnt in einem Haushalt']
           end

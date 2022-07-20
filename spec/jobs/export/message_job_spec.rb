@@ -17,7 +17,6 @@ describe Export::MessageJob do
   let(:person3) { create_person }
   let(:person4) { create_person }
   let(:top_layer) { groups(:sekretariat) }
-  let(:filepath) { AsyncDownloadFile::DIRECTORY.join('message_export') }
 
   before do
     SeedFu.quiet = true
@@ -59,9 +58,9 @@ describe Export::MessageJob do
 
       subject.perform
 
-      lines = File.readlines("#{filepath}.#{format}")
+      lines = subject.send(:async_download_file).read.lines
       expect(lines.size).to eq(9) # some addresses contain newlines
-      expect(lines[0]).to eq("Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Total inkl. MwSt.;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt;Person 2 Vorname;Person 2 Nachname;Person 2 Anrede;Person 2 Geschlecht;Person 2 Korrespondenzsprache;Person 2 Referenz\n")
+      expect(lines[0]).to eq("Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Rechnungsbetrag;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt;Person 2 Vorname;Person 2 Nachname;Person 2 Anrede;Person 2 Geschlecht;Person 2 Korrespondenzsprache;Person 2 Referenz\n")
       expect(lines[0].split(';').count).to match(26)
     end
 
@@ -70,9 +69,9 @@ describe Export::MessageJob do
 
       subject.perform
 
-      lines = File.readlines("#{filepath}.#{format}")
+      lines = subject.send(:async_download_file).read.lines
       expect(lines.size).to eq(13) # some addresses contain newlines
-      expect(lines[0]).to eq("Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Total inkl. MwSt.;Spendenbetrag;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt\n")
+      expect(lines[0]).to eq("Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Rechnungsbetrag;Spendenbetrag;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt\n")
       expect(lines[0].split(';').count).to match(21)
     end
   end
