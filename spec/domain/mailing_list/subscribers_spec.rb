@@ -5,7 +5,7 @@
 #
 require "spec_helper"
 
-describe MailingList::Subscribers do
+describe MailingLists::Subscribers do
   let(:list) { mailing_lists(:list) }
   let(:group) { groups(:sekretariat) }
 
