@@ -86,7 +86,7 @@ module Export::Tabular::Messages
     def donation_amount
       return nil unless message.donation_confirmation?
 
-      amount = Donation.new.
+      amount = PaymentCollector.new.
         in_last(1.year).
         in_layer(entry.group).
         of_person(entry.recipient).
