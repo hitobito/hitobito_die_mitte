@@ -90,7 +90,7 @@ module Export::Tabular::Messages
         in_last(1.year).
         in_layer(entry.group).
         of_person(entry.recipient).
-        previous_amount.
+        payments_amount.
         to_s
 
       sprintf('%.2f', amount)
