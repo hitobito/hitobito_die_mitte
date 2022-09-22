@@ -10,157 +10,207 @@ it:
 
       group/bund:
         one: Svizzera
+        many: Svizzera
         other: Svizzera
       group/bund_gewaehlte:
         one: eletto
+        many: eletti
         other: eletti
       group/bund_parteigremium:
         one: Comitato del Partito
+        many: Comitato del Partito
         other: Comitato del Partito
       group/bund_praesidium:
         one: Presidenza
+        many: Presidenza
         other: Presidenza
       group/bund_sekretariat:
         one: Segretariato
+        many: Segretariato
         other: Segretariato
       group/bund_kommission:
         one: Commissione
+        many: Commissione
         other: Commissione
       group/bund_arbeitsgruppe:
         one: 'gruppo '
+        many: Gruppo di lavoro
         other: Gruppo di lavoro
       group/bund_externe_kontakte:
         one: Contatto esterno
+        many: Contatto esterno
         other: Contatto esterno
       group/bund_delegierte:
         one: delegato
+        many: delegato
         other: delegato
       group/bund_mitglieder:
         one: membro
+        many: membro
         other: membro
       group/bund_sympathisanten:
         one: simpatizzanti
+        many: simpatizzante
         other: simpatizzante
 
       group/kanton:
         one: Cantone
+        many: Cantoni
         other: Cantoni
       group/kanton_gewaehlte:
         one: eletto
+        many: eletti
         other: eletti
       group/kanton_parteigremium:
         one: Comitato del Partito
+        many: Comitati
         other: Comitati
       group/kanton_praesidium:
         one: Presidenza
+        many: Presidenze
         other: Presidenze
       group/kanton_sekretariat:
         one: Segretariato
+        many: Segretariati
         other: Segretariati
       group/kanton_kommission:
         one: Commissione
+        many: Commissioni
         other: Commissioni
       group/kanton_arbeitsgruppe:
         one: Gruppo di lavoro
+        many: Gruppi di lavoro
         other: Gruppi di lavoro
       group/kanton_externe_kontakte:
         one: Contatti esterni
+        many: Contatti esterni
         other: Contatti esterni
       group/kanton_delegierte:
         one: Delegato
+        many: Delegato
         other: Delegato
       group/kanton_sympathisanten:
         one: Simpatizzanti
+        many: Simpatizzanti
         other: Simpatizzanti
       group/kanton_mitglieder:
         one: Membro
+        many: Membro
         other: Membro
 
       group/vereinigung:
         one: Associazione
+        many: Associazioni
         other: Associazioni
       group/vereinigung_parteigremium:
         one: Comitato del Partito
+        many: Comitato del Partito
         other: Comitato del Partito
       group/vereinigung_praesidium:
         one: Presidenza
+        many: Presidenza
         other: Presidenza
       group/vereinigung_sekretariat:
         one: Segretariato
+        many: Segretariato
         other: Segretariato
       group/vereinigung_kommission:
         one: Commissione
+        many: Commissione
         other: Commissione
       group/vereinigung_arbeitsgruppe:
         one: Gruppo di lavoro
+        many: Gruppi di lavoro
         other: Gruppi di lavoro
       group/vereinigung_externe_kontakte:
         one: Contatto esterno
+        many: Contatto esterno
         other: Contatto esterno
       group/vereinigung_mitglieder:
         one: Membro
+        many: Membro
         other: Membro
       group/vereinigung_sympathisanten:
         one: Simpatizzanti
+        many: Simpatizzanti
         other: Simpatizzanti
       group/vereinigung_delegierte:
         one: Delegato
+        many: Delegato
         other: Delegato
 
       group/region:
         one: Regione
+        many: Regioni
         other: Regioni
       group/region_parteigremium:
         one: Comitato del Partito
+        many: Comitato del Partito
         other: Comitato del Partito
       group/region_praesidium:
         one: Presidenza
+        many: Presidenza
         other: Presidenza
       group/region_sekretariat:
         one: Segretariato
+        many: Segretariato
         other: Segretariato
       group/region_arbeitsgruppe:
         one: Gruppo di lavoro
+        many: Gruppi di lavoro
         other: Gruppi di lavoro
       group/region_delegierte:
         one: Delegato
+        many: Delegato
         other: Delegato
       group/region_mitglieder:
         one: Membro
+        many: Membro
         other: Membro
       group/region_sympathisanten:
         one: Simpatizzanti
+        many: Simpatizzanti
         other: Simpatizzanti
       group/region_externe_kontakte:
         one: Contatti esterni
+        many: Contatti esterni
         other: Contatti esterni
 
       group/ort:
         one: Partito locale
+        many: Partiti locali
         other: Partiti locali
       group/ort_gewaehlte:
         one: Eletto
+        many: Eletti
         other: Eletti
       group/ort_parteigremium:
         one: Comitato del Partito
+        many: Comitati
         other: Comitati
       group/ort_praesidium:
         one: Presidenza
+        many: Presidenze
         other: Presidenze
       group/ort_sekretariat:
         one: Segretariato
+        many: Segretariati
         other: Segretariati
       group/ort_arbeitsgruppe:
         one: Gruppo di lavoro
+        many: Gruppi di lavoro
         other: Gruppi di lavoro
       group/ort_externe_kontakte:
         one: Contatti esterni
+        many: Contatti esterni
         other: Contatti esterni
       group/ort_mitglieder:
         one: Membro
+        many: Membri
         other: Membri
       group/ort_sympathisanten:
         one: Simpatizzanti
+        many: Simpatizzanti
         other: Simpatizzanti
 
       ### ROLES

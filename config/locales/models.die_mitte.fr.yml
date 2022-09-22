@@ -10,157 +10,207 @@ fr:
 
       group/bund:
         one: Suisse
+        many: Suisse
         other: Suisse
       group/bund_gewaehlte:
         one: 'Élu-e-s '
+        many: 'Élu-e-s '
         other: 'Élu-e-s '
       group/bund_parteigremium:
         one: Organes du parti
+        many: Organes du parti
         other: Organes du parti
       group/bund_praesidium:
         one: Présidence
+        many: Présidence
         other: Présidence
       group/bund_sekretariat:
         one: Secrétariat
+        many: Secrétariat
         other: Secrétariat
       group/bund_kommission:
         one: Commission
+        many: Commission
         other: Commission
       group/bund_arbeitsgruppe:
         one: Groupes de travail
+        many: Groupes de travail
         other: Groupes de travail
       group/bund_externe_kontakte:
         one: Contacts externes
+        many: Contacts externes
         other: Contacts externes
       group/bund_delegierte:
         one: Délé
+        many: Délégué-e-s
         other: Délégué-e-s
       group/bund_mitglieder:
         one: Membres
+        many: Membres
         other: Membres
       group/bund_sympathisanten:
         one: Sympathisant-e-s
+        many: Sympathisant-e-s
         other: Sympathisant-e-s
 
       group/kanton:
         one: Canton
+        many: Canton
         other: Canton
       group/kanton_gewaehlte:
         one: 'Élu-e-s '
+        many: Élu-e-s
         other: Élu-e-s
       group/kanton_parteigremium:
         one: Comités
+        many: Comités
         other: Comités
       group/kanton_praesidium:
         one: Présidences
+        many: Présidences
         other: Présidences
       group/kanton_sekretariat:
         one: Sécretariat
+        many: Secrétariats
         other: Secrétariats
       group/kanton_kommission:
         one: Commissions
+        many: Commissions
         other: Commissions
       group/kanton_arbeitsgruppe:
         one: Groupes de travail
+        many: Groupes de travail
         other: Groupes de travail
       group/kanton_externe_kontakte:
         one: Contacts externes
+        many: Contacts
         other: Contacts
       group/kanton_delegierte:
         one: Délégué-e-s
+        many: Délégué-e-s
         other: Délégué-e-s
       group/kanton_sympathisanten:
         one: Sympathisant-e-s
+        many: Sympathisant-e-s
         other: Sympathisant-e-s
       group/kanton_mitglieder:
         one: Membres
+        many: Membres
         other: Membres
 
       group/vereinigung:
         one: Groupements
+        many: Groupements
         other: Groupements
       group/vereinigung_parteigremium:
         one: Organes du parti
+        many: Organes du parti
         other: Organes du parti
       group/vereinigung_praesidium:
         one: Présidence
+        many: Présidence
         other: Présidence
       group/vereinigung_sekretariat:
         one: Secrétariat
+        many: Secrétariat
         other: Secrétariat
       group/vereinigung_kommission:
         one: Commission
+        many: Commission
         other: Commission
       group/vereinigung_arbeitsgruppe:
         one: Groupes de travail
+        many: Groupes de travail
         other: Groupes de travail
       group/vereinigung_externe_kontakte:
         one: Contacts externes
+        many: Contacts externes
         other: Contacts externes
       group/vereinigung_mitglieder:
         one: Membres
+        many: Membres
         other: Membres
       group/vereinigung_sympathisanten:
         one: Sympathisant-e-s
+        many: Sympathisant-e-s
         other: Sympathisant-e-s
       group/vereinigung_delegierte:
         one: Délégué-e-s
+        many: Délégué-e-s
         other: Délégué-e-s
 
       group/region:
         one: Régions
+        many: Régions
         other: Régions
       group/region_parteigremium:
         one: Organes du parti
+        many: Organes du parti
         other: Organes du parti
       group/region_praesidium:
         one: Présidence
+        many: Présidence
         other: Présidence
       group/region_sekretariat:
         one: Secrétariat
+        many: Secrétariat
         other: Secrétariat
       group/region_arbeitsgruppe:
         one: Groupes de travail
+        many: Groupes de travail
         other: Groupes de travail
       group/region_delegierte:
         one: Délégué-e-s
+        many: Délégué-e-s
         other: Délégué-e-s
       group/region_mitglieder:
         one: Membres
+        many: Membres
         other: Membres
       group/region_sympathisanten:
         one: Sympathisant-e-s
+        many: Sympathisant-e-s
         other: Sympathisant-e-s
       group/region_externe_kontakte:
         one: Contacts externes
+        many: Contacts externes
         other: Contacts externes
 
       group/ort:
         one: Partis locaux
+        many: Partis locaux
         other: Partis locaux
       group/ort_gewaehlte:
         one: 'Élu-e-s '
+        many: 'Élu-e-s '
         other: 'Élu-e-s '
       group/ort_parteigremium:
         one: Comités
+        many: Comités
         other: Comités
       group/ort_praesidium:
         one: Présidences
+        many: Présidences
         other: Présidences
       group/ort_sekretariat:
         one: Secrétariats
+        many: Secrétariats
         other: Secrétariats
       group/ort_arbeitsgruppe:
         one: Groupes de travail
+        many: Groupes de travail
         other: Groupes de travail
       group/ort_externe_kontakte:
         one: Contacts externes
+        many: Contacts externes
         other: Contacts externes
       group/ort_mitglieder:
         one: Membres
+        many: Membres
         other: Membres
       group/ort_sympathisanten:
         one: Sympathisant-e-s
+        many: Sympathisant-e-s
         other: Sympathisant-e-s
 
       ### ROLES
