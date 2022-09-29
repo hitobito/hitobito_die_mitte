@@ -548,6 +548,12 @@ it:
               m: Egregio signor
               w: Gentile signora
               other: ""
+          sehr_geehrter_nachname:
+            label: "Stimata Signora [nome]*Stimato Signor [nome]"
+            value:
+              m: Stimata Signor %{last_name}
+              w: Stimata Signora %{last_name}
+              other: ""
           sehr_geehrter_titel_nachname:
             label: ""
             value:
