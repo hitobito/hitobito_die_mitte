@@ -532,15 +532,15 @@ it:
         default:
           label: "Ciao [nome]"
           value:
-            m: Ciao
-            w: Ciao
+            m: Ciao ${greeting_name}
+            w: Ciao ${greeting_name}
             other: Ciao
         available:
           lieber_vorname:
             label: "Caro [nome]"
             value:
-              m: Caro
-              w: Cara
+              m: Caro ${greeting_name}
+              w: Cara ${greeting_name}
               other: Caro
           lieber_titel_nachname:
             label: ""
@@ -555,7 +555,7 @@ it:
               w: Stimata Signora %{last_name}
               other: ""
           sehr_geehrter_titel_nachname:
-            label: ""
+            label: "Gentile Signora [nome]*Egregio Signor [nome]"
             value:
               m: Egregio Signor
               w: Gentile Signora
