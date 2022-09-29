@@ -548,6 +548,12 @@ fr:
               m: "Cher Monsieur %{title_last_name}"
               w: "Chère Madame %{title_last_name}"
               other: "Chère Madame / Cher Monsieur %{title_last_name}"
+          sehr_geehrter_nachname:
+            label: "Chère Madame,*Cher Monsieur"
+            value:
+              m: "Cher Monsieur,"
+              w: "Chère Madame,"
+              other: "Chère Madame,*Cher Monsieur,"
           sehr_geehrter_titel_nachname:
             label: "Chère Madame, cher Monsieur [titre] [nom]"
             value:

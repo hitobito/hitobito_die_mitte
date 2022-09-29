@@ -498,6 +498,12 @@ de:
               m: Lieber Herr %{title_last_name}
               w: Liebe Frau %{title_last_name}
               other: Liebe*r Frau*Herr %{title_last_name}
+          sehr_geehrter_nachname:
+            label: Sehr geehrte*r Frau*Herr [Nachname]
+            value:
+              m: Sehr geehrter Herr %{last_name}
+              w: Sehr geehrte Frau %{last_name}
+              other: Sehr geehrte*r Frau*Herr %{last_name}
           sehr_geehrter_titel_nachname:
             label: Sehr geehrte*r Frau*Herr [Titel] [Nachname]
             value:
