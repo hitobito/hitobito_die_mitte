@@ -11,7 +11,7 @@ list:
   subscribable: true
 
 leaders:
-  group: top_layer
+  group: die_mitte
   name: Leaders
   mail_name: leaders
   subscribable: true
