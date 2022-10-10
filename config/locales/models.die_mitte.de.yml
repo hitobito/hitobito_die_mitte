@@ -515,6 +515,9 @@ de:
       invoice:
         donation_amount: Spendenbetrag
 
+      invoice_items:
+        invoice_item/variable_donation: Variabler Spendenaufruf
+
       mailing_list:
         correspondence_language: Korrespondenzsprache
       group_setting:
