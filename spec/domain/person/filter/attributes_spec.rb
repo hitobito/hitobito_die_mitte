@@ -45,9 +45,9 @@ describe Person::Filter::Attributes do
       expect(filter("allemand").entries).to have(2).items
     end
 
-    it "finds one with correspondence_language en" do
-      expect(filter("en").entries).to have(1).items
-      expect(filter("inglese").entries).to have(1).items
+    it "finds one with correspondence_language fr" do
+      expect(filter("fr").entries).to have(1).items
+      expect(filter("francese").entries).to have(1).items
     end
   end
 

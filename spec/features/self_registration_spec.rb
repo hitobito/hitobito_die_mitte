@@ -5,7 +5,7 @@ describe :self_registration do
 
   subject { page }
 
-  let(:group) { groups(:sekretariat) } # THIS HAS TO BE REPLACED WHEN COPIED
+  let(:group) { groups(:sekretariat) } # THIS HAS TO BE REPLACED WHEN COPIED, important that there is an allowed role type in this group
 
   let(:self_registration_role) { group.decorate.allowed_roles_for_self_registration.first }
 
@@ -24,7 +24,7 @@ describe :self_registration do
     fill_in 'Haupt-E-Mail', with: 'max.muster@hitobito.example.com'
 
     expect do
-      find_all('.btn-toolbar.bottom .btn-group button').first.click # submit
+      find_all('.btn-toolbar.bottom .btn-group button[type="submit"]').first.click # submit
     end.to change { Person.count }.by(1)
       .and change { ActionMailer::Base.deliveries.count }.by(1)
 

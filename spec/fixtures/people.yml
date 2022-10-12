@@ -24,7 +24,7 @@ sekretaer:
   primary_group: die_mitte
   title: 'Herr'
   website: 'hitobito.example.com'
-  correspondence_language: 'en'
+  correspondence_language: 'fr'
   civil_status: 'divorced'
   salutation: 'lieber_titel_nachname'
 
