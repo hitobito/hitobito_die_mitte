@@ -53,6 +53,8 @@ module HitobitoDieMitte
       MailingLists::Subscribers.prepend DieMitte::MailingLists::Subscribers
 
       Export::MessageJob.prepend DieMitte::Export::MessageJob
+
+      InvoiceItem.add_type_mapping(:variable_donation, InvoiceItem::VariableDonation)
       # rubocop:enable Metrics/LineLength
     end
 

@@ -4,6 +4,9 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 de:
+  dropdown/invoice_new:
+    variable_donation: Variabler Spendenaufruf
+
   export:
     tabular:
       messages:
@@ -13,8 +16,6 @@ de:
     actions_show_die_mitte:
       button_export_csv: CSV exportieren
   people:
-    actions_index_die_mitte:
-      new_variable_donation: Neuer variabler Spendenaufruf
     address:
       two_with_same_last_name: '%{first} und %{second} %{last_name}'
   placeholder: Platzhalter
