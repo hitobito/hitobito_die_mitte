@@ -476,6 +476,10 @@ de:
       group/ort_sympathisanten/sympathisant:
         one: SympathisantIn
 
+      invoice_item/variable_donation:
+        one: Variabler Spendenaufruf
+        other: Variable Spendenaufrufe
+
       salutation:
         one: Anrede
         other: Anreden
@@ -514,9 +518,6 @@ de:
     attributes:
       invoice:
         donation_amount: Spendenbetrag
-
-      invoice_items:
-        invoice_item/variable_donation: Variabler Spendenaufruf
 
       mailing_list:
         correspondence_language: Korrespondenzsprache
