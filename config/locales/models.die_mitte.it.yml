@@ -526,21 +526,26 @@ it:
       group/ort_sympathisanten/sympathisant:
         one: Simpatizzante
 
+      invoice_item/variable_donation:
+        one: ''
+        many: ''
+        other: ''
+
       salutation:
         one: Saluto
         other: Saluti
         default:
           label: "Ciao [nome]"
           value:
-            m: Ciao ${greeting_name}
-            w: Ciao ${greeting_name}
+            m: Ciao
+            w: Ciao
             other: Ciao
         available:
           lieber_vorname:
             label: "Caro [nome]"
             value:
-              m: Caro ${greeting_name}
-              w: Cara ${greeting_name}
+              m: Caro
+              w: Cara
               other: Caro
           lieber_titel_nachname:
             label: ""
@@ -549,13 +554,13 @@ it:
               w: Gentile signora
               other: ""
           sehr_geehrter_nachname:
-            label: "Stimata Signora [nome]*Stimato Signor [nome]"
+            label: ""
             value:
-              m: Stimata Signor %{last_name}
-              w: Stimata Signora %{last_name}
+              m: ""
+              w: ""
               other: ""
           sehr_geehrter_titel_nachname:
-            label: "Gentile Signora [nome]*Egregio Signor [nome]"
+            label: ""
             value:
               m: Egregio Signor
               w: Gentile Signora

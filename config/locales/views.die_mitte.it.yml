@@ -4,6 +4,9 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 it:
+  dropdown/invoice_new:
+    variable_donation: ""
+
   export:
     tabular:
       messages:

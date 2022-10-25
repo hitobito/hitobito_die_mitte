@@ -526,6 +526,11 @@ fr:
       group/ort_sympathisanten/sympathisant:
         one: Sympathisant-e
 
+      invoice_item/variable_donation:
+        one: ''
+        many: ''
+        other: ''
+
       salutation:
         one: Adresse
         other: Adresses
@@ -537,7 +542,7 @@ fr:
             other: "Salut %{greeting_name}"
         available:
           lieber_vorname:
-            label: "Chère*Cher [prénom]"
+            label: "Cher/chère [prénom]"
             value:
               m: "Cher %{first_name}"
               w: "Chère %{first_name}"
@@ -549,11 +554,11 @@ fr:
               w: "Chère Madame %{title_last_name}"
               other: "Chère Madame / Cher Monsieur %{title_last_name}"
           sehr_geehrter_nachname:
-            label: "Chère Madame,*Cher Monsieur"
+            label: Chère Madame* Cher Monsieur
             value:
-              m: "Cher Monsieur,"
-              w: "Chère Madame,"
-              other: "Chère Madame,*Cher Monsieur,"
+              m: "Cher Monsieur "
+              w: Chère Madame
+              other: Chère Madame* Cher Monsieur
           sehr_geehrter_titel_nachname:
             label: "Chère Madame, cher Monsieur [titre] [nom]"
             value:
@@ -563,15 +568,15 @@ fr:
 
     attributes:
       invoice:
-        donation_amount: ""
+        donation_amount: Montant de la donation
 
       mailing_list:
         correspondence_language: Langue
       group_setting:
-        footer_column_1: ""
-        footer_column_2: ""
-        footer_column_3: ""
-        footer_column_4: ""
+        footer_column_1: Pied de page 1ère colonne
+        footer_column_2: Pied de page 2ème colonne
+        footer_column_3: Pied de page 3ème colonne
+        footer_column_4: Pied de page 4ème colonne
       person:
         salutation: Adresse
         salutation_value: Adresse
@@ -591,4 +596,4 @@ fr:
           married: Marié-e
           divorced: Divorcé-e
           widowed: Veuf / veuve
-        household?: ""
+        household?: "habite avec "
