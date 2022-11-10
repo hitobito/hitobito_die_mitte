@@ -29,6 +29,3 @@ messages:
 assignments:
   enabled: true
   default_assignee_email: info@sutergerteis.ch
-
-people:
-  export_related_roles_only_default: true
