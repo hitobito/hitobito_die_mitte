@@ -1,14 +1,15 @@
 [main]
 host = https://www.transifex.com
 
-[hitobito_die_mitte.models-die_mitte]
+[o:hitobito:p:hitobito_die_mitte:r:models-die_mitte]
 file_filter = config/locales/models.die_mitte.<lang>.yml
 source_file = config/locales/models.die_mitte.de.yml
 source_lang = de
-type = YML
+type        = YML
 
-[hitobito_die_mitte.views-die_mitte]
+[o:hitobito:p:hitobito_die_mitte:r:views-die_mitte]
 file_filter = config/locales/views.die_mitte.<lang>.yml
 source_file = config/locales/views.die_mitte.de.yml
 source_lang = de
-type = YML
+type        = YML
+
