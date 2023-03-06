@@ -16,7 +16,7 @@ class Group::VereinigungPraesidium < Group
   end
 
   class Kassier < Role
-    self.permissions = [:finance]
+    self.permissions = [:layer_and_below_full, :finance]
   end
 
   class Mitglied < Role

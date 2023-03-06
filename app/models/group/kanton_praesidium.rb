@@ -24,7 +24,7 @@ class Group::KantonPraesidium < Group
   end
 
   class Kassier < Role
-    self.permissions = [:finance]
+    self.permissions = [:layer_and_below_full, :finance]
   end
 
   roles Praesident, Vizepraesident, Mitglied, Gast, Kassier
