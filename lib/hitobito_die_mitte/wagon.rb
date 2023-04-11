@@ -39,6 +39,8 @@ module HitobitoDieMitte
       PeopleController.prepend DieMitte::PeopleController
       FilterNavigation::People.prepend DieMitte::FilterNavigation::People
 
+      PersonReadables.prepend DieMitte::PersonReadables
+
       PersonSerializer.include DieMitte::PersonSerializer
 
       Person::Address.prepend DieMitte::Person::Address

@@ -8,7 +8,9 @@
 module DieMitte::PersonReadables
 
   def initialize(user, group = nil, roles_join = nil)
-    super(user, group, roles_join)
+    @user_context = AbilityDsl::UserContext.new(user)
+    @roles_join = roles_join || { roles: :group }
+    @group = group
 
     can :index, Person, accessible_people { |_| true }
   end
