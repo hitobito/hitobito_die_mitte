@@ -11,18 +11,18 @@ module DieMitte::MailingListAbility
   included do
     on(MailingList) do
       permission(:layer_and_below_full).may(:show, :index_subscriptions, :export_subscriptions)
-        .in_same_layer_or_it_support
+        .in_same_layer_or_it_support_or_sekretariat_leitung
       permission(:layer_and_below_full).may(:create, :update, :destroy)
-        .in_same_layer_if_active_or_it_support
+        .in_same_layer_if_active_or_it_support_or_sekretariat_leitung
     end
   end
 
-  def in_same_layer_or_it_support
-    in_same_layer || it_support?
+  def in_same_layer_or_it_support_or_sekretariat_leitung
+    in_same_layer || it_support? || sekretariat_leitung?
   end
 
-  def in_same_layer_if_active_or_it_support
-    in_same_layer_if_active || it_support?
+  def in_same_layer_if_active_or_it_support_or_sekretariat_leitung
+    in_same_layer_if_active || it_support? || sekretariat_leitung?
   end
 
   def it_support?
