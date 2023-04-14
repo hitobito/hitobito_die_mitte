@@ -40,6 +40,7 @@ module HitobitoDieMitte
       FilterNavigation::People.prepend DieMitte::FilterNavigation::People
 
       PersonReadables.prepend DieMitte::PersonReadables
+      MailingListAbility.include DieMitte::MailingListAbility
 
       PersonSerializer.include DieMitte::PersonSerializer
 
