@@ -58,6 +58,7 @@ module HitobitoDieMitte
       Export::MessageJob.prepend DieMitte::Export::MessageJob
 
       InvoiceItem.add_type_mapping(:variable_donation, InvoiceItem::VariableDonation)
+      Role::Permissions << :complete_finance
       # rubocop:enable Metrics/LineLength
     end
 

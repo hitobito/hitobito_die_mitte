@@ -8,7 +8,7 @@
 class Group::BundSekretariat < Group
 
   class Leitung < Role
-    self.permissions = [:layer_and_below_full, :contact_data, :admin, :finance]
+    self.permissions = [:layer_and_below_full, :contact_data, :admin, :finance, :complete_finance]
   end
 
   class Mitarbeiter < Role

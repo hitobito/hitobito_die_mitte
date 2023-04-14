@@ -30,4 +30,10 @@ module DieMitte::MailingListAbility
         .map(&:type)
         .include?(Group::BundSekretariat::ItSupport.sti_name)
   end
+
+  def sekretariat_leitung?
+    user.roles
+        .map(&:type)
+        .include?(Group::BundSekretariat::Leitung.sti_name)
+  end
 end
