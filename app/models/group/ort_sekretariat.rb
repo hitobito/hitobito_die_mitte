@@ -15,7 +15,9 @@ class Group::OrtSekretariat < Group
     self.permissions = [:layer_full]
   end
 
-  class Webadministrator < Role; end
+  class Webadministrator < Role
+    self.permissions = [:layer_and_below_full]
+  end
 
   roles Leitung, Mitarbeiter, Webadministrator
 end

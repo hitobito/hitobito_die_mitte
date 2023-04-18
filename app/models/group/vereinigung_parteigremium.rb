@@ -7,8 +7,11 @@
 
 class Group::VereinigungParteigremium < Group
 
+  class Leitung < Role
+    self.permissions = [:layer_and_below_full]
+  end
+
   class Praesident < Role; end
-  class Leitung < Group::Simple::Leitung; end
   class Mitglied < Group::Simple::Mitglied; end
   class Gast < Role; end
 

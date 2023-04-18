@@ -39,6 +39,9 @@ module HitobitoDieMitte
       PeopleController.prepend DieMitte::PeopleController
       FilterNavigation::People.prepend DieMitte::FilterNavigation::People
 
+      PersonReadables.prepend DieMitte::PersonReadables
+      MailingListAbility.include DieMitte::MailingListAbility
+
       PersonSerializer.include DieMitte::PersonSerializer
 
       Person::Address.prepend DieMitte::Person::Address
@@ -55,6 +58,7 @@ module HitobitoDieMitte
       Export::MessageJob.prepend DieMitte::Export::MessageJob
 
       InvoiceItem.add_type_mapping(:variable_donation, InvoiceItem::VariableDonation)
+      Role::Permissions << :complete_finance
       # rubocop:enable Metrics/LineLength
     end
 
