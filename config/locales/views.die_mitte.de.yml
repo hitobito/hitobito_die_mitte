@@ -6,6 +6,8 @@
 de:
   dropdown/invoice_new:
     variable_donation: Variabler Spendenaufruf
+  dropdown/letter_with_invoice_new:
+    variable_donation: Variabler Spendenaufruf
 
   export:
     tabular:
