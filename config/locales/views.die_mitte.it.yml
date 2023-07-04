@@ -6,6 +6,8 @@
 it:
   dropdown/invoice_new:
     variable_donation: ""
+  dropdown/letter_with_invoice_new:
+    variable_donation: ""
 
   export:
     tabular:
