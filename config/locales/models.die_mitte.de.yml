@@ -521,11 +521,11 @@ de:
 
       mailing_list:
         correspondence_language: Korrespondenzsprache
-      group_setting:
-        footer_column_1: Fusszeile 1. Spalte
-        footer_column_2: Fusszeile 2. Spalte
-        footer_column_3: Fusszeile 3. Spalte
-        footer_column_4: Fusszeile 4. Spalte
+      group:
+        letter_footer_column_1: Fusszeile 1. Spalte
+        letter_footer_column_2: Fusszeile 2. Spalte
+        letter_footer_column_3: Fusszeile 3. Spalte
+        letter_footer_column_4: Fusszeile 4. Spalte
       person:
         salutation: Anrede
         salutation_value: Anrede

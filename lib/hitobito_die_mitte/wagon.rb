@@ -21,7 +21,6 @@ module HitobitoDieMitte
       # rubocop:disable Metrics/LineLength
       # extend application classes here
       Group.include DieMitte::Group
-      GroupSetting.include DieMitte::GroupSetting
       Role.include DieMitte::Role
       Role.extend DieMitte::NormalizedLabels
       Person.include DieMitte::Person
