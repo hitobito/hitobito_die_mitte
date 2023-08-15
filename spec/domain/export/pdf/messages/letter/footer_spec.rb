@@ -27,7 +27,11 @@ describe DieMitte::Export::Pdf::Messages::Letter::Footer do
   subject { described_class.new(pdf, letter, options) }
 
   before do
-    GroupSetting.create!(target: sekretariat, var: :messages_letter, **column_attrs)
+    sekretariat.letter_footer_column_1 = column_attrs[:footer_column_1]
+    sekretariat.letter_footer_column_2 = column_attrs[:footer_column_2]
+    sekretariat.letter_footer_column_3 = column_attrs[:footer_column_3]
+    sekretariat.letter_footer_column_4 = column_attrs[:footer_column_4]
+    sekretariat.save!
   end
 
   describe 'footer columns' do

@@ -31,7 +31,7 @@ module DieMitte
 
           def columns
             (1..4).map do |i|
-              letter.group.settings(:messages_letter).send("footer_column_#{i}")
+              letter.group.send("letter_footer_column_#{i}")
             end
           end
         end

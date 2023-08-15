@@ -572,11 +572,11 @@ it:
 
       mailing_list:
         correspondence_language: Lingua di corrispondenza
-      group_setting:
-        footer_column_1: ""
-        footer_column_2: ""
-        footer_column_3: ""
-        footer_column_4: ""
+      group:
+        letter_footer_column_1: ""
+        letter_footer_column_2: ""
+        letter_footer_column_3: ""
+        letter_footer_column_4: ""
       person:
         salutation: Saluto
         salutation_value: Saluto

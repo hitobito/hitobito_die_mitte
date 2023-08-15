@@ -13,6 +13,25 @@ module DieMitte::Group
     # self.used_attributes += [:website, :bank_account, :description]
     # self.superior_attributes = [:bank_account]
 
+    self.mounted_attr_categories = {
+      messages: [:letter_address_position,
+                 :letter_logo,
+                 :letter_footer_column_1,
+                 :letter_footer_column_2,
+                 :letter_footer_column_3,
+                 :letter_footer_column_4,
+                 :text_message_username,
+                 :text_message_password,
+                 :text_message_provider,
+                 :text_message_originator]
+    }
+
+
+    mounted_attr :letter_footer_column_1, :text
+    mounted_attr :letter_footer_column_2, :text
+    mounted_attr :letter_footer_column_3, :text
+    mounted_attr :letter_footer_column_4, :text
+
     root_types Group::Bund
   end
 
