@@ -44,21 +44,27 @@ class MigrateGroupSettingsDieMitte < ActiveRecord::Migration[6.1]
   def migrate_settings
     LegacyGroupSetting.where(target_type: 'Group').find_each do |setting|
       group = setting.target
+      values = setting.value
       setting.value.each do |key, value|
         case key
         when 'footer_column_1'
-          group.letter_footer_column_1 = value
+          group.letter_footer_column_1 = values.delete(key)
         when 'footer_column_2'
-          group.letter_footer_column_2 = value
+          group.letter_footer_column_2 = values.delete(key)
         when 'footer_column_3'
-          group.letter_footer_column_3 = value
+          group.letter_footer_column_3 = values.delete(key)
         when 'footer_column_4'
-          group.letter_footer_column_4 = value
+          group.letter_footer_column_4 = values.delete(key)
         end
       end
 
       group.save!
-      setting.destroy!
+
+      if values.empty?
+        setting.destroy!
+      else
+        setting.save!
+      end
     end
   end
 
