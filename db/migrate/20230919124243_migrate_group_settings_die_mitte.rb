@@ -42,20 +42,17 @@ class MigrateGroupSettingsDieMitte < ActiveRecord::Migration[6.1]
   private
 
   def migrate_settings
-    LegacyGroupSetting.find_each do |setting|
-      group = setting.target if setting.target_type == 'Group'
-
-      next unless group
-
+    LegacyGroupSetting.where(target_type: 'Group').find_each do |setting|
+      group = setting.target
       setting.value.each do |key, value|
         case key
-        when :footer_column_1
+        when 'footer_column_1'
           group.letter_footer_column_1 = value
-        when :footer_column_2
+        when 'footer_column_2'
           group.letter_footer_column_2 = value
-        when :footer_column_3
+        when 'footer_column_3'
           group.letter_footer_column_3 = value
-        when :footer_column_4
+        when 'footer_column_4'
           group.letter_footer_column_4 = value
         end
       end
@@ -74,10 +71,10 @@ class MigrateGroupSettingsDieMitte < ActiveRecord::Migration[6.1]
     Group.where(id: relevant_group_ids).find_each do |group|
       values_for_var = {
         messages_letter: {
-          footer_column_1: group.letter_footer_column_1,
-          footer_column_2: group.letter_footer_column_2,
-          footer_column_3: group.letter_footer_column_3,
-          footer_column_4: group.letter_footer_column_4
+          'footer_column_1' => group.letter_footer_column_1,
+          'footer_column_2' => group.letter_footer_column_2,
+          'footer_column_3' => group.letter_footer_column_3,
+          'footer_column_4' => group.letter_footer_column_4
         }
       }
 

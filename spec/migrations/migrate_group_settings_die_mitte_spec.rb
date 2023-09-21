@@ -26,10 +26,10 @@ describe MigrateGroupSettingsDieMitte do
           var: :messages_letter,
           target: group,
           value: {
-            footer_column_1: 'bla',
-            footer_column_2: 'bli',
-            footer_column_3: 'blö',
-            footer_column_4: 'ble'
+            'footer_column_1' => 'bla',
+            'footer_column_2' => 'bli',
+            'footer_column_3' => 'blö',
+            'footer_column_4' => 'ble'
           }
         })
       end
@@ -43,7 +43,7 @@ describe MigrateGroupSettingsDieMitte do
 
     it 'migrates group settings' do
       group_settings.each do |s|
-        value = s.value[:footer_column_3]
+        value = s.value['footer_column_3']
 
         expect(value).to be_present
         expect(value).to eq('blö')
@@ -84,10 +84,10 @@ describe MigrateGroupSettingsDieMitte do
       layers.each do |group|
         setting = MigrateGroupSettingsDieMitte::LegacyGroupSetting.find_by(target: group,
                                                                            var: :messages_letter)
-        expect(setting.value[:footer_column_1]).to eq('bla')
-        expect(setting.value[:footer_column_2]).to eq('bli')
-        expect(setting.value[:footer_column_3]).to eq('blö')
-        expect(setting.value[:footer_column_4]).to eq('ble')
+        expect(setting.value['footer_column_1']).to eq('bla')
+        expect(setting.value['footer_column_2']).to eq('bli')
+        expect(setting.value['footer_column_3']).to eq('blö')
+        expect(setting.value['footer_column_4']).to eq('ble')
       end
     end
   end
