@@ -37,8 +37,6 @@ describe MigrateGroupSettingsDieMitte do
 
     before do
       migration.down
-
-      MigrateGroupSettingsDieMitte::LegacyGroupSetting.delete_all
     end
 
     it 'migrates group settings' do
@@ -49,9 +47,9 @@ describe MigrateGroupSettingsDieMitte do
         expect(value).to eq('blö')
       end
 
-      expect do
-        migration.up
-      end.to change { MigrateGroupSettingsDieMitte::LegacyGroupSetting.count }.by(-2)
+      migration.up
+
+      expect(ActiveRecord::Base.connection.table_exists?('settings')).to eq(false)
 
       layers.each do |group|
         group.reload
@@ -66,7 +64,6 @@ describe MigrateGroupSettingsDieMitte do
   context '#down' do
     after do
       migration.up
-      MigrateGroupSettingsDieMitte::LegacyGroupSetting.delete_all
     end
 
     it 'migrates regular settings' do
@@ -77,9 +74,9 @@ describe MigrateGroupSettingsDieMitte do
                       letter_footer_column_4: 'ble')
       end
 
-      expect do
-        migration.down
-      end.to change { MigrateGroupSettingsDieMitte::LegacyGroupSetting.count }.by(2)
+      migration.down
+
+      expect(ActiveRecord::Base.connection.table_exists?('settings')).to eq(true)
 
       layers.each do |group|
         setting = MigrateGroupSettingsDieMitte::LegacyGroupSetting.find_by(target: group,
