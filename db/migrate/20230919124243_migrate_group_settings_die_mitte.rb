@@ -10,9 +10,16 @@ class MigrateGroupSettingsDieMitte < ActiveRecord::Migration[6.1]
       Group.reset_column_information
     end
 
+    return unless table_exists?(:settings)
 
     say_with_time('migrate group settings to group attributes') do
       migrate_settings
+    end
+
+    say_with_time('remove obsolete settings table') do
+      if LegacyGroupSetting.count.zero?
+        drop_table :settings
+      end
     end
 
   end
@@ -69,6 +76,7 @@ class MigrateGroupSettingsDieMitte < ActiveRecord::Migration[6.1]
   end
 
   def revert_mounted_attributes
+    create_settings_table
     relevant_group_ids = Group.where('letter_footer_column_1 IS NOT NULL OR ' \
                                      'letter_footer_column_2 IS NOT NULL OR ' \
                                      'letter_footer_column_3 IS NOT NULL OR ' \
@@ -95,5 +103,19 @@ class MigrateGroupSettingsDieMitte < ActiveRecord::Migration[6.1]
         end
       end
     end
+  end
+
+  def create_settings_table
+    return if table_exists?(:settings)
+
+    create_table :settings do |t|
+      t.string     :var, null: false
+      t.text       :value
+      t.references :target, null: false, polymorphic: true
+      t.timestamps null: true
+    end
+    add_index :settings, [:target_type, :target_id, :var], unique: true
+
+    LegacyGroupSetting.reset_column_information
   end
 end
