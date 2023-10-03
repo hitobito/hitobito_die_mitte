@@ -573,10 +573,10 @@ fr:
       mailing_list:
         correspondence_language: Langue
       group:
-        letter_footer_column_1: Pied de page 1ère colonne
-        letter_footer_column_2: Pied de page 2ème colonne
-        letter_footer_column_3: Pied de page 3ème colonne
-        letter_footer_column_4: Pied de page 4ème colonne
+        letter_footer_column_1: ""
+        letter_footer_column_2: ""
+        letter_footer_column_3: ""
+        letter_footer_column_4: ""
       person:
         salutation: Adresse
         salutation_value: Adresse
