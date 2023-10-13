@@ -54,10 +54,10 @@ module Export::Tabular::Messages
     end
 
     def housemate_label(attr, housemate_index)
-      I18n.t('export.tabular.messages.letters_with_invoice.housemate_n_attr', {
-          index: housemate_index,
-          attr: person_attribute(attr, { default: attribute_label(attr)})
-      })
+      I18n.t('export.tabular.messages.letters_with_invoice.housemate_n_attr',
+             index: housemate_index,
+             attr: person_attribute(attr, { default: attribute_label(attr)})
+      )
     end
 
     private
