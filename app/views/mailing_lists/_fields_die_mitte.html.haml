@@ -4,4 +4,4 @@
 -#  https://github.com/hitobito/hitobito_die_mitte.
 
 %fieldset
-  = f.labeled_collection_select(:correspondence_language, Person.correspondence_language_labels, :first, :second, include_blank: I18n.t('global.all'))
+  = f.labeled_collection_select(:correspondence_language, Person.correspondence_language_labels, :first, :second, { include_blank: I18n.t('global.all') }, class: 'form-select form-select-sm')

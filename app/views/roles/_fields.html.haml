@@ -2,11 +2,11 @@
 
 - if @group_selection.present? && @group_selection.size > 1
   = f.labeled(:group_id) do
-    .span6.shown
+    .shown
       = f.select(:group_id,
                  group_options_with_level,
                  { },
-                 { class: 'chosen-select',
+                 { class: 'form-select form-select-sm',
                    data: { remote: true,
                            url: role_types_group_roles_path(@group),
                            chosen_no_results: t('global.chosen_no_results') } })
@@ -14,7 +14,7 @@
   = f.hidden_field :group_id
 
 = f.labeled(:type) do
-  #role_type_select.span6
+  #role_type_select
     = render 'roles/type_select'
 
 = field_set_tag Role.human_attribute_name(:label) do
@@ -23,13 +23,13 @@
                             data: { provide: :typeahead, source: entry.klass.available_labels(code) },
                             label: name)
 
-  %small
+  %small.muted
     = t('.help_optional_label')
 
 = field_set_tag Role.human_attribute_name(:dates) do
   = f.labeled(:created_at) do
-    = f.date_field(:created_at, class: 'date span6', value: f(@role.created_at.try(:to_date) || Time.zone.today))
+    = f.date_field(:created_at, class: 'date', value: f(@role.created_at.try(:to_date) || Time.zone.today))
   = f.labeled(:deleted_at) do
-    = f.date_field(:deleted_at, disabled: !can?(:destroy, @role), class: 'date span6', value: f(@role.deleted_at.try(:to_date)))
+    = f.date_field(:deleted_at, disabled: !can?(:destroy, @role), class: 'date', value: f(@role.deleted_at.try(:to_date)))
 
 = render_extensions :fields, locals: { f: f }
