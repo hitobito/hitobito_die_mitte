@@ -32,8 +32,9 @@ describe PeopleController do
   it 'GET#index lists both members on top layer' do
     get :index, params: { group_id: groups(:die_mitte).id }
     expect(members_filter.text).to eq 'Mitglieder (2)'
-    expect(members_filter[:class]).to eq 'active'
-    expect(custom_filter[:class]).not_to eq 'active'
+
+    expect(members_filter.find('a')[:class]).to include 'active'
+    expect(custom_filter[:class]).not_to include 'active'
 
     expect(pagination_info).to eq '2 Personen angezeigt.'
     expect(people_table).to have(2).item
@@ -43,9 +44,10 @@ describe PeopleController do
     roles = { role_type_ids: Group::KantonMitglieder::Mitglied.id }
     get :index, params: { group_id: groups(:die_mitte).id, filters: { role: roles }, range: 'deep' }
 
-    expect(custom_filter[:class]).to eq 'dropdown active'
+    expect(custom_filter[:class]).to include 'dropdown'
+    expect(custom_filter[:class]).to include 'active'
     expect(members_filter.text).to eq 'Mitglieder (2)'
-    expect(members_filter[:class]).not_to eq 'active'
+    expect(members_filter.find('a')[:class]).not_to include 'active'
 
     expect(pagination_info).to eq '1 Person angezeigt.'
     expect(people_table).to have(1).item
