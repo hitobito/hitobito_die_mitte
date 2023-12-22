@@ -22,14 +22,18 @@ module DieMitte::Role
     alias_method_chain :to_s, :merkmal
   end
 
-  def to_s_with_merkmal(format=:default)
+  def to_s_with_merkmal(format = :default)
     model_name = self.class.label
     model_name = 'Merkmal' if self.class.sti_name.ends_with?('Merkmal')
-    string = label? ? "#{model_name} (#{label})" : model_name
+
+    unless format == :short
+      model_name = label? ? "#{model_name} (#{label})" : model_name
+      model_name += " (#{formatted_delete_date})" if delete_on
+    end
     if format == :long
-      I18n.t('activerecord.attributes.role.string_long', role: string, group: group.to_s)
+      I18n.t('activerecord.attributes.role.string_long', role: model_name, group: group.to_s)
     else
-      string
+      model_name
     end
   end
 

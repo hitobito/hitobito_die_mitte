@@ -23,7 +23,7 @@ describe RoleDecorator, :draper_with_helpers  do
   it "renders normal role within a <strong> tag for ordinary role and label" do
     roles(:sekretaer).update(label: 'General')
     aside = RoleDecorator.new(roles(:sekretaer)).for_aside
-    expect(aside).to eq '<strong>Leitung (General)</strong>'
+    expect(aside).to eq '<strong>Leitung</strong>&nbsp;(General)'
   end
 
   it "renders hiearchy with links for Mitglieder Role" do
@@ -31,9 +31,9 @@ describe RoleDecorator, :draper_with_helpers  do
     aside = RoleDecorator.new(roles(:thuner)).for_aside
 
     html = [
-      "<strong>Mitglied (Einzelmitglied)</strong>",
-      "<strong>Mitglied - Kanton <a href=#{group_path(:be)}>Bern</a></strong>",
-      "<strong>Mitglied - Schweiz <a href=#{group_path(:die_mitte)}>Die Mitte</a></strong>"
+      "<strong>Mitglied</strong>&nbsp;(Einzelmitglied)",
+      "<strong>Mitglied - Kanton <a href=\"/de/groups/734694925\">Bern</a></strong>",
+      "<strong>Mitglied - Schweiz <a href=\"/de/groups/244007978\">Die Mitte</a></strong>"
     ]
     expect(aside.split('<br />')).to eq html
   end
