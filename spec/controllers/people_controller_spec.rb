@@ -87,7 +87,7 @@ describe PeopleController do
 
       sekretaer.reload
 
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(303)
       expect(sekretaer.first_name).to eq('updated_name')
       expect(sekretaer.title).to eq('Frau')
       expect(sekretaer.website).to eq('example.com')
