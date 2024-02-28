@@ -50,7 +50,6 @@ module HitobitoDieMitte
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
       Export::Pdf::Messages::Letter.include DieMitte::Export::Pdf::Messages::Letter
       Export::Pdf::Messages::LetterWithInvoice.include DieMitte::Export::Pdf::Messages::LetterWithInvoice
-      Export::Pdf::Messages::Letter::BODY_FONT_SIZE = 10.5
 
       MailingLists::Subscribers.prepend DieMitte::MailingLists::Subscribers
 
