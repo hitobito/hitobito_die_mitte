@@ -21,10 +21,4 @@ module PeopleDieMitteHelper
   def format_person_civil_status(person)
     t("#{PERSON_I18N_KEY_PREFIX}.civil_statuses.#{person.civil_status}")
   end
-
-  def format_person_salutation(person)
-    if person.salutation.present?
-      t("activerecord.models.salutation.available.#{person.salutation}.label")
-    end
-  end
 end
