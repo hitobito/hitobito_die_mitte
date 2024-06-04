@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2021, Die Mitte Schweiz. This file is part of
+#  Copyright (c) 2021-2024, Die Mitte Schweiz. This file is part of
 #  hitobito_die_mitte and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_die_mitte.
@@ -31,7 +31,7 @@ describe Export::MessageJob do
         .create!(mailing_list: mailing_lists(:list),
                  body: 'Lorem ipsum',
                  subject: 'A Sunny Day')
-    end 
+    end
 
     before do
       create_invoice(person1)
@@ -47,7 +47,8 @@ describe Export::MessageJob do
       person4.update(household_key: 'asdf-asdf-asdf-asdf')
       person2.update(
           household_key: person4.household_key,
-          address: person4.address,
+          street: person4.street,
+          housenumber: person4.housenumber,
           zip_code: person4.zip_code,
           town: person4.town
       )
