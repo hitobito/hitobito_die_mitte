@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2021, Die Mitte. This file is part of
-#  hitobito_die_mitte and licensed under the Affero General Public License version 3
-#  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_die_mitte.
-
 if Rake::Task.task_defined?('spec:features')
   # we DO have feature specs in this wagon.
   Rake::Task['spec:features'].actions.clear
@@ -14,12 +9,18 @@ if Rake::Task.task_defined?('spec:features')
       t.rspec_opts = '--tag type:feature'
     end
 
-    task all: ['spec:features', 'spec']
+    RSpec::Core::RakeTask.new(:without_features) do |t|
+      t.pattern = './spec/**/*_spec.rb'
+      t.rspec_opts = '--tag ~type:feature'
+    end
+
+    task all: ['spec:features', 'spec:without_features']
   end
 
 else
   # we do NOT have feature specs in this wagon.
   namespace :spec do
     task all: 'spec'
+    task without_features: 'spec'
   end
 end
