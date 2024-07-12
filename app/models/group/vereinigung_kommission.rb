@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::VereinigungKommission < Group
-
   class Praesident < Role
     self.permissions = []
   end

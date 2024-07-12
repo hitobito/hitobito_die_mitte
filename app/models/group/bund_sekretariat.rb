@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::BundSekretariat < Group
-
   class Leitung < Role
     self.permissions = [:layer_and_below_full, :contact_data, :admin, :finance]
   end

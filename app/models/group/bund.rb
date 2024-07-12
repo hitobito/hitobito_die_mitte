@@ -6,21 +6,20 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::Bund < Group
-
   self.layer = true
 
   children Group::BundGewaehlte,
-           Group::BundParteigremium,
-           Group::BundPraesidium,
-           Group::BundSekretariat,
-           Group::BundKommission,
-           Group::BundArbeitsgruppe,
-           Group::BundExterneKontakte,
-           Group::BundDelegierte,
-           Group::BundMitglieder,
-           Group::BundSympathisanten,
-           Group::Kanton,
-           Group::Vereinigung
+    Group::BundParteigremium,
+    Group::BundPraesidium,
+    Group::BundSekretariat,
+    Group::BundKommission,
+    Group::BundArbeitsgruppe,
+    Group::BundExterneKontakte,
+    Group::BundDelegierte,
+    Group::BundMitglieder,
+    Group::BundSympathisanten,
+    Group::Kanton,
+    Group::Vereinigung
 
   ### ROLES
   #
@@ -28,5 +27,4 @@ class Group::Bund < Group
     Group::BundGewaehlte,
     Group::BundSekretariat
   ]
-
 end

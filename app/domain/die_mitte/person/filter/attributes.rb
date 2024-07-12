@@ -4,15 +4,14 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::Person::Filter::Attributes
-
-  I18N_KEY = 'activerecord.attributes.person.correspondence_languages'.freeze
+  I18N_KEY = "activerecord.attributes.person.correspondence_languages".freeze
 
   def persisted_attribute_condition_sql(key, value, constraint)
-    if key == 'correspondence_language' && value.present?
+    if key == "correspondence_language" && value.present?
       value = from_translations(value)&.first || value
     end
 
-    super(key, value, constraint)
+    super
   end
 
   def from_translations(value)

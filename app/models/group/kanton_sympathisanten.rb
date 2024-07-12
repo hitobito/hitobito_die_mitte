@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::KantonSympathisanten < Group
-
   class Sympathisant < Role
     self.permissions = []
   end

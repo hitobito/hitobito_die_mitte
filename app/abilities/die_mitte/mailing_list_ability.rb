@@ -27,13 +27,13 @@ module DieMitte::MailingListAbility
 
   def it_support?
     user.roles
-        .map(&:type)
-        .include?(Group::BundSekretariat::ItSupport.sti_name)
+      .map(&:type)
+      .include?(Group::BundSekretariat::ItSupport.sti_name)
   end
 
   def sekretariat_leitung?
     user.roles
-        .map(&:type)
-        .include?(Group::BundSekretariat::Leitung.sti_name)
+      .map(&:type)
+      .include?(Group::BundSekretariat::Leitung.sti_name)
   end
 end

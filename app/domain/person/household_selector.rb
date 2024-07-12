@@ -6,26 +6,25 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Person::HouseholdSelector
-
   def initialize(people)
     @people = people.presence || []
   end
-  
+
   def select(count = 2)
     [
       with_most_used_last_name,
       with_complete_name
-    ].find(->{ @people }) { |ordering| ordering.count >= count }.first(count)
+    ].find(-> { @people }) { |ordering| ordering.count >= count }.first(count)
   end
 
   private
 
   def with_most_used_last_name
-    with_complete_name.select{ |member| member.last_name == most_used_last_name }
+    with_complete_name.select { |member| member.last_name == most_used_last_name }
   end
 
   def most_used_last_name
-    @most_used_last_name ||= last_name_counts.max_by {|_, count| count}.first
+    @most_used_last_name ||= last_name_counts.max_by { |_, count| count }.first
   end
 
   def last_name_counts

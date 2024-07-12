@@ -6,15 +6,15 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::KantonParteigremium < Group
-
   class Leitung < Role
     self.permissions = [:layer_and_below_full]
   end
 
   class Praesident < Role; end
+
   class Mitglied < Group::Simple::Mitglied; end
+
   class Gast < Role; end
 
   roles Praesident, Leitung, Mitglied, Gast
-
 end

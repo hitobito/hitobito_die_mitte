@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::KantonKommission < Group::Simple
-
   class Praesident < Role
     self.permissions = []
   end

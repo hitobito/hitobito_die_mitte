@@ -6,25 +6,22 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::Vereinigung < Group
-
   self.layer = true
 
-
   children Group::VereinigungParteigremium,
-           Group::VereinigungPraesidium,
-           Group::VereinigungSekretariat,
-           Group::VereinigungKommission,
-           Group::VereinigungArbeitsgruppe,
-           Group::VereinigungExterneKontakte,
-           Group::VereinigungMitglieder,
-           Group::VereinigungSympathisanten,
-           Group::VereinigungDelegierte,
-           Group::Kanton
+    Group::VereinigungPraesidium,
+    Group::VereinigungSekretariat,
+    Group::VereinigungKommission,
+    Group::VereinigungArbeitsgruppe,
+    Group::VereinigungExterneKontakte,
+    Group::VereinigungMitglieder,
+    Group::VereinigungSympathisanten,
+    Group::VereinigungDelegierte,
+    Group::Kanton
 
   ### ROLES
   #
   self.default_children = [
     Group::VereinigungSekretariat
   ]
-
 end

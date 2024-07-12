@@ -8,9 +8,9 @@
 module DieMitte::Export::MessageJob
   # This statement is required because these classes would not be loaded correctly otherwise.
   # The price we pay for using classes as namespace.
-  require_dependency 'message/letter'
-  require_dependency 'message/letter_with_invoice'
-  require_dependency 'subscription'
+  require_dependency "message/letter"
+  require_dependency "message/letter_with_invoice"
+  require_dependency "subscription"
 
   extend ActiveSupport::Concern
 
@@ -57,5 +57,4 @@ module DieMitte::Export::MessageJob
   def send_to_households?
     message.send_to_households? || message.is_a?(Message::LetterWithInvoice)
   end
-
 end

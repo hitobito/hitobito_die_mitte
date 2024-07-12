@@ -15,7 +15,6 @@ module DieMitte
           def salutation
             entry.salutation_value
           end
-
         end
       end
     end

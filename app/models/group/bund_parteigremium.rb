@@ -6,12 +6,13 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::BundParteigremium < Group
-
   class Praesident < Role; end
+
   class Leitung < Group::Simple::Leitung; end
+
   class Mitglied < Group::Simple::Mitglied; end
+
   class Gast < Role; end
 
   roles Praesident, Leitung, Mitglied, Gast
-
 end

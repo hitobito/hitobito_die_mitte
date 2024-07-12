@@ -6,10 +6,9 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class InvoiceItem::VariableDonation < InvoiceItem
-
   self.dynamic = true
 
-  validates :cost, numericality: { greater_than: 0, allow_nil: true }
+  validates :cost, numericality: {greater_than: 0, allow_nil: true}
 
   def dynamic_cost
     return nil unless invoice&.recipient.present? || dynamic_cost_parameters[:recipient_id].present?

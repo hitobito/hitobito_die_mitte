@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::FilterNavigation::People
-
   def initialize(*args)
     super
 
@@ -17,7 +16,6 @@ module DieMitte::FilterNavigation::People
   end
 
   def visible_role_types?(types)
-    group.layer? ? false : super(types)
+    group.layer? ? false : super
   end
-
 end

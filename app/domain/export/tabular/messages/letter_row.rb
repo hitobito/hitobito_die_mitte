@@ -7,7 +7,6 @@
 
 module Export::Tabular::Messages
   class LetterRow < Export::Tabular::People::HouseholdRow
-
     def household
       [entry]
     end
@@ -19,6 +18,5 @@ module Export::Tabular::Messages
     def printed_address
       @entry&.address
     end
-
   end
 end

@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::OrtSympathisanten < Group
-
   class Sympathisant < Role; end
 
   roles Sympathisant

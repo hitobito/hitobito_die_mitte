@@ -6,7 +6,7 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module PeopleDieMitteHelper
-  PERSON_I18N_KEY_PREFIX = 'activerecord.attributes.person'
+  PERSON_I18N_KEY_PREFIX = "activerecord.attributes.person"
 
   def possible_person_civil_statuses
     DieMitte::Person::CIVIL_STATUSES.map do |key|

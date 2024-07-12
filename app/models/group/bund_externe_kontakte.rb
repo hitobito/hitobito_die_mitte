@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::BundExterneKontakte < Group
-
   class Medien < Role
     self.permissions = []
   end

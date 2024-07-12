@@ -6,11 +6,12 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::RegionExterneKontakte < Group
-
   class Medien < Role; end
+
   class Spender < Role; end
+
   class Kontakt < Role; end
 
-  roles  Medien, Spender, Kontakt
+  roles Medien, Spender, Kontakt
   children Group::RegionExterneKontakte
 end

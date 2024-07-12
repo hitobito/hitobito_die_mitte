@@ -6,8 +6,7 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::GroupDecorator
-
   def possible_roles
-    super.reject { |type| type.to_s.ends_with?('Merkmal') }
+    super.reject { |type| type.to_s.ends_with?("Merkmal") }
   end
 end

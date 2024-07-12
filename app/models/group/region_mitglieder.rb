@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::RegionMitglieder < Group
-
   class Mitglied < Role::Mitglied; end
 
   roles Mitglied

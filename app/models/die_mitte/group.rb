@@ -11,10 +11,9 @@ module DieMitte::Group
   included do
     # Define additional used attributes
     self.used_attributes += [:letter_footer_column_1, :letter_footer_column_2,
-                             :letter_footer_column_3, :letter_footer_column_4]
+      :letter_footer_column_3, :letter_footer_column_4]
     # self.superior_attributes = [:bank_account]
 
     root_types Group::Bund
   end
-
 end

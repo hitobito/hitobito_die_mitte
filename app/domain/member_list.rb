@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class MemberList
-
   def initialize(layer_group, current_user)
     @layer_group = layer_group
     @current_user = current_user
@@ -14,12 +13,12 @@ class MemberList
 
   def count
     Person::Filter::List.new(@layer_group,
-                             @current_user,
-                             filter_params).all_count
+      @current_user,
+      filter_params).all_count
   end
 
   def name
-    I18n.t('activerecord.attributes.role.class.kind.member.other')
+    I18n.t("activerecord.attributes.role.class.kind.member.other")
   end
 
   def filter_params
@@ -27,9 +26,8 @@ class MemberList
     ids = types.collect(&:id).join(Person::Filter::Base::ID_URL_SEPARATOR)
     {
       name: name,
-      range: 'deep',
-      filters: { role: { role_type_ids: ids } }
+      range: "deep",
+      filters: {role: {role_type_ids: ids}}
     }
   end
-
 end

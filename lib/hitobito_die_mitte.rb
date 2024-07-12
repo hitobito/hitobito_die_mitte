@@ -5,9 +5,9 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_die_mitte.
 
-require 'wagons'
+require "wagons"
 # require 'your_wagon_dependencies'
-require 'hitobito_die_mitte/wagon'
+require "hitobito_die_mitte/wagon"
 
 module HitobitoDieMitte
 end

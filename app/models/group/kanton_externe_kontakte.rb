@@ -6,9 +6,10 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::KantonExterneKontakte < Group
-
   class Medien < Role; end
+
   class Spender < Role; end
+
   class Kontakt < Role; end
 
   roles Medien, Spender, Kontakt

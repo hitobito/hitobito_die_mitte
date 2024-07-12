@@ -6,11 +6,10 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::RoleDecorator
-
   def for_aside
     tags = [super]
 
-    if model.group.type.ends_with?('Mitglieder')
+    if model.group.type.ends_with?("Mitglieder")
       hierarchy = (model.group.layer_hierarchy - [model.group.layer_group])
       tags += hierarchy.collect do |group|
         link = h.link_to(h.sanitize(group.to_s), group)

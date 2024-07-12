@@ -51,20 +51,19 @@
 module DieMitte::Person
   extend ActiveSupport::Concern
 
-  CIVIL_STATUSES = %w(single registered_partnership married divorced widowed).freeze
+  CIVIL_STATUSES = %w[single registered_partnership married divorced widowed].freeze
 
   included do
     include I18nEnums
 
     Person::PUBLIC_ATTRS << :title << :website << :correspondence_language <<
-                         :civil_status << :salutation
-
+      :civil_status << :salutation
 
     i18n_enum :correspondence_language, Settings.application
-                                                .correspondence_languages
-                                                .to_hash
-                                                .keys
-                                                .collect(&:to_s)
+      .correspondence_languages
+      .to_hash
+      .keys
+      .collect(&:to_s)
 
     i18n_enum :civil_status, CIVIL_STATUSES
 

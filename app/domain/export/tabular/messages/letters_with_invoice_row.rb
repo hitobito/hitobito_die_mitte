@@ -7,11 +7,10 @@
 
 module Export::Tabular::Messages
   class LettersWithInvoiceRow < Export::Tabular::People::HouseholdRow
-
-    self.dynamic_attributes = LettersWithInvoice::HOUSEMATE_ATTRS.
-        each_with_object({}) do |attr, dynamic_attributes|
-          dynamic_attributes[Regexp.new("^#{attr}_(\\d+)$")] = attr.to_sym
-        end
+    self.dynamic_attributes = LettersWithInvoice::HOUSEMATE_ATTRS
+      .each_with_object({}) do |attr, dynamic_attributes|
+      dynamic_attributes[Regexp.new("^#{attr}_(\\d+)$")] = attr.to_sym
+    end
 
     private
 
@@ -86,14 +85,14 @@ module Export::Tabular::Messages
     def donation_amount
       return nil unless message.donation_confirmation?
 
-      amount = ::Payments::Collection.new.
-        in_last(1.year).
-        in_layer(entry.group).
-        of_person(entry.recipient).
-        payments_amount.
-        to_s
+      amount = ::Payments::Collection.new
+        .in_last(1.year)
+        .in_layer(entry.group)
+        .of_person(entry.recipient)
+        .payments_amount
+        .to_s
 
-      sprintf('%.2f', amount)
+      sprintf("%.2f", amount)
     end
 
     def message

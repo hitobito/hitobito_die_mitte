@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::VereinigungPraesidium < Group
-
   class Praesident < Role
     self.permissions = [:layer_and_below_full, :contact_data, :finance]
   end

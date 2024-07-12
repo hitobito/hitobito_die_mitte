@@ -7,13 +7,11 @@
 
 module Export::Tabular::Messages
   class Letters < Export::Tabular::Base
-
     self.model_class = ::MessageRecipient
     self.row_class = LetterRow
 
     def attributes
       [:salutation, :address, :zip_code, :town, :country, :printed_address]
     end
-
   end
 end

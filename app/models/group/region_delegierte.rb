@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::RegionDelegierte < Group
-
   class Delegierte < Role
     self.permissions = []
   end

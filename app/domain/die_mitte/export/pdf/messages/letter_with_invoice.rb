@@ -10,13 +10,13 @@ module DieMitte
     module Pdf
       module Messages::LetterWithInvoice
         extend ActiveSupport::Concern
-        
+
         included do
           def sections
             @sections ||= [::Export::Pdf::Messages::Letter::Header,
-                           ::Export::Pdf::Messages::Letter::Content].collect do |section|
-                             section.new(pdf, @letter, @options.slice(:debug, :stamped))
-                           end
+              ::Export::Pdf::Messages::Letter::Content].collect do |section|
+              section.new(pdf, @letter, @options.slice(:debug, :stamped))
+            end
           end
         end
       end

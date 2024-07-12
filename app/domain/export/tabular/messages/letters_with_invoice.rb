@@ -7,19 +7,19 @@
 
 module Export::Tabular::Messages
   class LettersWithInvoice < Export::Tabular::Base
-    INCLUDED_ATTRS = %w(esr_number recipient_email recipient_address reference total).freeze
-    PERSON_ATTRS = %w(first_name last_name company_name company email address zip_code town country
-                      gender birthday salutation title correspondence_language household?).freeze
-    HOUSEMATE_ATTRS = %w(first_name last_name salutation gender correspondence_language
-                         reference).freeze
+    INCLUDED_ATTRS = %w[esr_number recipient_email recipient_address reference total].freeze
+    PERSON_ATTRS = %w[first_name last_name company_name company email address zip_code town country
+      gender birthday salutation title correspondence_language household?].freeze
+    HOUSEMATE_ATTRS = %w[first_name last_name salutation gender correspondence_language
+      reference].freeze
 
     self.model_class = ::Invoice
     self.row_class = Export::Tabular::Messages::LettersWithInvoiceRow
 
     def build_attribute_labels
-      invoice_attribute_labels.
-          merge(person_attribute_labels).
-          merge(housemate_attribute_labels)
+      invoice_attribute_labels
+        .merge(person_attribute_labels)
+        .merge(housemate_attribute_labels)
     end
 
     def invoice_attribute_labels
@@ -33,11 +33,11 @@ module Export::Tabular::Messages
     end
 
     def housemate_attribute_labels
-      (2..largest_household_size).map do |housemate_index|
+      (2..largest_household_size).flat_map do |housemate_index|
         HOUSEMATE_ATTRS.map do |attr|
           [housemate_attr(attr, housemate_index), housemate_label(attr, housemate_index)]
         end
-      end.flatten(1).to_h
+      end.to_h
     end
 
     def largest_household_size
@@ -50,14 +50,13 @@ module Export::Tabular::Messages
     end
 
     def housemate_attr(attr, housemate_index)
-      "#{attr}_#{housemate_index}".to_sym
+      :"#{attr}_#{housemate_index}"
     end
 
     def housemate_label(attr, housemate_index)
-      I18n.t('export.tabular.messages.letters_with_invoice.housemate_n_attr',
-             index: housemate_index,
-             attr: person_attribute(attr, { default: attribute_label(attr)})
-      )
+      I18n.t("export.tabular.messages.letters_with_invoice.housemate_n_attr",
+        index: housemate_index,
+        attr: person_attribute(attr, {default: attribute_label(attr)}))
     end
 
     private

@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 class Group::Simple < Group
-
   class Leitung < ::Role
     self.permissions = [:group_full]
   end
@@ -14,5 +13,4 @@ class Group::Simple < Group
   class Mitglied < ::Role
     self.permissions = [:group_read]
   end
-
 end

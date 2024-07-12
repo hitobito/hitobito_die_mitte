@@ -6,13 +6,11 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::PersonReadables
-
   def initialize(user, group = nil, roles_join = nil)
     @user_context = AbilityDsl::UserContext.new(user)
-    @roles_join = roles_join || { roles: :group }
+    @roles_join = roles_join || {roles: :group}
     @group = group
 
     can :index, Person, accessible_people { |_| true }
   end
-
 end

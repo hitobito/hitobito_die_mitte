@@ -6,10 +6,8 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::Salutation
-
   def value_for_household(housemates)
     selected = Person::HouseholdSelector.new(housemates).select(2)
     selected.map { |housemate| Salutation.new(housemate, @salutation).value }.join("\n")
   end
-
 end

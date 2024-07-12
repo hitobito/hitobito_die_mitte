@@ -4,10 +4,10 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module MailingListDieMitteHelper
-  I18N_KEY = 'activerecord.attributes.person.correspondence_languages'.freeze
+  I18N_KEY = "activerecord.attributes.person.correspondence_languages".freeze
 
   def format_mailing_list_correspondence_language(mailing_list)
     lang = mailing_list.correspondence_language
-    lang.present? ? I18n.t([I18N_KEY, lang].join('.')) : t('global.all')
+    lang.present? ? I18n.t([I18N_KEY, lang].join(".")) : t("global.all")
   end
 end

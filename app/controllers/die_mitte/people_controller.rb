@@ -10,7 +10,7 @@ module DieMitte::PeopleController
 
   def self.prepended(base)
     base.permitted_attrs += [:title, :salutation, :website,
-                             :correspondence_language, :civil_status]
+      :correspondence_language, :civil_status]
   end
 
   def list_filter_args
@@ -20,7 +20,7 @@ module DieMitte::PeopleController
   end
 
   def no_filter_active?
-    %w(filters filter_id).none? { |k| params[k].present? }
+    %w[filters filter_id].none? { |k| params[k].present? }
   end
 
   def model_scope

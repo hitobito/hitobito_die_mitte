@@ -13,6 +13,6 @@ module DieMitte::MailingLists::Subscribers
   def correspondence_language_condition
     return {} if @list.correspondence_language.blank?
 
-    { correspondence_language: @list.correspondence_language }
+    {correspondence_language: @list.correspondence_language}
   end
 end
