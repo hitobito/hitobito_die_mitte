@@ -28,7 +28,7 @@ module DieMitte::Role
 
     unless format == :short
       model_name += " (#{label})" if label?
-      model_name += " (#{formatted_delete_date})" if delete_on
+      model_name += " (#{formatted_delete_date})" if end_on
     end
 
     if format == :long
