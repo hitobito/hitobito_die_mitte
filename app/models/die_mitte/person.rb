@@ -59,6 +59,11 @@ module DieMitte::Person
     Person::PUBLIC_ATTRS << :title << :website << :correspondence_language <<
       :civil_status << :salutation
 
+    include PgSearchable
+    SEARCHABLE_ATTRS = [
+      {roles: {translations: [:label]}}
+    ]
+
     i18n_enum :correspondence_language, Settings.application
       .correspondence_languages
       .to_hash
