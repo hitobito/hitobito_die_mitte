@@ -60,9 +60,7 @@ module DieMitte::Person
       :civil_status << :salutation
 
     include PgSearchable
-    SEARCHABLE_ATTRS = [
-      {roles: {translations: [:label]}}
-    ]
+    SEARCHABLE_ATTRS = [{roles: {translations: [:label]}}] # rubocop:disable Lint/ConstantDefinitionInBlock
 
     i18n_enum :correspondence_language, Settings.application
       .correspondence_languages
