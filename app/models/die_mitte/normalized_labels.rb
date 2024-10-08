@@ -6,30 +6,16 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::NormalizedLabels
-  def available_labels(lang = I18n.locale)
-    Rails.cache.fetch(labels_cache_key(lang)) do
-      load_available_labels(lang)
-    end
+  def self.extended(base)
+    # #normalize_label works only for the current locale. If we want this feature
+    # for the die_mitte wagon, we need to implement the callback to normalize all
+    # translations of the label field.
+    base.skip_callback(:save, :before, :normalize_label)
   end
 
-  def sweep_available_labels
-    Settings.application.languages.keys.each do |key|
-      Rails.cache.delete(labels_cache_key(key))
-    end
-  end
+  def available_labels(lang = I18n.locale) = predefined_labels(lang)
 
   private
 
-  def load_available_labels(lang)
-    predefined_labels(lang) |
-      base_class.with_translations(lang).order(:label).distinct.pluck(:label).compact
-  end
-
-  def predefined_labels(_lang)
-    []
-  end
-
-  def labels_cache_key(lang)
-    "#{base_class.name}.Labels.#{lang}"
-  end
+  def predefined_labels(_lang = I18n.locale) = []
 end
