@@ -59,7 +59,7 @@ module DieMitte::Person
     Person::PUBLIC_ATTRS << :title << :website << :correspondence_language <<
       :civil_status << :salutation
 
-    Person::SEARCHABLE_ATTRS.find { |element| element.is_a?(Hash) }.merge!(role_translations: [:label])
+    Person::SEARCHABLE_ATTRS.find { |element| element.is_a?(Hash) }[:role_translations] = [:label]
 
     i18n_enum :correspondence_language, Settings.application
       .correspondence_languages
