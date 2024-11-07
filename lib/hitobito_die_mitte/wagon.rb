@@ -46,7 +46,6 @@ module HitobitoDieMitte
       Person::Address.prepend DieMitte::Person::Address
       Person::Filter::Attributes.prepend DieMitte::Person::Filter::Attributes
       Salutation.prepend DieMitte::Salutation
-      SearchColumnBuilder.prepend DieMitte::SearchColumnBuilder
 
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
       Export::Pdf::Messages::Letter.include DieMitte::Export::Pdf::Messages::Letter
