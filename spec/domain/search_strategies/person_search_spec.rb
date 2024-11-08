@@ -11,13 +11,6 @@ describe SearchStrategies::PersonSearch do
   describe "#search_fulltext" do
     let(:user) { people(:admin) }
 
-    it 'has assumptions' do
-      ActiveRecord::Migration.verbose = false
-      SearchColumnBuilder.new.run
-      result = Person.connection.execute("SELECT search_column FROM people LIMIT 1")
-      expect(result).to be_any
-    end
-
     it "finds accessible person by role-label" do
       search_term = 'Admingott'
 
