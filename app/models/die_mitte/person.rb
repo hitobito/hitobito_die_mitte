@@ -59,8 +59,7 @@ module DieMitte::Person
     Person::PUBLIC_ATTRS << :title << :website << :correspondence_language <<
       :civil_status << :salutation
 
-    include PgSearchable
-    SEARCHABLE_ATTRS = [{roles: {translations: [:label]}}] # rubocop:disable Lint/ConstantDefinitionInBlock
+    Person::SEARCHABLE_ATTRS.find { |element| element.is_a?(Hash) }[:role_translations] = [:label]
 
     i18n_enum :correspondence_language, Settings.application
       .correspondence_languages
