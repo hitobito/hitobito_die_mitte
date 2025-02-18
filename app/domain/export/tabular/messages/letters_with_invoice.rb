@@ -66,7 +66,15 @@ module Export::Tabular::Messages
     end
 
     def invoice_list
-      @invoice_list ||= list.first.first.invoice_list
+      @invoice_list ||= begin
+        if list.respond_to?(:peek)
+          list.peek
+        else
+          list.first
+        end.first.invoice_list
+      rescue StopIteration
+        nil
+      end
     end
   end
 end
