@@ -18,7 +18,6 @@ module HitobitoDieMitte
       #{config.root}/app/jobs ]
 
     config.to_prepare do
-      # rubocop:disable Metrics/LineLength
       # extend application classes here
       Group.include DieMitte::Group
       Role.include DieMitte::Role
@@ -57,7 +56,6 @@ module HitobitoDieMitte
 
       InvoiceItem.add_type_mapping(:variable_donation, InvoiceItem::VariableDonation)
       Role::Permissions << :complete_finance
-      # rubocop:enable Metrics/LineLength
     end
 
     initializer "die_mitte.add_settings" do |_app|
