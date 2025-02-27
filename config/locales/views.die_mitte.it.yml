@@ -21,3 +21,7 @@ it:
     address:
       two_with_same_last_name: ''
   placeholder: Segnaposto
+
+  roles:
+    fields:
+      help_optional_label: ""
