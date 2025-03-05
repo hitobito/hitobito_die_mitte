@@ -11,7 +11,8 @@ die_mitte:
   lft: 1
   rgt: 24
   email: alta.haley@example.org
-  address: Schellingstr. 8
+  street: Schellingstr.
+  housenumber: 8
   zip_code: 5692
   town: Damianburg
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:die_mitte) %>
@@ -23,7 +24,8 @@ be:
   lft: 2
   rgt: 11
   email: bern@be.ch
-  address: Klostergasse 3
+  street: Klostergasse
+  housenumber: 3
   zip_code: 3333
   town: Bern
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be) %>
@@ -35,7 +37,8 @@ be_bern:
   lft: 3
   rgt: 6
   email: verner@example.com
-  address: Glücksburger Str. 50a
+  street: Glücksburger Str.
+  housenumber: 50a
   zip_code: 6809
   town: Wakanscheid
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_bern) %>
@@ -47,7 +50,8 @@ be_bern_breitsch:
   lft: 4
   rgt: 5
   email: nat@example.com
-  address: Eichenkamp 78c
+  street: Eichenkamp
+  housenumber: 78c
   zip_code: 8414
   town: Nord Giulia
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_bern_breitsch) %>
@@ -59,7 +63,8 @@ be_thun:
   lft: 7
   rgt: 10
   email: theresia_bosco@example.org
-  address: Brucknerstr. 417
+  street: Brucknerstr.
+  housenumber: 417
   zip_code: 2559
   town: Neu Elaine
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_thun) %>
@@ -71,7 +76,8 @@ be_thun_mitglieder:
   lft: 8
   rgt: 9
   email: mohammed_jones@example.net
-  address: Im Rottland 872
+  street: Im Rottland
+  housenumber: 872
   zip_code: 8220
   town: Bad Mira
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_thun) %>
@@ -106,7 +112,8 @@ zh:
   lft: 18
   rgt: 23
   email: zuerich@zh.ch
-  address: Tellgasse 3
+  street: Tellgasse
+  housenumber: 3
   zip_code: 8888
   town: Zürich
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh) %>

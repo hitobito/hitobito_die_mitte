@@ -5,15 +5,14 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_die_mitte.
 
-require Rails.root.join('db', 'seeds', 'support', 'person_seeder')
-require Rails.root.join('db', 'seeds', 'support', 'person_duplicate_seeder')
+require Rails.root.join("db", "seeds", "support", "person_seeder")
+require Rails.root.join("db", "seeds", "support", "person_duplicate_seeder")
 
 class DieMittePersonSeeder < PersonSeeder
-
   def person_attributes(role_type)
-    attrs = super(role_type)
+    attrs = super
 
-    attrs[:title] = ['', '', '', '', '', '', '', '', 'Dr.', 'Prof.'].sample
+    attrs[:title] = ["", "", "", "", "", "", "", "", "Dr.", "Prof."].sample
     attrs[:website] = "example.com"
     attrs[:correspondence_language] = Settings.application.correspondence_languages.keys.sample.to_s
     attrs[:civil_status] = DieMitte::Person::CIVIL_STATUSES.sample
@@ -23,36 +22,35 @@ class DieMittePersonSeeder < PersonSeeder
 
   def amount(role_type)
     case role_type.name.demodulize
-    when 'Member' then 3
+    when "Member" then 3
     else 1
     end
   end
 
   def seed_printer
     attrs = {
-      email: 'info@sutergerteis.ch',
+      email: "info@sutergerteis.ch",
       company: true,
-      company_name: 'Suter & Gerteis AG',
+      company_name: "Suter & Gerteis AG",
       encrypted_password: encrypted_password
     }
     printer = Person.seed_once(attrs).first
     seed_role(printer, Group.root, Group::BundExterneKontakte::Kontakt)
   end
-
 end
 
-puzzlers = ['Pascal Zumkehr',
-            'Andreas Maierhofer',
-            'Matthias Viehweger',
-            'Oli Brian',
-            'Carlo Beltrame',
-            'Mathis Hofer',
-            'Pascal Simon']
+puzzlers = ["Pascal Zumkehr",
+  "Andreas Maierhofer",
+  "Matthias Viehweger",
+  "Oli Brian",
+  "Carlo Beltrame",
+  "Mathis Hofer",
+  "Pascal Simon"]
 
 devs = {
-  'Stefan Züger' => 'stefan.zueger@die-mitte.ch',
-  'Luca Strebel' => 'luca.strebel@die-mitte.ch',
-  'Pascal Bürgy' => 'pascal.buergy@proact.ch'
+  "Stefan Züger" => "stefan.zueger@die-mitte.ch",
+  "Luca Strebel" => "luca.strebel@die-mitte.ch",
+  "Pascal Bürgy" => "pascal.buergy@proact.ch"
 }
 puzzlers.each do |puz|
   devs[puz] = "#{puz.split.last.downcase}@puzzle.ch"
