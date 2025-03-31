@@ -36,6 +36,7 @@ describe Invoice::BatchCreate do
     invoice.invoice_items.build(name: 'pens', unit_cost: 1.5)
     invoice.invoice_items.build(name: 'variable donation', unit_cost: 0, type: InvoiceItem::VariableDonation.sti_name)
     list.invoice = invoice
+    list.save!
 
     Invoice::BatchCreate.call(list)
 
@@ -84,6 +85,7 @@ describe Invoice::BatchCreate do
     invoice.invoice_items.build(name: 'pens', unit_cost: 15.5)
     invoice.invoice_items.build(name: 'variable donation', unit_cost: 0, type: InvoiceItem::VariableDonation.sti_name)
     list.invoice = invoice
+    list.save!
 
     expect do
       Invoice::BatchCreate.call(list)
