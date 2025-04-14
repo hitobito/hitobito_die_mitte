@@ -6,9 +6,9 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::PersonReadables
-  def initialize(user, group = nil, roles_join = nil)
+  def initialize(user, group = nil, roles_join = nil, include_ended_roles: false)
     @user_context = AbilityDsl::UserContext.new(user)
-    @roles_join = roles_join || {roles: :group}
+    @roles_join = roles_join || (include_ended_roles ? [roles_with_ended_readable: :group] : [roles: :group])
     @group = group
 
     can :index, Person, accessible_people { |_| true }
