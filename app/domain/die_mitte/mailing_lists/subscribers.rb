@@ -12,6 +12,7 @@ module DieMitte::MailingLists::Subscribers
 
   def correspondence_language_condition
     return {} if @list.correspondence_language.blank?
+    return {} if @list.filter_chain.filters.any? { |filter| filter.attr == "language" }
 
     {correspondence_language: @list.correspondence_language}
   end
