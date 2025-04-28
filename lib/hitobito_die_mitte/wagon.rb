@@ -24,6 +24,8 @@ module HitobitoDieMitte
       Role.extend DieMitte::NormalizedLabels
       Person.include DieMitte::Person
 
+      ApplicationMailer.prepend DieMitte::ApplicationMailer
+
       Person::FILTER_ATTRS << :correspondence_language << :email
 
       RoleDecorator.prepend DieMitte::RoleDecorator
