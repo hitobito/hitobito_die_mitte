@@ -1,27 +1,2 @@
-#  Copyright (c) 2021, Die Mitte. This file is part of
-#  hitobito_die_mitte and licensed under the Affero General Public License version 3
-#  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_die_mitte.
-
 fr:
-  dropdown/invoice_new:
-    variable_donation: ""
-  dropdown/letter_with_invoice_new:
-    variable_donation: ""
-
-  export:
-    tabular:
-      messages:
-        letters_with_invoice:
-          housemate_n_attr: ''
-  messages:
-    actions_show_die_mitte:
-      button_export_csv: ""
-  people:
-    address:
-      two_with_same_last_name: ''
   placeholder: Placeholder
-
-  roles:
-    fields:
-      help_optional_label: ""

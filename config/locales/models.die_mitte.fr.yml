@@ -1,13 +1,6 @@
-#  Copyright (c) 2021, Die Mitte. This file is part of
-#  hitobito_die_mitte and licensed under the Affero General Public License version 3
-#  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_die_mitte.
-
 fr:
   activerecord:
     models:
-      ### GROUPS
-
       group/bund:
         one: Suisse
         many: Suisse
@@ -52,7 +45,6 @@ fr:
         one: Sympathisant-e-s
         many: Sympathisant-e-s
         other: Sympathisant-e-s
-
       group/kanton:
         one: Canton
         many: Canton
@@ -97,7 +89,6 @@ fr:
         one: Membres
         many: Membres
         other: Membres
-
       group/vereinigung:
         one: Groupements
         many: Groupements
@@ -138,7 +129,6 @@ fr:
         one: Délégué-e-s
         many: Délégué-e-s
         other: Délégué-e-s
-
       group/region:
         one: Régions
         many: Régions
@@ -175,7 +165,6 @@ fr:
         one: Contacts externes
         many: Contacts externes
         other: Contacts externes
-
       group/ort:
         one: Partis locaux
         many: Partis locaux
@@ -212,9 +201,6 @@ fr:
         one: Sympathisant-e-s
         many: Sympathisant-e-s
         other: Sympathisant-e-s
-
-      ### ROLES
-
       group/bund_gewaehlte/bundesrat:
         one: Conseillers fédéraux / conseillères fédérales
       group/bund_gewaehlte/bundeskanzler:
@@ -232,7 +218,7 @@ fr:
       group/bund_gewaehlte/bundespatentrichter:
         one: Juges fédérales des brevets
       group/bund_gewaehlte/bundesstrafrichter:
-        one: "Juges pénales fédéraux "
+        one: 'Juges pénales fédéraux '
       group/bund_parteigremium/praesident:
         one: Président-e
       group/bund_parteigremium/leitung:
@@ -291,7 +277,6 @@ fr:
         one: Membre
       group/bund_sympathisanten/sympathisant:
         one: Sympathisant-e
-
       group/kanton_gewaehlte/fraktionschef:
         one: Chef de groupe / Cheffe de groupe
       group/kanton_gewaehlte/kantonale_exekutive:
@@ -364,7 +349,6 @@ fr:
         one: Sympathisant-e d'après son statut cantonal
       group/kanton_sympathisanten/sympathisant:
         one: Sympathisant-e
-
       group/vereinigung_parteigremium/praesident:
         one: Président-e
       group/vereinigung_parteigremium/leitung:
@@ -415,7 +399,6 @@ fr:
         one: Délégué-e-s suppléant-e-s
       group/vereinigung_delegierte/delegierte_von_amtes_wegen:
         one: Délégué-e-s d'office
-
       group/region_parteigremium/praesident:
         one: Président-e
       group/region_parteigremium/leitung:
@@ -464,7 +447,6 @@ fr:
         one: Donateur / donatrice
       group/region_externe_kontakte/kontakt:
         one: Contact
-
       group/ort_gewaehlte/fraktionschef:
         one: Chef de groupe / cheffe de groupe
       group/ort_gewaehlte/mitglied:
@@ -525,58 +507,44 @@ fr:
         one: Sympathisant-e d'après son statut cantonal
       group/ort_sympathisanten/sympathisant:
         one: Sympathisant-e
-
-      invoice_item/variable_donation:
-        one: ''
-        many: ''
-        other: ''
-
       salutation:
         one: Adresse
         other: Adresses
         default:
-          label: "Salut [nom]"
+          label: Salut [nom]
           value:
-            m: "Salut %{greeting_name}"
-            w: "Salut %{greeting_name}"
-            other: "Salut %{greeting_name}"
+            m: Salut %{greeting_name}
+            w: Salut %{greeting_name}
+            other: Salut %{greeting_name}
         available:
           lieber_vorname:
-            label: "Cher/chère [prénom]"
+            label: Cher/chère [prénom]
             value:
-              m: "Cher %{first_name}"
-              w: "Chère %{first_name}"
-              other: "Cher %{first_name}"
+              m: Cher %{first_name}
+              w: Chère %{first_name}
+              other: Cher %{first_name}
           lieber_titel_nachname:
-            label: "Chère Madame, cher Monsieur [titre] [nom]"
             value:
-              m: "Cher Monsieur %{title_last_name}"
-              w: "Chère Madame %{title_last_name}"
-              other: "Chère Madame / Cher Monsieur %{title_last_name}"
+              m: Cher Monsieur %{title_last_name}
+              w: Chère Madame %{title_last_name}
+              other: Chère Madame / Cher Monsieur %{title_last_name}
           sehr_geehrter_nachname:
             label: Chère Madame* Cher Monsieur
             value:
-              m: "Cher Monsieur "
+              m: 'Cher Monsieur '
               w: Chère Madame
               other: Chère Madame* Cher Monsieur
           sehr_geehrter_titel_nachname:
-            label: "Chère Madame, cher Monsieur [titre] [nom]"
+            label: Chère Madame, cher Monsieur [titre] [nom]
             value:
-              m: "Cher Monsieur %{title_last_name}"
-              w: "Chère Madame %{title_last_name}"
-              other: "Chère Madame / Cher Monsieur %{title_last_name}"
-
+              m: Cher Monsieur %{title_last_name}
+              w: Chère Madame %{title_last_name}
+              other: Chère Madame / Cher Monsieur %{title_last_name}
     attributes:
       invoice:
         donation_amount: Montant de la donation
-
       mailing_list:
         correspondence_language: Langue
-      group:
-        letter_footer_column_1: ""
-        letter_footer_column_2: ""
-        letter_footer_column_3: ""
-        letter_footer_column_4: ""
       person:
         salutation: Adresse
         salutation_value: Adresse
@@ -596,4 +564,4 @@ fr:
           married: Marié-e
           divorced: Divorcé-e
           widowed: Veuf / veuve
-        household?: "habite avec "
+        household?: 'habite avec '
