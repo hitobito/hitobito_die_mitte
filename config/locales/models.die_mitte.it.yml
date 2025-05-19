@@ -228,11 +228,11 @@ it:
       group/bund_gewaehlte/nebenamt_bundes_richter:
         one: Giudice federale supplente
       group/bund_gewaehlte/bundesverwaltungsrichter:
-        one: ""
+        one: Bundesverwaltungsrichter
       group/bund_gewaehlte/bundespatentrichter:
-        one: ""
+        one: Bundespatentrichter
       group/bund_gewaehlte/bundesstrafrichter:
-        one: ""
+        one: Bundesstrafrichter
       group/bund_parteigremium/praesident:
         one: Presidente
       group/bund_parteigremium/leitung:
@@ -527,9 +527,8 @@ it:
         one: Simpatizzante
 
       invoice_item/variable_donation:
-        one: ''
-        many: ''
-        other: ''
+        one: Variabler Spendenaufruf
+        other: Variable Spendenaufrufe
 
       salutation:
         one: Saluto
@@ -548,35 +547,35 @@ it:
               w: Cara
               other: Caro
           lieber_titel_nachname:
-            label: ""
+            label: "Liebe*r Frau*Herr [Titel] [Nachname]"
             value:
               m: Egregio signor
               w: Gentile signora
-              other: ""
+              other: "Liebe*r Frau*Herr %{title_last_name}"
           sehr_geehrter_nachname:
-            label: ""
+            label: "Sehr geehrte*r Frau*Herr [Nachname]"
             value:
-              m: ""
-              w: ""
-              other: ""
+              m: "Sehr geehrter Herr %{last_name}"
+              w: "Sehr geehrte Frau %{last_name}"
+              other: "Sehr geehrte*r Frau*Herr %{last_name}"
           sehr_geehrter_titel_nachname:
-            label: ""
+            label: "Sehr geehrte*r Frau*Herr [Titel] [Nachname]"
             value:
               m: Egregio Signor
               w: Gentile Signora
-              other: ""
+              other: "Sehr geehrte*r Frau*Herr %{title_last_name}"
 
     attributes:
       invoice:
-        donation_amount: ""
+        donation_amount: Spendenbetrag
 
       mailing_list:
         correspondence_language: Lingua di corrispondenza
       group:
-        letter_footer_column_1: ""
-        letter_footer_column_2: ""
-        letter_footer_column_3: ""
-        letter_footer_column_4: ""
+        letter_footer_column_1: Fusszeile 1. Spalte
+        letter_footer_column_2: Fusszeile 2. Spalte
+        letter_footer_column_3: Fusszeile 3. Spalte
+        letter_footer_column_4: Fusszeile 4. Spalte
       person:
         salutation: Saluto
         salutation_value: Saluto
@@ -596,4 +595,4 @@ it:
           married: sposato
           divorced: divorziato
           widowed: vedova
-        household?: ""
+        household?: Wohnt in einem Haushalt

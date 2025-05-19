@@ -527,9 +527,8 @@ fr:
         one: Sympathisant-e
 
       invoice_item/variable_donation:
-        one: ''
-        many: ''
-        other: ''
+        one: Variabler Spendenaufruf
+        other: Variable Spendenaufrufe
 
       salutation:
         one: Adresse
@@ -573,10 +572,10 @@ fr:
       mailing_list:
         correspondence_language: Langue
       group:
-        letter_footer_column_1: ""
-        letter_footer_column_2: ""
-        letter_footer_column_3: ""
-        letter_footer_column_4: ""
+        letter_footer_column_1: Fusszeile 1. Spalte
+        letter_footer_column_2: Fusszeile 2. Spalte
+        letter_footer_column_3: Fusszeile 3. Spalte
+        letter_footer_column_4: Fusszeile 4. Spalte
       person:
         salutation: Adresse
         salutation_value: Adresse
