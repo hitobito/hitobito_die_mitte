@@ -27,7 +27,6 @@ module HitobitoDieMitte
       Person::FILTER_ATTRS << :correspondence_language << :email
 
       RoleDecorator.prepend DieMitte::RoleDecorator
-      GroupDecorator.prepend DieMitte::GroupDecorator
 
       Event.role_types -= [Event::Role::Cook]
 
