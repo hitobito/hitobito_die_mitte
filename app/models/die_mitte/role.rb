@@ -24,7 +24,6 @@ module DieMitte::Role
 
   def to_s_with_merkmal(format = :default) # rubocop:disable Metrics/MethodLength
     model_name = self.class.label
-    model_name = "Merkmal" if self.class.sti_name.ends_with?("Merkmal")
 
     unless format == :short
       model_name += " (#{label})" if label?
@@ -35,12 +34,6 @@ module DieMitte::Role
       I18n.t("activerecord.attributes.role.string_long", role: model_name, group: group.to_s)
     else
       model_name
-    end
-  end
-
-  class_methods do
-    def label
-      sti_name.ends_with?("Merkmal") ? "Merkmal" : model_name.human
     end
   end
 end
