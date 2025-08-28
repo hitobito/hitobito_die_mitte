@@ -29,7 +29,16 @@ describe Export::MessageJob do
       Message::LetterWithInvoice
         .create!(mailing_list: mailing_lists(:list),
           body: "Lorem ipsum",
-          subject: "A Sunny Day")
+          subject: "A Sunny Day",
+          invoice_attributes: {
+            invoice_items_attributes: {
+              "1": {
+                name: "Spendenaufruf",
+                count: 1,
+                unit_cost: 0
+              }
+            }
+          }.deep_stringify_keys)
     end
 
     before do
