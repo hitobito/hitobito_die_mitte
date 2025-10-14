@@ -47,7 +47,9 @@ module HitobitoDieMitte
 
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
       Export::Pdf::Messages::Letter.include DieMitte::Export::Pdf::Messages::Letter
+      # rubocop:todo Layout/LineLength
       Export::Pdf::Messages::LetterWithInvoice.include DieMitte::Export::Pdf::Messages::LetterWithInvoice
+      # rubocop:enable Layout/LineLength
 
       MailingLists::Subscribers.prepend DieMitte::MailingLists::Subscribers
 
@@ -76,7 +78,9 @@ module HitobitoDieMitte
 
     def seed_fixtures
       fixtures = root.join("db", "seeds")
+      # rubocop:todo Rails/EnvironmentVariableAccess
       ENV["NO_ENV"] ? [fixtures] : [fixtures, File.join(fixtures, Rails.env)]
+      # rubocop:enable Rails/EnvironmentVariableAccess
     end
   end
 end

@@ -6,7 +6,7 @@
 #  https://github.com/hitobito/hitobito_die_mitte.
 
 module DieMitte::RoleDecorator
-  def for_aside
+  def for_aside # rubocop:todo Metrics/AbcSize
     tags = [super]
 
     if model.group.type.ends_with?("Mitglieder")

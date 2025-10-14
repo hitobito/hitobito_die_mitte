@@ -46,7 +46,7 @@ class AddressOverview
     @counts ||= OpenStruct.new(found: 0, street_missing: 0, number_missing: 0, missing: [])
   end
 
-  def each_slice(rows)
+  def each_slice(rows) # rubocop:todo Metrics/AbcSize
     rows.each_slice(1000) do |slice|
       current = counts.dup
       slice.each do |row|
@@ -61,7 +61,7 @@ class AddressOverview
     end
   end
 
-  def run
+  def run # rubocop:todo Metrics/AbcSize
     each_slice(rows) do |row|
       addresses = Address.search(row["Postleitzahl"], row["Strasse"])
       if addresses.one? { |address| number?(address, row) }
