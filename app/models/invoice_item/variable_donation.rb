@@ -10,7 +10,7 @@ class InvoiceItem::VariableDonation < InvoiceItem
 
   validates :cost, numericality: {greater_than: 0, allow_nil: true}
 
-  def dynamic_cost
+  def dynamic_cost # rubocop:todo Metrics/AbcSize
     return nil unless invoice&.recipient.present? || dynamic_cost_parameters[:recipient_id].present?
 
     layer = Group.find(dynamic_cost_parameters[:group_id]).layer_group
