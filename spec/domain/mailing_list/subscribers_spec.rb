@@ -26,6 +26,14 @@ describe MailingLists::Subscribers do
       expect(list.people).to have(2).items
     end
 
+    it "includes two people if set but with a more specific filter-chain" do
+      list.update(correspondence_language: :fr)
+      list.update(filter_chain: {language: {allowed_values: [:fr, :de]}})
+
+      expect(list.people).to have(2).items
+    end
+
+
     it "includes single perosn when set" do
       list.update(correspondence_language: :de)
       expect(list.people).to eq [other]
