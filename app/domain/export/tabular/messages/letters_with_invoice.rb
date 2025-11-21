@@ -62,16 +62,16 @@ module Export::Tabular::Messages
     private
 
     def message
-      @message ||= Message::LetterWithInvoice.find_by(invoice_list: invoice_list)
+      @message ||= Message::LetterWithInvoice.find_by(invoice_run: invoice_run)
     end
 
-    def invoice_list
-      @invoice_list ||= begin
+    def invoice_run
+      @invoice_run ||= begin
         if list.respond_to?(:peek)
           list.peek
         else
           list.first
-        end.first.invoice_list
+        end.first.invoice_run
       rescue StopIteration
         nil
       end

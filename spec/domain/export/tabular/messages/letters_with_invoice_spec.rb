@@ -8,7 +8,7 @@
 require "spec_helper"
 
 describe Export::Tabular::Messages::LettersWithInvoice do
-  let(:invoice_list) { invoices.map { |i| [i] } }
+  let(:invoice_run) { invoices.map { |i| [i] } }
   let(:top_layer) { groups(:die_mitte) }
 
   let(:letter_with_invoice_attributes) {
@@ -29,7 +29,7 @@ describe Export::Tabular::Messages::LettersWithInvoice do
     }.deep_stringify_keys
   }
 
-  subject { described_class.new(invoice_list) }
+  subject { described_class.new(invoice_run) }
 
   context "donation confirmation" do
     context "active" do

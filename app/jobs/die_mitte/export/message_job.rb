@@ -23,13 +23,13 @@ module DieMitte::Export::MessageJob
   def recipient_invoices
     @recipient_invoices ||= recipients.lazy.map do |person_or_household|
       Array.wrap(person_or_household).map do |person|
-        invoice_list.invoices.find_or_initialize_by(recipient_id: person.id)
+        invoice_run.invoices.find_or_initialize_by(recipient_id: person.id)
       end
     end
   end
 
-  def invoice_list
-    @invoice_list ||= InvoiceList.find(message.invoice_list_id)
+  def invoice_run
+    @invoice_run ||= InvoiceRun.find(message.invoice_run_id)
   end
 
   def data
