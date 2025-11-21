@@ -96,7 +96,7 @@ module Export::Tabular::Messages
     end
 
     def message
-      @message ||= Message::LetterWithInvoice.find_by(invoice_list: entry.invoice_list)
+      @message ||= Message::LetterWithInvoice.find_by(invoice_run: entry.invoice_run)
     end
 
     private

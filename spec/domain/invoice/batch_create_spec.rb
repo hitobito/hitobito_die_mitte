@@ -22,7 +22,7 @@ describe Invoice::BatchCreate do
                          subscriber: group,
                          role_types: [Group::BundSekretariat::Leitung])
 
-    list = InvoiceList.new(receiver: mailing_list, group: group, title: :title)
+    list = InvoiceRun.new(receiver: mailing_list, group: group, title: :title)
 
     layer.invoice_config.update_attribute(:donation_increase_percentage, 5)
     layer.invoice_config.update_attribute(:donation_calculation_year_amount, 2)
@@ -56,7 +56,7 @@ describe Invoice::BatchCreate do
                          subscriber: group,
                          role_types: [Group::BundSekretariat::Leitung])
 
-    list = InvoiceList.new(receiver: mailing_list, group: group, title: :title)
+    list = InvoiceRun.new(receiver: mailing_list, group: group, title: :title)
 
     layer.invoice_config.update_attribute(:donation_increase_percentage, 5)
     layer.invoice_config.update_attribute(:donation_calculation_year_amount, 2)
@@ -76,7 +76,7 @@ describe Invoice::BatchCreate do
                          subscriber: group,
                          role_types: [Group::BundSekretariat::Leitung])
 
-    list = InvoiceList.new(receiver: mailing_list, group: group, title: :title)
+    list = InvoiceRun.new(receiver: mailing_list, group: group, title: :title)
 
     layer.invoice_config.update_attribute(:donation_increase_percentage, 5)
     layer.invoice_config.update_attribute(:donation_calculation_year_amount, 2)

@@ -48,7 +48,7 @@ describe Export::MessageJob do
       create_invoice(person4)
       invoices(:invoice).destroy!
       invoices(:sent).destroy!
-      message.update!(invoice_list_id: message.invoice_list.id)
+      message.update!(invoice_run_id: message.invoice_run.id)
       person3.destroy! # invoices from this person should not be included anymore
 
       # Person 2 and 4 are in a household
@@ -99,7 +99,7 @@ describe Export::MessageJob do
   def create_invoice(recipient)
     invoice = invoices(:sent).dup
     invoice.recipient = recipient
-    invoice.invoice_list_id = message.invoice_list.id
+    invoice.invoice_run_id = message.invoice_run.id
     invoice.invoice_items << invoice_items(:pins).dup
     invoice.save!
     invoice
