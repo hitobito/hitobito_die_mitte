@@ -22,7 +22,8 @@ describe Export::Tabular::Messages::LettersWithInvoiceRow do
     it "are present" do
       expect(subject.fetch(:esr_number)).to eq(invoice.esr_number)
       expect(subject.fetch(:recipient_email)).to eq(invoice.recipient_email)
-      expect(subject.fetch(:recipient_address)).to eq(invoice.recipient_address)
+      expect(subject.fetch(:deprecated_recipient_address))
+        .to eq(invoice.deprecated_recipient_address)
       expect(subject.fetch(:reference)).to eq(invoice.reference)
       expect(subject.fetch(:total)).to eq(invoice.total)
     end

@@ -48,6 +48,12 @@ invoice:
   group: sekretariat
   recipient: sekretaer
   recipient_email: top_leader@example.com
+  recipient_name: "Top Leader"
+  recipient_street: Greatstreet
+  recipient_housenumber: 345
+  recipient_zip_code: 3456
+  recipient_town: Greattown
+  recipient_country: CH
   payment_slip: ch_esr
   sequence_number: <%= ActiveRecord::FixtureSet.identify(:sekretariat) %>-2
   esr_number: '00 00376 80338 90000 00000 00021'
@@ -61,6 +67,12 @@ sent:
   group: sekretariat
   recipient: sekretaer
   recipient_email: top_leader@example.com
+  recipient_name: "Top Leader"
+  recipient_street: Greatstreet
+  recipient_housenumber: 345
+  recipient_zip_code: 3456
+  recipient_town: Greattown
+  recipient_country: CH
   payment_slip: ch_esr
   sequence_number: <%= ActiveRecord::FixtureSet.identify(:sekretariat) %>-3
   esr_number: '00 00376 80338 90000 00000 00036'
