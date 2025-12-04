@@ -71,8 +71,8 @@ describe Export::MessageJob do
       csv = CSV.parse(lines.join, col_sep: ";", headers: true)
       expect(csv).to have(2).rows # rspec appears to define rows as csv#each.to_a returning only data not header
       addresses = csv["Empfänger Adresse"]
-      expect(addresses[0].lines).to have(4).lines
-      expect(addresses[1].lines).to have(4).items
+      expect(addresses[0].lines).to have(3).lines
+      expect(addresses[1].lines).to have(3).items
       expect(lines[0]).to match(Regexp.new("^#{Export::Csv::UTF8_BOM}Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Rechnungsbetrag;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt;Person 2 Vorname;Person 2 Nachname;Person 2 Anrede;Person 2 Geschlecht;Person 2 Korrespondenzsprache;Person 2 Referenz\n"))
       expect(lines[0].split(";").count).to match(26)
     end
@@ -86,9 +86,9 @@ describe Export::MessageJob do
       csv = CSV.parse(lines.join, col_sep: ";", headers: true)
       expect(csv).to have(3).rows # rspec appears to define rows as csv#each.to_a returning only data not header
       addresses = csv["Empfänger Adresse"]
-      expect(addresses[0].lines).to have(4).lines
-      expect(addresses[1].lines).to have(4).items
-      expect(addresses[2].lines).to have(4).items
+      expect(addresses[0].lines).to have(3).lines
+      expect(addresses[1].lines).to have(3).items
+      expect(addresses[2].lines).to have(3).items
       expect(lines[0]).to match(Regexp.new("^#{Export::Csv::UTF8_BOM}Referenz Nummer;Empfänger E-Mail;Empfänger Adresse;Referenz;Rechnungsbetrag;Spendenbetrag;Vorname;Nachname;Firmenname;Firma;Haupt-E-Mail;Adresse;PLZ;Ort;Land;Geschlecht;Geburtstag;Anrede;Titel;Korrespondenzsprache;Wohnt in einem Haushalt\n"))
       expect(lines[0].split(";").count).to match(21)
     end

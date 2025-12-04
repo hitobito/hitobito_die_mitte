@@ -82,6 +82,15 @@ module Export::Tabular::Messages
       household[index_for(attr)]&.reference
     end
 
+    def recipient_address(attr = nil)
+      invoice = household[index_for(attr)]
+      if invoice.recipient_address_values.empty?
+        invoice.deprecated_recipient_address
+      else
+        invoice.recipient_address_values.join("\n")
+      end
+    end
+
     def donation_amount
       return nil unless message.donation_confirmation?
 
