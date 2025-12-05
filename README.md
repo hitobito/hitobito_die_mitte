@@ -4,6 +4,7 @@ This hitobito wagon defines the organization hierarchy with groups and roles of 
 
 ## Organization Hierarchy
 
+<!-- roles:start -->
 * Schweiz
   * Gewählte
     * Bundesrat: []
@@ -26,9 +27,9 @@ This hitobito wagon defines the organization hierarchy with groups and roles of 
     * Mitglied: []
     * Gast: []
   * Sekretariat
-    * Leitung: [:layer_and_below_full, :contact_data, :admin, :finance, :complete_finance]
+    * Leitung: [:layer_and_below_full, :contact_data, :admin, :finance]
     * MitarbeiterIn: [:layer_and_below_full, :contact_data, :admin]
-    * It-Support: [:layer_and_below_full, :contact_data, :admin, :impersonation, :complete_finance]
+    * It-Support: [:layer_and_below_full, :contact_data, :admin, :impersonation]
     * KassierIn: [:layer_and_below_full, :finance]
     * WebadministratorIn: [:layer_and_below_full]
   * Kommission
@@ -52,7 +53,7 @@ This hitobito wagon defines the organization hierarchy with groups and roles of 
     * Mitglied: []
   * Sympathisanten
     * SympathisantIn: []
-* Kanton
+* Kanton < Vereinigung, Schweiz
   * Gewählte
     * Kantonale Exekutive: []
     * Kantonale Legislative: []
@@ -98,7 +99,7 @@ This hitobito wagon defines the organization hierarchy with groups and roles of 
     * Mitglied: []
   * Sympathisanten
     * SympathisantIn: []
-* Region
+* Region < Kanton
   * Parteigremium
     * PräsidentIn: []
     * Leitung: [:group_full]
@@ -129,7 +130,7 @@ This hitobito wagon defines the organization hierarchy with groups and roles of 
     * Medien: []
     * SpenderIn: []
     * Kontakt: []
-* Ortspartei
+* Ortspartei < Region, Kanton
   * Gewählte
     * FraktionschefIn: []
     * Kommunale Exekutive: []
@@ -166,7 +167,7 @@ This hitobito wagon defines the organization hierarchy with groups and roles of 
     * Mitglied: []
   * Sympathisanten
     * SympathisantIn: []
-* Vereinigung
+* Vereinigung < Schweiz
   * Parteigremium
     * PräsidentIn: []
     * Leitung: [:layer_and_below_full]
@@ -201,5 +202,5 @@ This hitobito wagon defines the organization hierarchy with groups and roles of 
     * DelegierteR: []
     * ErsatzdelegierteR: []
     * DelegierteR von Amtes wegen: []
-
 (Output of rake app:hitobito:roles)
+<!-- roles:end -->

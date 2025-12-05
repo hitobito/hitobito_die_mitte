@@ -56,7 +56,6 @@ module HitobitoDieMitte
       Export::MessageJob.prepend DieMitte::Export::MessageJob
 
       InvoiceItem.add_type_mapping(:variable_donation, InvoiceItem::VariableDonation)
-      Role::Permissions << :complete_finance
     end
 
     initializer "die_mitte.add_settings" do |_app|
