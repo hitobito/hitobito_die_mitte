@@ -5,7 +5,7 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_die_mitte.
 
-module DieMitte::Person::Address
+module DieMitte::Contactable::Address
   private
 
   def combine_household_names(members)

@@ -19,6 +19,8 @@ module HitobitoDieMitte
 
     config.to_prepare do
       # extend application classes here
+      Contactable::Address.prepend DieMitte::Contactable::Address
+
       Group.include DieMitte::Group
       Role.include DieMitte::Role
       Role.extend DieMitte::NormalizedLabels
@@ -41,7 +43,6 @@ module HitobitoDieMitte
 
       PersonSerializer.include DieMitte::PersonSerializer
 
-      Person::Address.prepend DieMitte::Person::Address
       Person::Filter::Attributes.prepend DieMitte::Person::Filter::Attributes
       Salutation.prepend DieMitte::Salutation
 
