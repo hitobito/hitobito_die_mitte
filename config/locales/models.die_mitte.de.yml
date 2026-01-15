@@ -519,8 +519,6 @@ de:
       invoice:
         donation_amount: Spendenbetrag
 
-      mailing_list:
-        correspondence_language: Korrespondenzsprache
       group:
         letter_footer_column_1: Fusszeile 1. Spalte
         letter_footer_column_2: Fusszeile 2. Spalte
@@ -531,14 +529,10 @@ de:
         salutation_value: Anrede
         title: Titel
         website: Webseite
-        correspondence_language: Korrespondenzsprache
-        civil_status: Zivilstand
-        correspondence_languages:
-          de: Deutsch
-          en: Englisch
-          fr: Französisch
-          it: Italienisch
+        language: Korrespondenzsprache
+        languages:
           rm: Rätoromanisch
+        civil_status: Zivilstand
         civil_statuses:
           single: Ledig
           registered_partnership: Eingetragene Partnerschaft

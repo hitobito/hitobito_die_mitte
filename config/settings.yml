@@ -5,10 +5,7 @@ application:
     de: Deutsch
     fr: Französisch
     it: Italienisch
-  correspondence_languages:
-    de: Deutsch
-    fr: Französisch
-    it: Italienisch
+  additional_languages:
     rm: Rätoromanisch
   logo:
     image: die_mitte.svg

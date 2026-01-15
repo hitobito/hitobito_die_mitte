@@ -68,8 +68,8 @@ module Export::Tabular::Messages
       housemate(attr)&.title
     end
 
-    def correspondence_language(attr = nil)
-      housemate(attr)&.correspondence_language
+    def language(attr = nil)
+      housemate(attr)&.language
     end
 
     def household?(attr = nil)

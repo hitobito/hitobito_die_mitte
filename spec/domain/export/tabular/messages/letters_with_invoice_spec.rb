@@ -40,7 +40,7 @@ describe Export::Tabular::Messages::LettersWithInvoice do
           should == [:esr_number, :recipient_email, :recipient_address, :reference, :total, :donation_amount,
             :first_name, :last_name, :company_name, :company, :email, :address,
             :zip_code, :town, :country, :gender, :birthday, :salutation, :title,
-            :correspondence_language, :household?]
+            :language, :household?]
         end
 
         its(:labels) do
@@ -59,7 +59,7 @@ describe Export::Tabular::Messages::LettersWithInvoice do
             should == [:esr_number, :recipient_email, :recipient_address, :reference, :total,
               :first_name, :last_name, :company_name, :company, :email, :address,
               :zip_code, :town, :country, :gender, :birthday, :salutation, :title,
-              :correspondence_language, :household?]
+              :language, :household?]
           end
 
           its(:labels) do

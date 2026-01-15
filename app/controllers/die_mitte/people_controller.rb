@@ -9,8 +9,7 @@ module DieMitte::PeopleController
   extend ActiveSupport::Concern
 
   def self.prepended(base)
-    base.permitted_attrs += [:title, :salutation, :website,
-      :correspondence_language, :civil_status]
+    base.permitted_attrs += [:title, :salutation, :website, :civil_status]
   end
 
   def list_filter_args

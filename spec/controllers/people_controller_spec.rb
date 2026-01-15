@@ -25,7 +25,6 @@ describe PeopleController do
     expect(PeopleController.permitted_attrs).to include(:title)
     expect(PeopleController.permitted_attrs).to include(:salutation)
     expect(PeopleController.permitted_attrs).to include(:website)
-    expect(PeopleController.permitted_attrs).to include(:correspondence_language)
     expect(PeopleController.permitted_attrs).to include(:website)
   end
 
@@ -77,7 +76,6 @@ describe PeopleController do
           first_name: 'updated_name',
           title: 'Frau',
           website: 'example.com',
-          correspondence_language: 'de',
           civil_status: 'single',
           salutation: 'lieber_vorname'
         }
@@ -91,7 +89,6 @@ describe PeopleController do
       expect(sekretaer.first_name).to eq('updated_name')
       expect(sekretaer.title).to eq('Frau')
       expect(sekretaer.website).to eq('example.com')
-      expect(sekretaer.correspondence_language).to eq('de')
       expect(sekretaer.civil_status).to eq('single')
       expect(sekretaer.salutation).to eq('lieber_vorname')
     end
