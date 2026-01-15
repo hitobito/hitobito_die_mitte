@@ -569,8 +569,6 @@ it:
       invoice:
         donation_amount: Spendenbetrag
 
-      mailing_list:
-        correspondence_language: Lingua di corrispondenza
       group:
         letter_footer_column_1: Fusszeile 1. Spalte
         letter_footer_column_2: Fusszeile 2. Spalte
@@ -581,14 +579,8 @@ it:
         salutation_value: Saluto
         title: Titolo
         website: Sito web
-        correspondence_language: lingua di corrispondenza
+        language: lingua di corrispondenza
         civil_status: Stato civile
-        correspondence_languages:
-          de: tedesco
-          en: inglese
-          fr: francese
-          it: italiano
-          rm: Romancio
         civil_statuses:
           single: Singolo
           registered_partnership: Unione registrata

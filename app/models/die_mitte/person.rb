@@ -45,7 +45,6 @@
 #  household_key             :string(255)
 #  title                     :string(255)      not null
 #  website                   :string(255)      not null
-#  correspondence_language   :string(255)      default('de'), not null
 #  civil_status              :string(255)      default('single'), not null
 
 module DieMitte::Person
@@ -56,16 +55,10 @@ module DieMitte::Person
   included do
     include I18nEnums
 
-    Person::PUBLIC_ATTRS << :title << :website << :correspondence_language <<
+    Person::PUBLIC_ATTRS << :title << :website << :language <<
       :civil_status << :salutation
 
     Person::SEARCHABLE_ATTRS.find { |element| element.is_a?(Hash) }[:role_translations] = [:label]
-
-    i18n_enum :correspondence_language, Settings.application
-      .correspondence_languages
-      .to_hash
-      .keys
-      .collect(&:to_s)
 
     i18n_enum :civil_status, CIVIL_STATUSES
 

@@ -12,7 +12,7 @@ admin:
   primary_group: root
   title: 'Frau'
   website: 'hitobito.example.com'
-  correspondence_language: 'de'
+  language: 'de'
   civil_status: 'widowed'
   salutation: 'lieber_titel_nachname'
 
@@ -24,7 +24,7 @@ sekretaer:
   primary_group: die_mitte
   title: 'Herr'
   website: 'hitobito.example.com'
-  correspondence_language: 'en'
+  language: 'en'
   civil_status: 'divorced'
   salutation: 'lieber_titel_nachname'
 
@@ -35,7 +35,7 @@ thuner:
   primary_group: be_thun_mitglieder
   title: 'Herr'
   website: 'hitobito.example.com'
-  correspondence_language: 'de'
+  language: 'de'
   civil_status: 'married'
   salutation: 'lieber_vorname'
 
@@ -46,6 +46,6 @@ zuercher:
   primary_group: zh_miglieder
   title: 'Herr'
   website: 'hitobito.example.com'
-  correspondence_language: 'de'
+  language: 'de'
   civil_status: 'single'
   salutation: 'lieber_titel_nachname'

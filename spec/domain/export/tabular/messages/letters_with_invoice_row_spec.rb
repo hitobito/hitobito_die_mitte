@@ -44,7 +44,7 @@ describe Export::Tabular::Messages::LettersWithInvoiceRow do
       expect(subject.fetch(:birthday)).to eq(bottom_member.birthday)
       expect(subject.fetch(:salutation)).to eq("Liebe*r A")
       expect(subject.fetch(:title)).to eq("Herr")
-      expect(subject.fetch(:correspondence_language)).to eq("de")
+      expect(subject.fetch(:language)).to eq("de")
       expect(subject.fetch(:household?)).to eq("nein")
     end
   end
@@ -72,13 +72,13 @@ describe Export::Tabular::Messages::LettersWithInvoiceRow do
       expect(subject.fetch(:birthday)).to eq(bottom_member.birthday)
       expect(subject.fetch(:salutation)).to eq("Liebe*r A")
       expect(subject.fetch(:title)).to eq("Herr")
-      expect(subject.fetch(:correspondence_language)).to eq("de")
+      expect(subject.fetch(:language)).to eq("de")
       expect(subject.fetch(:household?)).to eq("nein")
       expect(subject.fetch(:first_name_2)).to eq(bottom_member2.first_name)
       expect(subject.fetch(:last_name_2)).to eq(bottom_member2.last_name)
       expect(subject.fetch(:salutation_2)).to eq("Liebe*r Frau*Herr Herr Zuercher")
       expect(subject.fetch(:gender_2)).to eq(bottom_member2.gender)
-      expect(subject.fetch(:correspondence_language_2)).to eq("de")
+      expect(subject.fetch(:language_2)).to eq("de")
       expect(subject.fetch(:reference_2)).to eq(invoice2.reference)
     end
 
@@ -87,7 +87,7 @@ describe Export::Tabular::Messages::LettersWithInvoiceRow do
       expect(subject.fetch(:last_name_3)).to be_nil
       expect(subject.fetch(:salutation_3)).to be_nil
       expect(subject.fetch(:gender_3)).to be_nil
-      expect(subject.fetch(:correspondence_language_3)).to be_nil
+      expect(subject.fetch(:language_3)).to be_nil
       expect(subject.fetch(:reference_3)).to be_nil
     end
   end
