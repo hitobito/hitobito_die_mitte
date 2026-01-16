@@ -14,7 +14,7 @@ class DieMittePersonSeeder < PersonSeeder
 
     attrs[:title] = ["", "", "", "", "", "", "", "", "Dr.", "Prof."].sample
     attrs[:website] = "example.com"
-    attrs[:correspondence_language] = Settings.application.correspondence_languages.keys.sample.to_s
+    attrs[:language] = Person::LANGUAGES.keys.sample.to_s
     attrs[:civil_status] = DieMitte::Person::CIVIL_STATUSES.sample
     attrs[:salutation] = Salutation.available.keys.sample
     attrs

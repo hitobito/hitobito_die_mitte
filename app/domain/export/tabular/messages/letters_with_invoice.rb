@@ -9,8 +9,8 @@ module Export::Tabular::Messages
   class LettersWithInvoice < Export::Tabular::Base
     INCLUDED_ATTRS = %w[esr_number recipient_email recipient_address reference total].freeze
     PERSON_ATTRS = %w[first_name last_name company_name company email address zip_code town country
-      gender birthday salutation title correspondence_language household?].freeze
-    HOUSEMATE_ATTRS = %w[first_name last_name salutation gender correspondence_language
+      gender birthday salutation title language household?].freeze
+    HOUSEMATE_ATTRS = %w[first_name last_name salutation gender language
       reference].freeze
 
     self.model_class = ::Invoice

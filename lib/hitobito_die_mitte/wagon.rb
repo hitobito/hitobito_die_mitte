@@ -26,13 +26,12 @@ module HitobitoDieMitte
       Role.extend DieMitte::NormalizedLabels
       Person.include DieMitte::Person
 
-      Person::FILTER_ATTRS << :correspondence_language << :email
+      Person::FILTER_ATTRS << :email
 
       RoleDecorator.prepend DieMitte::RoleDecorator
 
       Event.role_types -= [Event::Role::Cook]
 
-      MailingListsController.permitted_attrs << :correspondence_language
       MessagesController.prepend DieMitte::MessagesController
 
       PeopleController.prepend DieMitte::PeopleController
@@ -43,7 +42,6 @@ module HitobitoDieMitte
 
       PersonSerializer.include DieMitte::PersonSerializer
 
-      Person::Filter::Attributes.prepend DieMitte::Person::Filter::Attributes
       Salutation.prepend DieMitte::Salutation
 
       Export::Tabular::People::PersonRow.include DieMitte::Export::Tabular::People::PersonRow
@@ -51,8 +49,6 @@ module HitobitoDieMitte
       # rubocop:todo Layout/LineLength
       Export::Pdf::Messages::LetterWithInvoice.include DieMitte::Export::Pdf::Messages::LetterWithInvoice
       # rubocop:enable Layout/LineLength
-
-      MailingLists::Subscribers.prepend DieMitte::MailingLists::Subscribers
 
       Export::MessageJob.prepend DieMitte::Export::MessageJob
 

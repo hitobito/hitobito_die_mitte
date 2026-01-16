@@ -569,8 +569,6 @@ fr:
       invoice:
         donation_amount: Montant de la donation
 
-      mailing_list:
-        correspondence_language: Langue
       group:
         letter_footer_column_1: Fusszeile 1. Spalte
         letter_footer_column_2: Fusszeile 2. Spalte
@@ -581,14 +579,8 @@ fr:
         salutation_value: Adresse
         title: Titre
         website: Site web
-        correspondence_language: Langue de correspondance
+        language: Langue de correspondance
         civil_status: État civil
-        correspondence_languages:
-          de: Allemand
-          en: Anglais
-          fr: Français
-          it: Italien
-          rm: Romanche
         civil_statuses:
           single: Célibataire
           registered_partnership: Partenariat enregistré
