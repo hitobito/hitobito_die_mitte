@@ -20,6 +20,9 @@ fr:
   people:
     address:
       two_with_same_last_name: '%{first} und %{second} %{last_name}'
+  people_filters:
+    language:
+      title: Korrespondenzsprache
   placeholder: Placeholder
 
   roles:

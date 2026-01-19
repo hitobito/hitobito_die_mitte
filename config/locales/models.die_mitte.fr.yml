@@ -579,7 +579,9 @@ fr:
         salutation_value: Adresse
         title: Titre
         website: Site web
-        language: Langue de correspondance
+        language: Korrespondenzsprache
+        languages:
+          rm: Rätoromanisch
         civil_status: État civil
         civil_statuses:
           single: Célibataire
