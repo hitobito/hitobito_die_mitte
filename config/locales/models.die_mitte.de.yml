@@ -531,6 +531,7 @@ de:
         website: Webseite
         language: Korrespondenzsprache
         languages:
+          it: Italienisch
           rm: Rätoromanisch
         civil_status: Zivilstand
         civil_statuses:
