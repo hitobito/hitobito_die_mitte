@@ -21,7 +21,7 @@ describe Invoice::BatchCreate do
                          subscriber: group,
                          role_types: [Group::BundSekretariat::Leitung])
 
-    run = InvoiceRun.new(receiver: mailing_list, group: group, title: :title)
+    run = InvoiceRun.new(recipient_source: mailing_list, group: group, title: :title)
 
     layer.invoice_config.update_attribute(:donation_increase_percentage, 5)
     layer.invoice_config.update_attribute(:donation_calculation_year_amount, 2)
@@ -37,10 +37,10 @@ describe Invoice::BatchCreate do
     run.invoice = invoice
     run.save!
 
-    Invoice::BatchCreate.call(run)
+    Invoice::BatchCreate.call(run, person)
 
     expect(run.reload).to have(1).invoices
-    expect(run.receiver).to eq mailing_list
+    expect(run.recipient_source).to eq mailing_list
     expect(run.recipients_total).to eq 1
     expect(run.recipients_paid).to eq 0
     
@@ -55,7 +55,7 @@ describe Invoice::BatchCreate do
                          subscriber: group,
                          role_types: [Group::BundSekretariat::Leitung])
 
-    run = InvoiceRun.new(receiver: mailing_list, group: group, title: :title)
+    run = InvoiceRun.new(recipient_source: mailing_list, group: group, title: :title)
 
     layer.invoice_config.update_attribute(:donation_increase_percentage, 5)
     layer.invoice_config.update_attribute(:donation_calculation_year_amount, 2)
@@ -64,10 +64,10 @@ describe Invoice::BatchCreate do
     invoice.invoice_items.build(name: 'variable donation', unit_cost: 0, type: InvoiceItem::VariableDonation.sti_name)
     run.invoice = invoice
 
-    Invoice::BatchCreate.call(run)
+    Invoice::BatchCreate.call(run, person)
 
     expect(run.reload).to have(0).invoices
-    expect(run.receiver).to eq mailing_list
+    expect(run.recipient_source).to eq mailing_list
   end
 
   it '#call deletes variable donation invoice item with amount 0' do
@@ -75,7 +75,7 @@ describe Invoice::BatchCreate do
                          subscriber: group,
                          role_types: [Group::BundSekretariat::Leitung])
 
-    run = InvoiceRun.new(receiver: mailing_list, group: group, title: :title)
+    run = InvoiceRun.new(recipient_source: mailing_list, group: group, title: :title)
 
     layer.invoice_config.update_attribute(:donation_increase_percentage, 5)
     layer.invoice_config.update_attribute(:donation_calculation_year_amount, 2)
@@ -87,11 +87,11 @@ describe Invoice::BatchCreate do
     run.save!
 
     expect do
-      Invoice::BatchCreate.call(run)
+      Invoice::BatchCreate.call(run, person)
     end.to change { group.invoice_items.count }.by(1)
 
     expect(run.reload).to have(1).invoices
-    expect(run.receiver).to eq mailing_list
+    expect(run.recipient_source).to eq mailing_list
     expect(run.recipients_total).to eq 1
     expect(run.recipients_paid).to eq 0
     
