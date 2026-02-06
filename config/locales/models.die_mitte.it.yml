@@ -579,7 +579,9 @@ it:
         salutation_value: Saluto
         title: Titolo
         website: Sito web
-        language: lingua di corrispondenza
+        language: Korrespondenzsprache
+        languages:
+          rm: Rätoromanisch
         civil_status: Stato civile
         civil_statuses:
           single: Singolo
