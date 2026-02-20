@@ -40,7 +40,7 @@ describe PeopleController do
   end
 
   it 'GET#index accepts filter params and lists only single member' do
-    roles = { role_type_ids: Group::KantonMitglieder::Mitglied.id }
+    roles = { role_type_ids: Group::KantonMitglieder::Mitglied.type_id }
     get :index, params: { group_id: groups(:die_mitte).id, filters: { role: roles }, range: 'deep' }
 
     expect(custom_filter[:class]).to include 'dropdown'

@@ -23,7 +23,7 @@ class MemberList
 
   def filter_params
     types = Role.all_types.select { |type| type < Role::Mitglied }
-    ids = types.collect(&:id).join(Person::Filter::Base::ID_URL_SEPARATOR)
+    ids = types.collect(&:type_id).join(Person::Filter::Base::ID_URL_SEPARATOR)
     {
       name: name,
       range: "deep",
