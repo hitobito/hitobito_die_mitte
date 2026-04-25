@@ -48,7 +48,8 @@ invoice:
   group: sekretariat
   recipient: sekretaer
   recipient_email: top_leader@example.com
-  recipient_name: "Top Leader"
+  recipient_first_name: "Top"
+  recipient_last_name: "Leader"
   recipient_street: Greatstreet
   recipient_housenumber: 345
   recipient_zip_code: 3456
@@ -67,7 +68,8 @@ sent:
   group: sekretariat
   recipient: sekretaer
   recipient_email: top_leader@example.com
-  recipient_name: "Top Leader"
+  recipient_first_name: "Top"
+  recipient_last_name: "Leader"
   recipient_street: Greatstreet
   recipient_housenumber: 345
   recipient_zip_code: 3456
