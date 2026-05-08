@@ -32,7 +32,7 @@ module HitobitoDieMitte
 
       Event.role_types -= [Event::Role::Cook]
 
-      MessagesController.prepend DieMitte::MessagesController
+      MailingLists::MessagesController.prepend DieMitte::MailingLists::MessagesController
 
       PeopleController.prepend DieMitte::PeopleController
       FilterNavigation::People.prepend DieMitte::FilterNavigation::People
