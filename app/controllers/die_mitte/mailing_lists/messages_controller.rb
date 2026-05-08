@@ -5,7 +5,7 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_die_mitte.
 
-module DieMitte::MessagesController
+module DieMitte::MailingLists::MessagesController
   extend ActiveSupport::Concern
 
   def show
