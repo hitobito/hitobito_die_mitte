@@ -42,13 +42,14 @@ describe Export::MessageJob do
     end
 
     before do
+      invoice_run = InvoiceRun.create!(message.invoice_run_attributes)
+      message.update!(invoice_run_id: invoice_run.id)
       create_invoice(person1)
       create_invoice(person2)
       create_invoice(person3)
       create_invoice(person4)
       invoices(:invoice).destroy!
       invoices(:sent).destroy!
-      message.update!(invoice_run_id: message.invoice_run.id)
       person3.destroy! # invoices from this person should not be included anymore
 
       # Person 2 and 4 are in a household
