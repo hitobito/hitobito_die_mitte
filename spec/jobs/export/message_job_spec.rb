@@ -69,7 +69,7 @@ describe Export::MessageJob do
       subject.enqueue!
       subject.perform
 
-      lines = subject.user_job_result.read.lines
+      lines = subject.job_observation.read.lines
       csv = CSV.parse(lines.join, col_sep: ";", headers: true)
       expect(csv).to have(2).rows # rspec appears to define rows as csv#each.to_a returning only data not header
       addresses = csv["Empfänger Adresse"]
@@ -85,7 +85,7 @@ describe Export::MessageJob do
       subject.enqueue!
       subject.perform
 
-      lines = subject.user_job_result.read.lines
+      lines = subject.job_observation.read.lines
       csv = CSV.parse(lines.join, col_sep: ";", headers: true)
       expect(csv).to have(3).rows # rspec appears to define rows as csv#each.to_a returning only data not header
       addresses = csv["Empfänger Adresse"]
