@@ -8,6 +8,8 @@
 require "spec_helper"
 
 describe Export::MessageJob do
+  include JobObservationSpecHelper
+
   subject { Export::MessageJob.new(format, user.id, message.id, {filename: "message_export"}) }
 
   let(:user) { people(:sekretaer) }
@@ -69,7 +71,7 @@ describe Export::MessageJob do
       subject.enqueue!
       subject.perform
 
-      lines = subject.job_observation.read.lines
+      lines = read_data_from_generated_file(subject.job_observation).lines
       csv = CSV.parse(lines.join, col_sep: ";", headers: true)
       expect(csv).to have(2).rows # rspec appears to define rows as csv#each.to_a returning only data not header
       addresses = csv["Empfänger Adresse"]
@@ -85,7 +87,7 @@ describe Export::MessageJob do
       subject.enqueue!
       subject.perform
 
-      lines = subject.job_observation.read.lines
+      lines = read_data_from_generated_file(subject.job_observation).lines
       csv = CSV.parse(lines.join, col_sep: ";", headers: true)
       expect(csv).to have(3).rows # rspec appears to define rows as csv#each.to_a returning only data not header
       addresses = csv["Empfänger Adresse"]
