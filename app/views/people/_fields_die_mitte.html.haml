@@ -1,10 +1,9 @@
 = field_set_tag do
   = f.labeled_input_field :title
   = f.labeled_input_field :website
-  = f.labeled_collection_select :salutation, Salutation.available, :first, :last, { include_blank: "" }, class: 'form-select form-select-sm'
+  = f.labeled_collection_select :salutation, Salutation.available, :first, :last, { include_blank: "" }
   = f.labeled_collection_select(:civil_status,
                                 possible_person_civil_statuses,
                                 :first,
                                 :last,
-                                { prompt: true },
-                                class: 'form-select form-select-sm')
+                                { prompt: true })
