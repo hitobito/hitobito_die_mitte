@@ -15,6 +15,10 @@ module Export::Tabular::Messages
       @entry.person
     end
 
+    def salutation
+      @entry.salutation
+    end
+
     def printed_address
       @entry&.address
     end
