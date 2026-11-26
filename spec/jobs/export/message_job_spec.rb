@@ -99,6 +99,42 @@ describe Export::MessageJob do
     end
   end
 
+  context "creates a CSV-Export for letter sent to households" do
+    let(:format) { :csv }
+
+    let(:message) do
+      Message::Letter.create!(mailing_list: mailing_lists(:list), body: "Lorem ipsum",
+        subject: "A Sunny Day", send_to_households: true)
+    end
+
+    before do
+      [person1, person2, person3].each do |person|
+        mailing_lists(:list).subscriptions.create!(subscriber: person)
+      end
+      person2.update!(household_key: "asdf-asdf-asdf-asdf")
+      person1.update!(
+        household_key: person2.household_key,
+        street: person2.street,
+        housenumber: person2.housenumber,
+        zip_code: person2.zip_code,
+        town: person2.town
+      )
+      Messages::LetterDispatch.new(message).run
+    end
+
+    it "and saves it with one row per household" do
+      subject.enqueue!
+      subject.perform
+
+      csv = CSV.parse(read_data_from_generated_file(subject.job_observation), col_sep: ";",
+        headers: true)
+      household_address = MessageRecipient.find_by(message: message, person: person1).address
+
+      expect(csv.size).to eq 2
+      expect(csv["Briefadresse"]).to include(household_address)
+    end
+  end
+
   private
 
   def create_invoice(recipient)

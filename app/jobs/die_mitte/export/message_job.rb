@@ -48,13 +48,19 @@ module DieMitte::Export::MessageJob
 
   def message_recipients
     return message.recipients if message.donation_confirmation?
+    return People::HouseholdList.new(message.recipients).each if letter_with_invoice?
+    return one_recipient_per_household if message.send_to_households?
 
-    send_to_households? ?
-        People::HouseholdList.new(message.recipients).each :
-        message.message_recipients
+    message.message_recipients
   end
 
-  def send_to_households?
-    message.send_to_households? || message.is_a?(Message::LetterWithInvoice)
+  def one_recipient_per_household
+    message.message_recipients.where(
+      id: message.message_recipients.group(:address).select("MIN(message_recipients.id)")
+    )
+  end
+
+  def letter_with_invoice?
+    message.is_a?(Message::LetterWithInvoice)
   end
 end
